@@ -60,3 +60,30 @@ a {
         stroke-dashoffset: 0;
     }
 }
+
+@media (max-width: 600px) {
+    .Body {
+        padding: 1em;
+        height: auto;
+
+        .text-section {
+            font-size: 1.2em;
+            padding: 1em;
+        }
+
+        .image-grid {
+
+            padding-top: 4em;
+            padding-bottom: 4em;
+
+            img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    }
+
+    a {
+        font-size: 1em;
+    }
+}
