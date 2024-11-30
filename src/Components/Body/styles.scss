@@ -1,0 +1,62 @@
+@import '../../global.scss';
+
+.Body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: $orange;
+    height: 100vh;
+
+    .text-section {
+        font-size: 1.8em;
+        font-weight: $regular;
+        color: $white;
+        padding: 4em;
+        text-align: justify;
+
+        b {
+            color: $black;
+        }
+    }
+
+    .image-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+
+        img {
+            width: 100px;
+            height: 100px;
+        }
+
+    }
+
+
+}
+
+a {
+    color: $white;
+    text-decoration: underline;
+    font-weight: $bold;
+    transition: color 0.3s;
+
+    &:hover {
+        color: $black;
+    }
+}
+
+//Animation
+.path,
+.grid-item {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 5s linear alternate infinite;
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}

@@ -1,0 +1,36 @@
+@import '../../global.scss';
+
+.Footer {
+    align-items: center;
+    background: $black;
+    color: $white;
+    display: flex;
+    padding: 0.5em 1.5em;
+    height: 3.5em;
+    font-size: 0.8em;
+    //font-family: $pt_sans;
+    font-weight: $regular;
+    //word-wrap: break-word;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 999;
+    ;
+}
+
+.Address {
+    padding: 0, 1.5em;
+    text-align: left;
+}
+
+@media screen and (max-width: 640px) {
+    .Title {
+        padding: 1em 1.5em;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .Title {
+        padding: 1em 1em;
+    }
+}
