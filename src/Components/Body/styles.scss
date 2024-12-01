@@ -33,6 +33,16 @@
 
     }
 
+    .path {
+        stroke: $white;
+        stroke-opacity: 0.6;
+        stroke-width: 1;
+        stroke-dasharray: 1;
+        stroke-dashoffset: 1;
+        transition: stroke-dashoffset 0.8s ease-out;
+        scale: 1;
+    }
+
 
 }
 
