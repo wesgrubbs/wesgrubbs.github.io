@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import anime from "animejs/lib/anime.es.js";
 
 import "./styles.scss";
 
 const Body = () => {
+  const gridRef = useRef(null);
+
+  useEffect(() => {
+    const gridItems = gridRef.current.querySelectorAll(".grid-item");
+
+    anime({
+      targets: gridItems,
+      opacity: [0, 1],
+      translateY: [50, 0],
+      delay: anime.stagger(500), // 500ms between each image
+      easing: "easeOutQuad",
+      duration: 800,
+    });
+  }, []);
+
   return (
     <div className="Body">
       <section className="text-section">
@@ -19,7 +34,7 @@ const Body = () => {
         </p>
       </section>
       <section className="Grid">
-        <div className="image-grid">
+        <div ref={gridRef} className="image-grid">
           {Array.from(
             { length: 3 * Math.ceil(window.innerWidth / 550) },
             (_, index) => (
@@ -29,6 +44,7 @@ const Body = () => {
                 alt="Dynamic SVG"
                 className="grid-item"
                 style={{
+                  opacity: 0, // Start with 0 opacity for animation
                   transform: `rotate(${Math.floor(Math.random() * 4) * 90}deg)`,
                 }}
               />
