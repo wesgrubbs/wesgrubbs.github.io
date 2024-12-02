@@ -1,0 +1,13 @@
+@import '../../global.scss';
+
+.Work {
+    align-items: center;
+    background: $orange;
+    color: $white;
+    display: flex;
+    padding: 0.5em 1.5em;
+    font-size: 0.8em;
+    //font-family: $pt_sans; //will be neue
+    font-weight: $regular;
+    width: 100%;
+}

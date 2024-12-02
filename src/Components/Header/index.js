@@ -4,17 +4,17 @@ import "./styles.scss";
 
 const Header = () => {
   return (
-    <header className="header">
+    <header className="Header">
       <nav>
         <ul className="nav-links">
           <li>
-            <Link to="/work">Work</Link>
+            <Link to="/work">Selected Work</Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact">Contact Me</Link>
           </li>
           <li>
-            <Link to="/background">Background</Link>
+            <Link to="/background">Clients</Link>
           </li>
         </ul>
       </nav>

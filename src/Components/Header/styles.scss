@@ -1,19 +1,33 @@
 @import '../../global.scss';
 
-.Footer {
-    align-items: center;
-    background: $black;
+.Header {
+    align-items: right;
+    background: $orange;
     color: $white;
     display: flex;
     padding: 0.5em 1.5em;
-    height: 3.5em;
+    height: 2em;
     font-size: 0.8em;
     //font-family: $pt_sans; //will be neue
     font-weight: $regular;
-    //word-wrap: break-word;
     position: fixed;
     width: 100%;
-    bottom: 0;
     z-index: 999;
-    ;
+
+    ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        gap: 1em;
+    }
+
+    li {
+        cursor: pointer;
+        transition: color 0.3s;
+
+        &:hover {
+            color: $black;
+        }
+    }
 }

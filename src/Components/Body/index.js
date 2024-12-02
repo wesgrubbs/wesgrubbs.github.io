@@ -27,6 +27,25 @@ const Body = () => {
     }
   }
 
+  // Animation function to be reused
+  const animatePath = (path) => {
+    const length = path.getTotalLength();
+
+    // Reset to initial state
+    path.style.strokeDasharray = length;
+    path.style.strokeDashoffset = length;
+
+    // Animate path
+    return anime({
+      targets: path,
+      strokeDashoffset: [
+        { value: length, duration: 0 }, // Start fully offset
+        { value: 0, duration: 400 }, // Animate to zero
+      ],
+      easing: "easeOutQuad",
+    });
+  };
+
   useEffect(() => {
     // Handle window resize to update grid configuration
     const handleResize = () => {
@@ -79,6 +98,12 @@ const Body = () => {
         delay: distanceFromCenter * 5, // Delay based on distance from center
         easing: "easeOutQuad",
       });
+
+      // Add hover event listeners
+      const parentSvg = item.closest("svg");
+      parentSvg.addEventListener("mouseenter", () => {
+        animatePath(item);
+      });
     });
   }, [gridConfig]); // Re-run effect when grid configuration changes
 
@@ -103,7 +128,7 @@ const Body = () => {
               key={index}
               width="62"
               height="62"
-              viewBox="0 0 63 63"
+              viewBox="0 0 65 65"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
               className="grid-item"
@@ -113,7 +138,7 @@ const Body = () => {
             >
               <path
                 className="path"
-                d="M0.5 62.5L62.498 62.5C62.2307 28.3789 34.6211 0.769313 0.500001 0.501956L0.5 62.5Z"
+                d="M64 64.0001V64.0001C64 29.2061 35.7939 1.00006 1 1.00006V1.00006L1 64.0001L64 64.0001Z"
               />
             </svg>
           ))}
