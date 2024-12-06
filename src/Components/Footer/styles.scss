@@ -2,7 +2,7 @@
 
 .Footer {
     align-items: center;
-    background: $black;
+    background: $orange;
     color: $white;
     display: flex;
     padding: 0.5em 1.5em;
@@ -11,6 +11,18 @@
     font-weight: $regular;
     width: 100%;
     bottom: 0;
+
+    .social-media-list {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        padding: 2em 4em 2em 4em;
+        margin: 0;
+
+        li {
+            padding: 0 0.8em;
+        }
+    }
 }
 
 .Address {

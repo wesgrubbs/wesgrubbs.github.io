@@ -2,51 +2,72 @@ import React from "react";
 import "./styles.scss";
 
 const Footer = () => {
+  const revealEmail = (e) => {
+    e.preventDefault(); // Prevent default link behavior
+    const user = "wesgrubbs";
+    const domain = ".com";
+    const tld = "gmail";
+    const email = `${user}@${tld}${domain}`;
+    const subject = "Email from website";
+
+    // Use window.location to open email client
+    window.location.href = `mailto:${email}?subject=${encodeURIComponent(
+      subject
+    )}`;
+  };
+
   return (
     <footer className="Footer">
       <div className="footer-column">
-        <h3>Contact Info</h3>
-        <p>Wesley Grubbs</p>
-        <p>Email: wesley@example.com</p>
-        <p>Phone: (123) 456-7890</p>
-      </div>
-      <div className="footer-column">
-        <h3>Follow Me</h3>
-        <ul>
+        <ul className="social-media-list">
           <li>
-            <a
-              href="https://www.linkedin.com/in/wesleygrubbs"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn
+            <a id="email-link" href="#" onClick={revealEmail}>
+              <img src="images/email.svg" alt="Email" />
             </a>
           </li>
           <li>
             <a
-              href="https://www.instagram.com/wesleygrubbs"
+              href="https://github.com/wesgrubbs"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Instagram
+              <img src="images/github.svg" alt="GitHub" />
             </a>
           </li>
           <li>
             <a
-              href="https://bsky.app/profile/wesleygrubbs"
+              href="https://www.linkedin.com/in/wesgrubbs/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Bluesky
+              <img src="images/linkedin.svg" alt="LinkedIn" />
             </a>
           </li>
           <li>
             <a
-              href="https://www.threads.net/@wesleygrubbs"
+              href="https://www.instagram.com/wesgrubbs"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Threads
+              <img src="images/instagram.svg" alt="Instagram" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.threads.net/@wesgrubbs"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="images/threads.svg" alt="Threads" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://bsky.app/profile/wesgrubbs.bsky.social"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="images/bluesky.svg" alt="Bluesky" />
             </a>
           </li>
         </ul>

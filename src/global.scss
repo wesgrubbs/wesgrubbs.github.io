@@ -1,5 +1,4 @@
 $blue: #295496;
-/* header. BU Blue */
 $white: #fff;
 $lightgrey: #f8f8f8;
 $black: #2d2926;
@@ -12,28 +11,61 @@ $grey80: #847971;
 $grey70: #aba29c;
 $grey60: #d0cbc8;
 
-/* Shades of Blue (Deb to Major Creditor Colors */
+/* Shades of Blue */
 $blue100: #002d72;
 $blue90: #19488f;
 $blue80: #3f6bad;
 $blue70: #98b6e4;
 
-/* Shades of Green (Green Investment Needs) */
+/* Shades of Green*/
 $green100: #42762d;
 $green90: #5fad41;
 $green80: #91cd7a;
 $green70: #c2e3b5;
 
-/* Shades of Red (Used on Sankey Chart */
+/* Shades of Red */
 $red100: #8d1818;
 $red90: #cc0000;
 $red80: #df4242;
 $red70: #ff9191;
 
 $yellow: #ffb000;
-/* Other Category on Sankey Chart */
 
 /* Fonts */
-/* to add fonts here */
+$meta_sans: 'Meta Sans', 'Fira Sans', sans-serif;
+$meta_serif: 'Meta Serif', serif;
 $regular: '400';
 $bold: '700';
+
+body {
+    background: $orange;
+}
+
+h1 {
+    font-size: 1.7em;
+    font-family: $meta_serif;
+    font-weight: $bold;
+    color: $black;
+    margin: 0;
+    padding: 10px;
+}
+
+p {
+    font-size: 1.1em;
+    font-family: $meta_sans;
+    font-weight: $regular;
+    color: $white;
+    margin: 0;
+    padding: 10px;
+}
+
+a {
+    color: $white;
+    text-decoration: underline;
+    font-weight: $bold;
+    transition: color 0.3s;
+
+    &:hover {
+        color: $black;
+    }
+}
