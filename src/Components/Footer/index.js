@@ -71,6 +71,57 @@ const Footer = () => {
             </a>
           </li>
         </ul>
+        <ul className="footer-links">
+          <li>
+            <a
+              href="https://pitchinteractive.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Pitch Interactive
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/pitch_inc/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @pitch_inc
+            </a>
+          </li>
+        </ul>
+        <ul className="footer-links">
+          <li>
+            <a
+              href="https://www.alpine-mode.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Alpine Mode
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/alpine.mode"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @alpine.mode
+            </a>
+          </li>
+        </ul>
+        <ul className="footer-links">
+          <li>
+            <a
+              href="https://www.instagram.com/gray.pattern/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @gray.pattern
+            </a>
+          </li>
+        </ul>
       </div>
     </footer>
   );
