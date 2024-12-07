@@ -39,44 +39,21 @@
     }
 }
 
-.Address {
-    padding: 0, 1.5em;
-    text-align: left;
-}
-
-@media screen and (max-width: 640px) {
-    .Title {
-        padding: 1em 1.5em;
-    }
-}
-
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 600px) {
     .Footer {
-        padding: 1em;
         height: auto;
+        padding: 0 1em;
 
         .text-section {
-            padding: 1em;
             text-align: left;
         }
 
-        .image-grid {
-
-            padding-top: 4em;
-            padding-bottom: 4em;
-
-            img {
-                width: 80px;
-                height: 80px;
-            }
-        }
-
         .social-media-list {
-            padding: 1em;
+            padding: 0.5em 0;
         }
 
         .footer-links {
-            padding: 1em;
+            padding: 0.5em 0;
         }
     }
 

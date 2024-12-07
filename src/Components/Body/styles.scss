@@ -52,7 +52,6 @@
 
 @media (max-width: 600px) {
     .Body {
-        padding: 1em;
         height: auto;
 
         .text-section {
@@ -61,8 +60,7 @@
         }
 
         .Grid {
-            display: flex;
-            padding: 0 6em;
+            display: none;
         }
     }
 
