@@ -7,7 +7,7 @@
     width: 100%;
 
     .text-section {
-        padding: 4em 4em 3em 4em;
+        padding: 4em 4em 4em 4em;
         text-align: left;
 
         p {
@@ -20,11 +20,9 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        padding: 0;
+        padding: 0 4em;
         margin: 0;
         gap: 0;
-        line-height: 0; // This can help remove unexpected spacing
-        font-size: 0; // Removes potential text-related spacing
     }
 
     .path {
@@ -62,15 +60,9 @@
             text-align: left;
         }
 
-        .image-grid {
-
-            padding-top: 4em;
-            padding-bottom: 4em;
-
-            img {
-                width: 80px;
-                height: 80px;
-            }
+        .Grid {
+            display: flex;
+            padding: 0 6em;
         }
     }
 

@@ -59,13 +59,44 @@ p {
     padding: 10px;
 }
 
-a {
+a,
+.blink-link {
     color: $white;
-    text-decoration: underline;
-    font-weight: $bold;
+    text-decoration: none;
     transition: color 0.3s;
 
     &:hover {
         color: $black;
+    }
+
+    &.blink {
+        animation: blink-animation 0.4s linear 2;
+    }
+}
+
+@keyframes blink-animation {
+
+    0%,
+    100% {
+        color: $white;
+    }
+
+    50% {
+        color: $black;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 1em;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 1.4em;
+    }
+
+    p {
+        font-size: 0.9em;
     }
 }

@@ -17,7 +17,7 @@
         justify-content: center;
         align-items: center;
         list-style-type: none;
-        padding: 2em 4em 2em 4em;
+        padding: 2em 4em 1em 4em;
         margin: 0;
 
         li {
@@ -30,7 +30,7 @@
         justify-content: left;
         align-items: center;
         list-style-type: none;
-        padding: 0.4em 4em;
+        padding: 0.1em 4em;
 
         li {
             padding: 0 0.8em;
@@ -51,7 +51,36 @@
 }
 
 @media screen and (max-width: 414px) {
-    .Title {
-        padding: 1em 1em;
+    .Footer {
+        padding: 1em;
+        height: auto;
+
+        .text-section {
+            padding: 1em;
+            text-align: left;
+        }
+
+        .image-grid {
+
+            padding-top: 4em;
+            padding-bottom: 4em;
+
+            img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        .social-media-list {
+            padding: 1em;
+        }
+
+        .footer-links {
+            padding: 1em;
+        }
+    }
+
+    a {
+        font-size: 1em;
     }
 }
