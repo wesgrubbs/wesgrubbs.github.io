@@ -120,7 +120,7 @@ const Body = () => {
             "https://www.pitchinteractive.com/work/mozillaid/"
           )}{" "}
           and {createLink("iOS applications", "https://countmode.app")}. Skilled
-          in technologies including Swift, React, Node, Python, etc. he tailors
+          in technologies including Swift, React, Node, Python, etc., he tailors
           his process for each project, leveraging over two decades of
           expertise. Beyond work, Wesley is a passionate father, rock climber,
           mountaineer, and alpinist, driven by a deep respect for the
