@@ -74,6 +74,18 @@ a,
     }
 }
 
+button {
+    background-color: $orange;
+    border: 1px solid $white;
+    border-radius: 5px;
+    color: white;
+    padding: 2px 12px;
+    text-align: center;
+    display: inline-block;
+    font-size: 0.6em;
+    font-family: $meta_sans;
+}
+
 @keyframes blink-animation {
 
     0%,

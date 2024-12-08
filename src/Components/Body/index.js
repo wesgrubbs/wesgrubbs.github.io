@@ -1,25 +1,25 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import PatternOne from "./PatternOne";
+import "./styles.scss";
 
 const Body = () => {
+  const [isToggled, setIsToggled] = useState(false);
+
   useEffect(() => {
-    // Wait 1 second, then animate all links
-    const timeoutId = setTimeout(() => {
-      const links = document.querySelectorAll(".blink-link");
+    const links = document.querySelectorAll(".blink-link");
 
-      links.forEach((link) => {
-        link.classList.add("blink");
+    links.forEach((link) => {
+      if (isToggled) {
+        link.style.color = "#2d2926";
+      } else {
+        link.style.color = "";
+      }
+    });
+  }, [isToggled]);
 
-        // Remove the blink class after animation
-        setTimeout(() => {
-          link.classList.remove("blink");
-        }, 800);
-      });
-    }, 3000);
-
-    // Cleanup timeout to prevent memory leaks
-    return () => clearTimeout(timeoutId);
-  }, []);
+  const handleToggle = () => {
+    setIsToggled((prev) => !prev);
+  };
 
   // Reusable link creation function
   const createLink = (text, url) => (
@@ -124,7 +124,10 @@ const Body = () => {
           his process for each project, leveraging over two decades of
           expertise. Beyond work, Wesley is a passionate father, rock climber,
           mountaineer, and alpinist, driven by a deep respect for the
-          environment, equality, and human dignity.
+          environment, equality, and human dignity.{" "}
+          <button onClick={handleToggle}>
+            {isToggled ? "Hide Links" : "Show Links"}
+          </button>
         </p>
       </section>
       <PatternOne />
