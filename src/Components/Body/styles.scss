@@ -1,13 +1,12 @@
-@import '../../global.scss';
+@use '../../styles/variables' as *;
 
 .Body {
     display: flex;
     flex-direction: column;
-    background: $orange;
     width: 100%;
 
     .text-section {
-        padding: 4em 4em 4em 4em;
+        padding: 4em 4em 2em 4em;
         text-align: left;
 
         p {
@@ -26,10 +25,19 @@
     }
 
     .path {
-        stroke: $white;
+        stroke: var(--theme-text-secondary);
         stroke-opacity: 0.6;
         stroke-width: 1;
         scale: 1;
+    }
+
+    a,
+    .blink-link {
+        color: var(--theme-link);
+
+        &:hover {
+            color: var(--theme-link-hover);
+        }
     }
 }
 
@@ -38,10 +46,10 @@
     margin: 0;
     padding: 0;
     line-height: 0;
-    display: block; // Ensures no inline spacing
-    flex: 0 0 auto; // Prevents flex from adding space
-    width: 62px; // Explicitly set width
-    height: 62px; // Explicitly set height
+    display: block;
+    flex: 0 0 auto;
+    width: 62px;
+    height: 62px;
 }
 
 @keyframes dash {

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import PatternOne from "./PatternOne";
+
 import "./styles.scss";
 
 const Body = () => {
@@ -10,7 +11,7 @@ const Body = () => {
 
     links.forEach((link) => {
       if (isToggled) {
-        link.style.color = "#2d2926";
+        link.style.color = "#e14414";
       } else {
         link.style.color = "";
       }
@@ -124,7 +125,8 @@ const Body = () => {
           his process for each project, leveraging over two decades of
           expertise. Beyond work, Wesley is a passionate father, rock climber,
           mountaineer, and alpinist, driven by a deep respect for the
-          environment, equality, and human dignity.{" "}
+          environment, equality, and human dignity.
+          <br />{" "}
           <button onClick={handleToggle}>
             {isToggled ? "Hide Links" : "Show Links"}
           </button>
