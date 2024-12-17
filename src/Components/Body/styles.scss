@@ -1,9 +1,14 @@
 @use '../../styles/variables' as *;
 
 .Body {
+    align-items: center;
     display: flex;
-    flex-direction: column;
+    padding: 0.5em 1.5em;
+    font-size: 1em;
+    font-family: var(--meta-sans);
+    font-weight: var(--regular);
     width: 100%;
+    background-color: var(--theme-background);
 
     .text-section {
         padding: 4em 4em 2em 4em;

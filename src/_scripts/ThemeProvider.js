@@ -3,7 +3,7 @@ import SunCalc from "suncalc";
 
 // Oakland's coordinates
 const OAKLAND_LAT = 37.8044;
-const OAKLAND_LON = -122.2711;
+const OAKLAND_LON = 122.2711;
 
 const ThemeContext = createContext();
 

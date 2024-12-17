@@ -11,9 +11,11 @@ const Body = () => {
 
     links.forEach((link) => {
       if (isToggled) {
-        link.style.color = "#e14414";
+        //link.style.color = "#fff";
+        link.style.textDecoration = "underline";
       } else {
         link.style.color = "";
+        link.style.textDecoration = "none";
       }
     });
   }, [isToggled]);
