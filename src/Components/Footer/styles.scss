@@ -43,12 +43,18 @@
         }
 
     }
+
+    a:hover svg,
+    button:hover svg {
+        fill: var(--theme-text-primary);
+        transition: fill 0.5s;
+    }
 }
 
 @media screen and (max-width: 600px) {
     .Footer {
         height: auto;
-        padding: 0 1em;
+        padding: 0 2.3em;
 
         .text-section {
             text-align: left;

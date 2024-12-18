@@ -1,9 +1,8 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import SunCalc from "suncalc";
 
-// Oakland's coordinates
 const OAKLAND_LAT = 37.8044;
-const OAKLAND_LON = 122.2711;
+const OAKLAND_LON = -122.2711;
 
 const ThemeContext = createContext();
 
@@ -26,6 +25,16 @@ export const ThemeProvider = ({ children }) => {
 
     return () => clearInterval(interval);
   }, []);
+
+  // New effect to handle body class
+  useEffect(() => {
+    document.body.className = isDarkMode ? "theme--dark" : "theme--light";
+
+    // Cleanup function to remove class when component unmounts
+    return () => {
+      document.body.className = "";
+    };
+  }, [isDarkMode]);
 
   return (
     <ThemeContext.Provider value={{ isDarkMode }}>

@@ -1,17 +1,13 @@
 @use '../../styles/variables' as *;
 
 .Body {
-    align-items: center;
     display: flex;
     padding: 0.5em 1.5em;
-    font-size: 1em;
-    font-family: var(--meta-sans);
-    font-weight: var(--regular);
     width: 100%;
     background-color: var(--theme-background);
 
     .text-section {
-        padding: 4em 4em 2em 4em;
+        padding: 4em 2em 0em 4em;
         text-align: left;
 
         p {
@@ -19,42 +15,12 @@
         }
     }
 
-    .image-grid {
+    .image-section {
         display: flex;
-        flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
-        padding: 0 4em;
+        padding: 4em 2em;
         margin: 0;
-        gap: 0;
     }
-
-    .path {
-        stroke: var(--theme-text-secondary);
-        stroke-opacity: 0.6;
-        stroke-width: 1;
-        scale: 1;
-    }
-
-    a,
-    .blink-link {
-        color: var(--theme-link);
-
-        &:hover {
-            color: var(--theme-link-hover);
-        }
-    }
-}
-
-//Animation
-.grid-item {
-    margin: 0;
-    padding: 0;
-    line-height: 0;
-    display: block;
-    flex: 0 0 auto;
-    width: 62px;
-    height: 62px;
 }
 
 @keyframes dash {

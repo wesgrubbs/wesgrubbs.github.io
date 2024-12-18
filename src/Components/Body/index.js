@@ -1,30 +1,8 @@
-import React, { useEffect, useState } from "react";
-import PatternOne from "./PatternOne";
-
+import React from "react";
+import { TimeBasedPattern } from "./../Patterns";
 import "./styles.scss";
 
 const Body = () => {
-  const [isToggled, setIsToggled] = useState(false);
-
-  useEffect(() => {
-    const links = document.querySelectorAll(".blink-link");
-
-    links.forEach((link) => {
-      if (isToggled) {
-        //link.style.color = "#fff";
-        link.style.textDecoration = "underline";
-      } else {
-        link.style.color = "";
-        link.style.textDecoration = "none";
-      }
-    });
-  }, [isToggled]);
-
-  const handleToggle = () => {
-    setIsToggled((prev) => !prev);
-  };
-
-  // Reusable link creation function
   const createLink = (text, url) => (
     <a
       href={url}
@@ -44,13 +22,18 @@ const Body = () => {
           about data-driven, meaningful experiences.
         </h1>
         <p>
-          Based in Oakland, California, Wesley is the founder and Chief Creative
+          Based in Oakland, California, Wesley is the Founder and Chief Creative
           Technologist of{" "}
           {createLink("Pitch Interactive", "https://www.pitchinteractive.com")},
-          a studio renowned for crafting innovative data visualizations since
-          2006. With a Bachelor's in International Economics and a Master's in
-          Information Systems and over 23 years of professional experience,
-          Wesley has collaborated with leading organizations such as{" "}
+          a studio{" "}
+          {createLink(
+            "renowned",
+            "https://www.commarts.com/features/pitch-interactive"
+          )}{" "}
+          for crafting innovative data visualizations since 2006. With a
+          Bachelor's in International Economics and a Master's in Information
+          Systems and over 23 years of professional experience, Wesley has
+          collaborated with leading organizations such as{" "}
           {createLink(
             "Google",
             "https://www.pitchinteractive.com/work/googledebates/"
@@ -125,16 +108,19 @@ const Body = () => {
           and {createLink("iOS applications", "https://countmode.app")}. Skilled
           in technologies including Swift, React, Node, Python, etc., he tailors
           his process for each project, leveraging over two decades of
-          expertise. Beyond work, Wesley is a passionate father, rock climber,
-          mountaineer, and alpinist, driven by a deep respect for the
-          environment, equality, and human dignity.
-          <br />{" "}
-          <button onClick={handleToggle}>
-            {isToggled ? "Hide Links" : "Show Links"}
-          </button>
+          expertise.
+        </p>
+
+        <p>
+          Beyond work, Wesley is a passionate father, rock climber and alpinist
+          and regularly tests prototype equipment for The North Face. He is
+          driven by a deep respect for the environment, equality, and human
+          dignity.
         </p>
       </section>
-      <PatternOne />
+      <section className="image-section">
+        <TimeBasedPattern />
+      </section>
     </div>
   );
 };

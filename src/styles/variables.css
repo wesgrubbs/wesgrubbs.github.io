@@ -49,8 +49,8 @@
   /* Theme Colors - Dark */
   --dark-background: var(--black);
   --dark-text-primary: var(--orange);
-  --dark-text-secondary: var(--grey70);
-  --dark-link: var(--grey70);
+  --dark-text-secondary: var(--grey60);
+  --dark-link: var(--grey60);
   --dark-link-hover: var(--orange);
 }
 
@@ -74,12 +74,15 @@
 
 /* Global Styles */
 body {
-  /*background-color: var(--theme-background);*/
+  background-color: var(--theme-background);
   transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1 {
-  font-size: 1.7em;
+  font-size: 1.8em;
   font-family: var(--meta-serif);
   font-weight: var(--bold);
   color: var(--theme-text-primary);
@@ -96,28 +99,26 @@ p {
   padding: 10px;
 }
 
-a,
-.blink-link {
+a {
   color: var(--theme-link);
   text-decoration: none;
   transition: color 0.3s;
 }
 
-a:hover,
-.blink-link:hover {
+a:hover {
   color: var(--theme-link-hover);
 }
 
 button {
   background-color: var(--theme-background);
-  border: 1px solid var(--theme-text-secondary);
-  border-radius: 5px;
+  border: 0;
   color: var(--theme-text-secondary);
   padding: 0px 8px;
   text-align: center;
   display: inline-block;
   font-size: 0.6em;
   font-family: var(--meta-sans);
+  cursor: pointer;
 }
 
 @media (max-width: 600px) {

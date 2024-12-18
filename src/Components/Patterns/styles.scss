@@ -1,0 +1,22 @@
+@use '../../styles/variables' as *;
+
+.Grid {
+    display: grid;
+
+    .image-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        gap: 0;
+    }
+
+    .path {
+        stroke: var(--theme-text-secondary);
+        stroke-opacity: 0.6;
+        stroke-width: 1;
+        scale: 1;
+    }
+}

@@ -1,20 +1,30 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
 import "./styles.scss";
 
-const Header = () => {
+const Header = ({ isToggled, handleToggle }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <header className="Header">
       <nav>
-        <ul className="nav-links">
+        <button
+          className={`hamburger-menu ${isMenuOpen ? "open" : ""}`}
+          onClick={toggleMenu}
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul className={`nav-links ${isMenuOpen ? "open" : ""}`}>
           <li>
-            <Link to="/work">Selected Work</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact Me</Link>
-          </li>
-          <li>
-            <Link to="/background">Clients</Link>
+            <button onClick={handleToggle} className="toggle-button">
+              {isToggled ? "Hide Links" : "Show Links"}
+            </button>
           </li>
         </ul>
       </nav>
