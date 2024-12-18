@@ -6,24 +6,25 @@ import PatternFour from "./PatternFour";
 
 const patterns = [PatternOne, PatternTwo, PatternThree, PatternFour];
 
-export const getPatternForHour = () => {
-  const hour = new Date().getHours();
-  const patternIndex = Math.floor((hour / 24) * patterns.length);
-  return patterns[patternIndex];
-};
-
 export function TimeBasedPattern() {
-  const [Pattern, setPattern] = useState(() => getPatternForHour());
+  // Instead of switching entire components, just track the index
+  const [patternIndex, setPatternIndex] = useState(() => {
+    const hour = new Date().getHours();
+    return Math.floor((hour / 24) * patterns.length);
+  });
 
   useEffect(() => {
     const updatePattern = () => {
-      setPattern(getPatternForHour());
+      const hour = new Date().getHours();
+      const newIndex = Math.floor((hour / 24) * patterns.length);
+      setPatternIndex(newIndex);
     };
 
     const interval = setInterval(updatePattern, 60000);
-
     return () => clearInterval(interval);
   }, []);
 
-  return <Pattern />;
+  // Render the selected pattern component
+  const SelectedPattern = patterns[patternIndex];
+  return <SelectedPattern />;
 }
