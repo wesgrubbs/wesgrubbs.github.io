@@ -3,8 +3,20 @@ import PatternOne from "./PatternOne";
 import PatternTwo from "./PatternTwo";
 import PatternThree from "./PatternThree";
 import PatternFour from "./PatternFour";
+import PatternFive from "./PatternFive";
+import PatternSix from "./PatternSix";
 
-const patterns = [PatternOne, PatternTwo, PatternThree, PatternFour];
+//Used for testing new patterns
+//const patterns = [PatternFive];
+
+const patterns = [
+  PatternOne,
+  PatternTwo,
+  PatternThree,
+  PatternFour,
+  PatternFive,
+  PatternSix,
+];
 
 export function TimeBasedPattern() {
   // Instead of switching entire components, just track the index
