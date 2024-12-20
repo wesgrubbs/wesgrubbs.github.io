@@ -5,6 +5,7 @@ import "./styles.scss";
 const PatternFive = () => {
   const image1Ref = useRef(null);
   const image2Ref = useRef(null);
+  const containerRef = useRef(null);
 
   useEffect(() => {
     // Initial fade in - 3 seconds
@@ -22,6 +23,12 @@ const PatternFive = () => {
         "overlay",
         "difference",
         "exclusion",
+        "color-dodge",
+        "color-burn",
+        "hard-light",
+        "soft-light",
+        "difference",
+        "exclusion",
         "screen",
       ];
       let currentIndex = 0;
@@ -34,10 +41,8 @@ const PatternFive = () => {
           : image2Ref.current;
         const nextImage = isFirstImage ? image2Ref.current : image1Ref.current;
 
-        // Set up next blend mode
         nextImage.style.mixBlendMode = blendModes[nextIndex];
 
-        // 5-second crossfade animation
         anime
           .timeline()
           .add({
@@ -54,13 +59,12 @@ const PatternFive = () => {
               easing: "easeInOutQuad",
             },
             "-=5000"
-          ); // Start at same time
+          );
 
         currentIndex = nextIndex;
         isFirstImage = !isFirstImage;
       };
 
-      // Start the cycle - total time is 10 seconds (5s transition + 5s pause)
       const intervalId = setInterval(animate, 10000);
       return () => clearInterval(intervalId);
     }
@@ -70,20 +74,23 @@ const PatternFive = () => {
     position: "absolute",
     top: 0,
     left: 0,
-    width: "668px",
-    height: "681px",
+    width: "100%",
+    height: "100%",
+    objectFit: "contain",
   };
 
   return (
-    <section className="Grid">
+    <section
+      className="Grid"
+      ref={containerRef}
+      style={{
+        "--pattern-width": "668",
+        "--pattern-height": "681",
+      }}
+    >
       <div
-        className="image-grid"
-        style={{
-          position: "relative",
-          width: "668px",
-          height: "681px",
-          margin: "0 0 -100px 0",
-        }}
+        className="image-grid absolute-layout"
+        style={{ maxWidth: "668px", margin: "0 auto" }}
       >
         <img
           ref={image1Ref}

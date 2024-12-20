@@ -3,6 +3,8 @@
 .Grid {
     display: grid;
     padding: 0.7em 0 0 0;
+    width: 100%;
+    position: relative; // Add this to ensure proper positioning context
 
     .image-grid {
         display: flex;
@@ -12,12 +14,102 @@
         padding: 0;
         margin: 0;
         gap: 0;
-    }
+        width: 100%;
 
-    .path {
-        stroke: var(--theme-text-secondary);
-        stroke-opacity: 0.6;
-        stroke-width: 1;
-        scale: 1;
+        // For patterns with absolute positioning (like PatternFive/Six)
+        &.absolute-layout {
+            position: relative;
+            height: 0; // Set height to 0
+            padding-bottom: 86%; // Make it square by default
+            width: 100%;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+
+        // For grid-based patterns (like PatternOne)
+        &.grid-layout {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0;
+
+            .grid-item {
+                width: 62px;
+                height: 62px;
+                transition: transform 0.3s ease;
+
+                @media (max-width: 1200px) {
+                    width: 50px;
+                    height: 50px;
+                }
+
+                @media (max-width: 900px) {
+                    width: 40px;
+                    height: 40px;
+                }
+
+                @media (max-width: 600px) {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+
+        svg {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+
+            .path {
+                stroke: var(--theme-text-secondary);
+                stroke-opacity: 0.6;
+                stroke-width: 1;
+            }
+        }
+    }
+}
+
+// Responsive adjustments
+@media (max-width: 1200px) {
+    .Grid {
+        padding: 0.5em 0 0 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .Grid {
+        padding: 0.4em 0 0 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .Grid {
+        padding: 0.3em 0 0 0;
+        max-width: 100%;
+
+        .image-grid {
+            margin: 0 auto;
+        }
+    }
+}
+
+// Pattern-specific aspect ratios
+[data-pattern-dimensions] {
+    .image-grid.absolute-layout {
+        height: 0;
+        padding-bottom: calc(100% * (attr(data-pattern-dimensions) / 1));
+    }
+}
+
+// Add specific handling for PatternSix aspect ratio
+[data-pattern-dimensions="591/792"] {
+    .image-grid.absolute-layout {
+        padding-bottom: calc(100% * (792 / 591));
     }
 }

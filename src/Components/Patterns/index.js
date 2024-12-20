@@ -5,17 +5,19 @@ import PatternThree from "./PatternThree";
 import PatternFour from "./PatternFour";
 import PatternFive from "./PatternFive";
 import PatternSix from "./PatternSix";
+import PatternSeven from "./PatternSeven";
 
 //Used for testing new patterns
-//const patterns = [PatternFive];
+//const patterns = [PatternSeven];
 
 const patterns = [
-  PatternOne,
-  PatternTwo,
   PatternThree,
-  PatternFour,
+  PatternOne,
+  PatternSeven,
   PatternFive,
   PatternSix,
+  PatternTwo,
+  PatternFour,
 ];
 
 export function TimeBasedPattern() {

@@ -6,41 +6,41 @@ const PatternFour = () => {
   const gridRef = useRef(null);
   const [gridConfig, setGridConfig] = useState(calculateGridConfig());
 
-  // Reuse the same configuration and animation logic
   function calculateGridConfig() {
     const width = window.innerWidth;
     if (width > 1200) {
-      return { baseItems: 60, rows: 3 };
+      return {
+        baseItems: 60,
+        rows: 3,
+        svgSize: 62,
+      };
     } else if (width >= 900 && width <= 1200) {
-      return { baseItems: 32, rows: 2 };
+      return {
+        baseItems: 32,
+        rows: 2,
+        svgSize: 50,
+      };
+    } else if (width >= 600 && width < 900) {
+      return {
+        baseItems: 24,
+        rows: 2,
+        svgSize: 40,
+      };
     } else {
-      return { baseItems: 14, rows: 1 };
+      return {
+        baseItems: 14,
+        rows: 1,
+        svgSize: 30,
+      };
     }
   }
 
-  const animatePath = (path) => {
-    const length = path.getTotalLength();
-    path.style.strokeDasharray = length;
-    path.style.strokeDashoffset = length;
-    return anime({
-      targets: path,
-      strokeDashoffset: [
-        { value: length, duration: 0 },
-        { value: 0, duration: 400 },
-      ],
-      easing: "easeOutQuad",
-    });
-  };
-
-  // Reuse the same useEffect hooks
   useEffect(() => {
     const handleResize = () => {
       setGridConfig(calculateGridConfig());
     };
     window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   useEffect(() => {
@@ -76,19 +76,29 @@ const PatternFour = () => {
 
       const parentSvg = item.closest("svg");
       parentSvg.addEventListener("mouseenter", () => {
-        animatePath(item);
+        const length = item.getTotalLength();
+        item.style.strokeDasharray = length;
+        item.style.strokeDashoffset = length;
+        anime({
+          targets: item,
+          strokeDashoffset: [
+            { value: length, duration: 0 },
+            { value: 0, duration: 400 },
+          ],
+          easing: "easeOutQuad",
+        });
       });
     });
   }, [gridConfig]);
 
   return (
     <section className="Grid">
-      <div ref={gridRef} className="image-grid">
+      <div ref={gridRef} className="image-grid grid-layout">
         {Array.from({ length: gridConfig.baseItems }, (_, index) => (
           <svg
             key={index}
-            width="62"
-            height="62"
+            width={gridConfig.svgSize}
+            height={gridConfig.svgSize}
             viewBox="0 0 65 65"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import anime from "animejs/lib/anime.es.js";
 import "./styles.scss";
 
-const PatternSix = () => {
+const PatternSeven = () => {
   const image1Ref = useRef(null);
   const image2Ref = useRef(null);
   const containerRef = useRef(null);
@@ -22,14 +22,15 @@ const PatternSix = () => {
     function startBlendAnimation() {
       const blendModes = [
         "multiply",
-        "overlay",
-        "difference",
+        "darken",
         "color-dodge",
         "color-burn",
         "hard-light",
         "soft-light",
         "difference",
         "exclusion",
+        "overlay",
+        "difference",
         "exclusion",
         "screen",
       ];
@@ -74,20 +75,11 @@ const PatternSix = () => {
     }
   }, []);
 
-  const imageStyles = {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    width: "100%",
-    height: "80%",
-    objectFit: "contain",
-  };
-
   return (
     <section
       className="Grid"
       ref={containerRef}
-      data-pattern-dimensions="591/792"
+      data-pattern-dimensions="591/708"
     >
       <div
         className="image-grid absolute-layout"
@@ -95,20 +87,30 @@ const PatternSix = () => {
       >
         <img
           ref={image1Ref}
-          src="./images/pattern_arrow_left.png"
+          src="./images/pattern_offset_circles.png"
           alt="Pattern"
           style={{
-            ...imageStyles,
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "contain",
             opacity: 0,
             mixBlendMode: "multiply",
           }}
         />
         <img
           ref={image2Ref}
-          src="./images/pattern_arrow_left.png"
+          src="./images/pattern_offset_circles.png"
           alt="Pattern"
           style={{
-            ...imageStyles,
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "contain",
             opacity: 0,
           }}
         />
@@ -117,4 +119,4 @@ const PatternSix = () => {
   );
 };
 
-export default PatternSix;
+export default PatternSeven;

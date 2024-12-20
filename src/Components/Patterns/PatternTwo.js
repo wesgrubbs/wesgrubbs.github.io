@@ -1,105 +1,101 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import anime from "animejs/lib/anime.es.js";
 import "./styles.scss";
 
 const PatternTwo = () => {
-  const gridRef = useRef(null);
-  const [gridConfig, setGridConfig] = useState(calculateGridConfig());
+  const svgRef = useRef(null);
 
-  // Reuse the same configuration and animation logic
-  function calculateGridConfig() {
-    const width = window.innerWidth;
-    if (width > 1200) {
-      return { baseItems: 60, rows: 3 };
-    } else if (width >= 900 && width <= 1200) {
-      return { baseItems: 32, rows: 2 };
-    } else {
-      return { baseItems: 14, rows: 1 };
-    }
-  }
+  // Generate random circles with their properties
+  const circles = Array.from({ length: 20 }, () => {
+    const size = Math.random() * 20 + 10; // Random size between 10 and 30
+    const radius = size / 2;
 
-  const animatePath = (path) => {
-    const length = path.getTotalLength();
-    path.style.strokeDasharray = length;
-    path.style.strokeDashoffset = length;
-    return anime({
-      targets: path,
-      strokeDashoffset: [
-        { value: length, duration: 0 },
-        { value: 0, duration: 400 },
-      ],
-      easing: "easeOutQuad",
-    });
-  };
+    // Adjust position range to account for radius and prevent edge clipping
+    const x = radius + Math.random() * (100 - 2 * radius);
+    const y = radius + Math.random() * (100 - 2 * radius);
 
-  // Reuse the same useEffect hooks
-  useEffect(() => {
-    const handleResize = () => {
-      setGridConfig(calculateGridConfig());
+    const delay = Math.random() * 2000; // Random delay up to 2 seconds
+    const duration = Math.random() * 10000 + 100000; // Random duration between 1-2 seconds
+    const rotation = Math.random() * 360; // Random rotation angle
+    const isClockwise = Math.random() < 0.5; // Random direction
+
+    return {
+      size,
+      x,
+      y,
+      delay,
+      duration,
+      rotation,
+      isClockwise,
     };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  });
 
   useEffect(() => {
-    const gridItems = gridRef.current.querySelectorAll(".path");
-    const gridContainer = gridRef.current;
-    const containerRect = gridContainer.getBoundingClientRect();
-    const centerX = containerRect.width / 2;
-    const centerY = containerRect.height / 2;
+    const circlePaths = svgRef.current?.querySelectorAll(".circle-path");
+    if (!circlePaths) return;
 
-    gridItems.forEach((item, index) => {
-      const itemRect = item.getBoundingClientRect();
-      const itemCenterX =
-        itemRect.left - containerRect.left + itemRect.width / 2;
-      const itemCenterY =
-        itemRect.top - containerRect.top + itemRect.height / 2;
-      const distanceFromCenter = Math.sqrt(
-        Math.pow(itemCenterX - centerX, 2) + Math.pow(itemCenterY - centerY, 2)
-      );
-      const length = item.getTotalLength();
+    circlePaths.forEach((circle, index) => {
+      const circleData = circles[index];
 
-      item.style.strokeDasharray = length;
-      item.style.strokeDashoffset = length;
+      // Calculate the circle's circumference
+      const radius = circleData.size / 2;
+      const circumference = 2 * Math.PI * radius;
 
+      // Initial setup - make circle invisible
+      circle.style.strokeDasharray = circumference;
+      circle.style.strokeDashoffset = circumference;
+
+      // Apply rotation
+      circle.style.transform = `rotate(${circleData.rotation}deg)`;
+      circle.style.transformOrigin = `${circleData.x}% ${circleData.y}%`;
+
+      // Animate the drawing of the circle
       anime({
-        targets: item,
-        strokeDashoffset: [
-          { value: length, duration: 0 },
-          { value: 0, duration: 400 },
-        ],
-        delay: distanceFromCenter * 5,
-        easing: "easeOutQuad",
-      });
-
-      const parentSvg = item.closest("svg");
-      parentSvg.addEventListener("mouseenter", () => {
-        animatePath(item);
+        targets: circle,
+        strokeDashoffset: [circumference, 0],
+        duration: circleData.duration,
+        delay: circleData.delay,
+        easing: "easeInOutSine",
+        direction: circleData.isClockwise ? "normal" : "reverse",
+        complete: () => {
+          // Ensure circle is completely drawn
+          circle.style.strokeDasharray = "none";
+          circle.style.strokeDashoffset = 0;
+        },
       });
     });
-  }, [gridConfig]);
+  }, []);
 
   return (
     <section className="Grid">
-      <div ref={gridRef} className="image-grid">
-        {Array.from({ length: gridConfig.baseItems }, (_, index) => (
-          <svg
-            key={index}
-            width="62"
-            height="62"
-            viewBox="0 0 65 65"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="grid-item"
-            style={{
-              transform: `rotate(${Math.floor(Math.random() * 4) * 90}deg)`,
-            }}
-          >
-            <path className="path" d="M1 1h63v63H1z M1 32h63 M32 1v63" />
-          </svg>
-        ))}
+      <div className="image-grid">
+        <svg
+          ref={svgRef}
+          viewBox="0 0 100 100"
+          width="100%"
+          height="100%"
+          style={{ maxWidth: "800px", aspectRatio: "1/1" }}
+          preserveAspectRatio="xMidYMid meet"
+        >
+          {circles.map((circle, index) => (
+            <circle
+              key={index}
+              className="circle-path"
+              cx={`${circle.x}%`}
+              cy={`${circle.y}%`}
+              r={circle.size / 2}
+              fill="none"
+              stroke="var(--theme-text-secondary)"
+              strokeWidth="0.15"
+              strokeLinecap="round"
+              opacity={0.8}
+              style={{
+                strokeDasharray: Math.PI * circle.size,
+                strokeDashoffset: Math.PI * circle.size,
+              }}
+            />
+          ))}
+        </svg>
       </div>
     </section>
   );

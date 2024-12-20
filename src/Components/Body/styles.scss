@@ -2,22 +2,70 @@
 
 .Body {
     display: flex;
+    flex-direction: row;
     padding: 0.5em 1.5em;
+    width: 100%;
+    box-sizing: border-box;
 
     .text-section {
         padding: 4em 2em 0em 4em;
         text-align: left;
+        flex: 1;
 
         p {
             text-align: justify;
+            max-width: 100%;
         }
     }
 
     .image-section {
         display: flex;
         justify-content: center;
+        align-items: flex-start;
         padding: 4em 2em;
         margin: 0;
+        flex: 1;
+
+        .Grid {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+
+            .image-grid {
+                position: relative;
+                width: 100%;
+                margin: 0;
+
+                // For grid-based patterns
+                &.grid-layout {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 0;
+                }
+
+                // For image-based patterns
+                &.absolute-layout {
+                    position: relative;
+                    width: 100%;
+
+                    &::before {
+                        content: '';
+                        display: block;
+                        padding-top: calc(var(--pattern-height, 100%) / var(--pattern-width, 100%) * 100%);
+                    }
+
+                    img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -27,22 +75,40 @@
     }
 }
 
-@media (max-width: 600px) {
+// Tablet breakpoint
+@media (max-width: 1024px) {
     .Body {
-        height: auto;
-        padding: 0em 0.1em;
+        padding: 0.5em 1em;
 
         .text-section {
-            padding: 0em;
-            text-align: left;
+            padding: 2em 2em 0em 2em;
         }
 
         .image-section {
-            display: none;
+            padding: 2em 2em;
+        }
+    }
+}
+
+// Mobile breakpoint
+@media (max-width: 800px) {
+    .Body {
+        flex-direction: column;
+        height: auto;
+        padding: 1em 1.5em 1em 0.5em;
+
+        .text-section {
+            padding: 1em 0.5em;
+            width: 100%;
         }
 
-        .Grid {
-            display: none;
+        .image-section {
+            padding: 1em 0.5em;
+            width: 100%;
+
+            .Grid {
+                margin: 0 auto;
+            }
         }
     }
 
