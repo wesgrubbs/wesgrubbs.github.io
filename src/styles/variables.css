@@ -3,8 +3,9 @@
   --blue: #295496;
   --white: #fff;
   --lightgrey: #f8f8f8;
-  --black: #2d2926;
+  --black: #03191e;
   --orange: #e14414;
+  --yellow: #ffba08;
 
   /* Shades of Grey */
   --grey100: #2d2926;
@@ -48,10 +49,10 @@
 
   /* Theme Colors - Dark */
   --dark-background: var(--black);
-  --dark-text-primary: var(--orange);
+  --dark-text-primary: var(--yellow);
   --dark-text-secondary: var(--grey60);
   --dark-link: var(--grey60);
-  --dark-link-hover: var(--orange);
+  --dark-link-hover: var(--yellow);
 }
 
 /* Light theme class */
@@ -82,7 +83,7 @@ body {
 }
 
 h1 {
-  font-size: 1.8em;
+  font-size: 2em;
   font-family: var(--meta-serif);
   font-weight: var(--bold);
   color: var(--theme-text-primary);
@@ -128,7 +129,7 @@ button {
   }
 
   h1 {
-    font-size: 1.4em;
+    font-size: 1.6em;
   }
 
   p {
