@@ -1,0 +1,15 @@
+<svg width="600" height="600" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @media (prefers-color-scheme: dark) {
+      .background { fill: #03191E; }
+      .arrows { fill: #FFBA08; }
+    }
+    @media (prefers-color-scheme: light) {
+      .background { fill: #FFBA08; }
+      .arrows { fill: #03191E; }
+    }
+  </style>
+  <rect class="background" width="600" height="600" rx="120"/>
+  <path class="arrows" d="M68.9651 269.068L68.7103 312.63L163.732 217.609L163.732 413.766L196.085 414.021L196.085 217.863L290.852 312.63L290.852 268.813L180.036 157.997L68.9651 269.068Z"/>
+  <path class="arrows" d="M309.369 330.536L309.114 286.974L404.109 381.986L404.109 185.829L436.489 185.583L436.489 381.741L531.256 286.974L531.256 330.791L420.44 441.607L309.369 330.536Z"/>
+</svg>
