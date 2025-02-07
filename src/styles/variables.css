@@ -44,7 +44,7 @@
   --light-text-primary: var(--black);
   --light-text-secondary: var(--black);
   --light-link: var(--black);
-  --light-link-hover: var(--black);
+  --light-link-hover: var(--red);
 
   /* Theme Colors - Dark */
   --dark-background: var(--black);

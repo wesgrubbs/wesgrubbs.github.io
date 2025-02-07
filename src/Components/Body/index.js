@@ -49,7 +49,11 @@ const Body = () => {
             "https://decodinghate.taaf.org/"
           )}
           , {createLink("SPLC", "https://www.splcenter.org/flyering-map")},{" "}
-          {createLink("eBay", "https://www.wesleygrubbs.com/ebayqx")},{" "}
+          {createLink(
+            "eBay",
+            "https://www.pitchinteractive.com/work/ebayanalytics/"
+          )}
+          ,{" "}
           {createLink(
             "GE",
             "https://www.pitchinteractive.com/work/norfolksouthernpulse/"
@@ -80,12 +84,7 @@ const Body = () => {
             "science",
             "https://www.pitchinteractive.com/work/sciamcarboncapture/"
           )}
-          ,{" "}
-          {createLink(
-            "education",
-            "https://www.bostonpublicschools.org/cms/lib/MA01906464/Centricity/domain/184/budgetvisualization/index.html#/"
-          )}
-          ,{" "}
+          , {createLink("education", "https://web.ravenswoodschools.org/")},{" "}
           {createLink(
             "entertainment",
             "https://www.pitchinteractive.com/work/sharkbump/"
@@ -99,8 +98,10 @@ const Body = () => {
           human-centered design.
         </p>
         <p>
-          An ambidextrous creative technologist, Wesley bridges design and code,
-          crafting data visualizations and UI/UX systems to{" "}
+          An ambidextrous creative technologist, Wesley bridges{" "}
+          {createLink("design", "https://www.behance.net/wesleygrubbs")} and{" "}
+          {createLink("code", "https://github.com/wesgrubbs")}, crafting data
+          visualizations and UI/UX systems to{" "}
           {createLink(
             "brand identities",
             "https://www.pitchinteractive.com/work/mozillaid/"
@@ -110,9 +111,9 @@ const Body = () => {
             "iOS applications",
             "https://apps.apple.com/us/app/inflatacart/id6740125695?platform=iphone"
           )}
-          . Skilled in technologies including Swift, React, Node, Python, etc.,
-          he tailors his process for each project, leveraging over two decades
-          of expertise.
+          . Skilled in technologies including Swift, React, Node, and Python, he
+          tailors his process for each project, leveraging over two decades of
+          expertise.
         </p>
 
         <p>
