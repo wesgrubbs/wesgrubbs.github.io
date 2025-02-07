@@ -3,9 +3,10 @@
   --blue: #295496;
   --white: #fff;
   --lightgrey: #f8f8f8;
-  --black: #03191e;
+  --black: #131313;
   --orange: #e14414;
-  --yellow: #ffba08;
+  --yellow: #fdaa08;
+  --red: #fb3735;
 
   /* Shades of Grey */
   --grey100: #2d2926;
@@ -32,8 +33,6 @@
   --red80: #df4242;
   --red70: #ff9191;
 
-  --yellow: #ffb000;
-
   /* Fonts */
   --meta-sans: "Meta Sans", "Fira Sans", sans-serif;
   --meta-serif: "Meta Serif", serif;
@@ -41,18 +40,18 @@
   --bold: 700;
 
   /* Theme Colors - Light */
-  --light-background: var(--orange);
+  --light-background: var(--yellow);
   --light-text-primary: var(--black);
-  --light-text-secondary: var(--white);
-  --light-link: var(--white);
+  --light-text-secondary: var(--black);
+  --light-link: var(--black);
   --light-link-hover: var(--black);
 
   /* Theme Colors - Dark */
   --dark-background: var(--black);
   --dark-text-primary: var(--yellow);
-  --dark-text-secondary: var(--grey60);
-  --dark-link: var(--grey60);
-  --dark-link-hover: var(--yellow);
+  --dark-text-secondary: var(--yellow);
+  --dark-link: var(--yellow);
+  --dark-link-hover: var(--red);
 }
 
 /* Light theme class */

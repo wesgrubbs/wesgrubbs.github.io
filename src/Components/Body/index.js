@@ -105,10 +105,14 @@ const Body = () => {
             "brand identities",
             "https://www.pitchinteractive.com/work/mozillaid/"
           )}{" "}
-          and {createLink("iOS applications", "https://countmode.app")}. Skilled
-          in technologies including Swift, React, Node, Python, etc., he tailors
-          his process for each project, leveraging over two decades of
-          expertise.
+          and{" "}
+          {createLink(
+            "iOS applications",
+            "https://apps.apple.com/us/app/inflatacart/id6740125695?platform=iphone"
+          )}
+          . Skilled in technologies including Swift, React, Node, Python, etc.,
+          he tailors his process for each project, leveraging over two decades
+          of expertise.
         </p>
 
         <p>
