@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Theme Colors - Light */
+  --theme-background: theme("colors.primary-yellow");
+  --theme-text-primary: theme("colors.primary-black");
+  --theme-text-secondary: theme("colors.primary-black");
+  --theme-link: theme("colors.primary-black");
+  --theme-link-hover: theme("colors.primary-red");
+}
+
+.dark {
+  --theme-background: theme("colors.primary-black");
+  --theme-text-primary: theme("colors.primary-yellow");
+  --theme-text-secondary: theme("colors.primary-yellow");
+  --theme-link: theme("colors.primary-yellow");
+  --theme-link-hover: theme("colors.primary-red");
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--theme-background)] transition-colors duration-300;
+  }
+
+  h1 {
+    @apply font-meta-serif text-[2.2em] font-bold text-[var(--theme-text-primary)] 
+           -mb-[6px] py-0 px-4;
+  }
+
+  h2 {
+    @apply font-meta-serif-italic text-[1.4em] font-normal text-[var(--theme-text-primary)]
+           opacity-50 italic py-0 px-4 pb-5;
+  }
+
+  p {
+    @apply font-meta-sans text-base text-[var(--theme-text-secondary)] p-[2px];
+  }
+
+  a {
+    @apply text-[var(--theme-link)] no-underline transition-colors duration-300
+           hover:text-[var(--theme-link-hover)];
+  }
+
+  button {
+    @apply bg-[var(--theme-background)] border-0 text-[var(--theme-text-secondary)]
+           px-2 text-center inline-block text-[0.6em] font-meta-sans cursor-pointer;
+  }
+
+  @media (max-width: 600px) {
+    body {
+      @apply p-4;
+    }
+
+    h1 {
+      @apply text-[1.6em];
+    }
+  }
+}

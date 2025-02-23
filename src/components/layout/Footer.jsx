@@ -1,10 +1,7 @@
-for file in $(find src/components -name "*.jsx"); do
-  filename=$(basename "$file" .jsx)
-  echo "export default function ${filename}() {
+export default function Footer() {
   return (
-    <div>
-      <h1>${filename}</h1>
-    </div>
-  )
-}" > "$file"
-done
+    <footer className="py-8 bg-gray-900 text-white">
+      {/* Footer content will go here */}
+    </footer>
+  );
+}
