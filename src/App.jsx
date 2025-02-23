@@ -1,4 +1,3 @@
-//import { useState } from "react";
 import Hero from "./components/sections/Hero";
 import Work from "./components/sections/Work";
 import Play from "./components/sections/Play";
