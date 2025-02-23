@@ -1,17 +1,9 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-// Determine the base URL based on the deployment environment
-const getBase = () => {
-  if (process.env.DEPLOY_TARGET === "custom") {
-    return "/"; // For wesleygrubbs.com
-  }
-  return "/wesgrubbs.github.io/"; // For GitHub Pages
-};
-
 export default defineConfig({
   plugins: [react()],
-  base: getBase(),
+  base: "/",
   build: {
     outDir: "dist",
     assetsDir: "assets",

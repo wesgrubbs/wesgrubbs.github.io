@@ -59,10 +59,12 @@ const Work = () => {
 
   return (
     <section id="work" className="py-24 px-6">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="font-meta-serif text-4xl mb-12">Selected Work</h2>
+      <div className="max-w-6xl mx-auto">
+        <h2 className="font-meta-serif text-3xl mb-6 text-black">
+          Selected Work
+        </h2>
 
-        <div className="divide-y divide-grey-60">
+        <div>
           {workProjects.map((project) => (
             <ProjectCard
               key={project.id}

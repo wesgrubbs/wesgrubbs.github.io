@@ -1,10 +1,59 @@
+import { useState, useEffect } from "react";
+
+const ProtectedEmail = () => {
+  const [email, setEmail] = useState("");
+
+  useEffect(() => {
+    // Assemble email parts
+    const username = ["w", "e", "s"].join("");
+    const domain = [
+      "p",
+      "i",
+      "t",
+      "c",
+      "h",
+      "i",
+      "n",
+      "t",
+      "e",
+      "r",
+      "a",
+      "c",
+      "t",
+      "i",
+      "v",
+      "e",
+    ].join("");
+    const tld = ["c", "o", "m"].join("");
+    setEmail(`${username}@${domain}.${tld}`);
+  }, []);
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    window.location.href = `mailto:${email}`;
+  };
+
+  return (
+    <span
+      onClick={handleClick}
+      className="font-meta-sans text-grey-70 hover:text-white transition-colors duration-300 cursor-pointer"
+      aria-label="Contact email"
+    >
+      {email || "Contact me"}
+    </span>
+  );
+};
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
     { label: "LinkedIn", href: "https://linkedin.com/in/wesleygrubbs" },
     { label: "GitHub", href: "https://github.com/wesgrubbs" },
-    { label: "Twitter", href: "https://twitter.com/wesleygrubbs" },
+    {
+      label: "BlueSky",
+      href: "https://bsky.app/profile/wesgrubbs.bsky.social",
+    },
   ];
 
   return (
@@ -14,12 +63,7 @@ const Footer = () => {
           {/* Contact Info */}
           <div>
             <h3 className="font-meta-serif text-xl mb-4">Contact</h3>
-            <a
-              href="mailto:wesley@pitchinteractive.com"
-              className="font-meta-sans text-grey-70 hover:text-white transition-colors duration-300"
-            >
-              wesley@pitchinteractive.com
-            </a>
+            <ProtectedEmail />
           </div>
 
           {/* Social Links */}

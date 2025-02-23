@@ -16,10 +16,10 @@ const ProjectDetail = ({ project, onClose }) => {
   if (!project) return null;
 
   return (
-    <div className="fixed inset-0 bg-white z-50 overflow-y-auto">
+    <div className="fixed inset-0 bg-primary-yellow dark:bg-primary-black z-50 overflow-y-auto">
       <div className="min-h-screen">
         {/* Header */}
-        <div className="sticky top-0 bg-white border-b border-grey-60 z-10">
+        <div className="sticky top-0 bg-primary-yellow dark:bg-primary-black z-10">
           <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div>
               <h2 className="font-meta-serif text-2xl">{project.title}</h2>

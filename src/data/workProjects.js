@@ -4,39 +4,35 @@ export const workProjects = [
     title: "InflataCart",
     subtitle: "An iOS app that ties inflation data with groceries",
     blurb:
-      "An interactive platform making global development data accessible through custom visualization tools and intuitive exploration interfaces.",
+      "With over thousands of downloads and national media coverage, InflataCart cuts through economic jargon to show you how inflation affects your daily shopping, letting you track price changes of common grocery items over time without the noise of news headlines. The app provides a clear, personalized view of how economic shifts impact your wallet, helping you make smarter shopping decisions and better understand how economic trends impact you directly.",
     year: "2025",
-    description:
-      "Led the development of an interactive platform that visualizes global human development indicators, making complex datasets accessible to policymakers and the public. The project features custom-built data visualization components and an intuitive interface for exploring trends across countries and time periods.",
-    challenge:
-      "Transform complex global development data into an accessible, interactive platform that enables policymakers and the public to understand and explore human development trends across countries and time periods.",
-    solution:
-      "Developed a comprehensive data visualization platform that combines intuitive navigation with powerful analytical tools. Created custom visualization components that make it easy to compare indicators across countries and track changes over time.",
-    image: "/path/to/undp-image.jpg",
+    description: "Coming soon.",
+    challenge: "Coming soon.",
+    solution: "Coming soon.",
+    image: "/images/work/inflatacart_3screens.webp",
     roles: [
-      "Project Lead",
-      "Data Visualization",
-      "Frontend Development",
-      "UX Design",
+      "Product design",
+      "Native app development (iOS, Swift)",
+      "Data Analysis (Pythong)",
+      "Logo design",
     ],
-    url: "https://example.com/undp-project",
+    url: "https://apps.apple.com/us/app/inflatacart/id6740125695?platform=iphone",
   },
   {
-    id: "google-news",
-    title: "Google News Initiative",
-    subtitle: "Journalism Data Tools",
+    id: "ebay-qsx",
+    title: "eBay QuickStrike (QSX)",
+    subtitle: "Globally used internal analytics dashboards for deep insights",
     blurb:
-      "A toolkit empowering journalists to create compelling data stories through automated visualization and analysis tools.",
-    year: "2022",
-    description:
-      "Developed a suite of data visualization tools for journalists, enabling them to create compelling visual stories from complex datasets. The project included both web-based and downloadable tools, with a focus on ease of use and visual impact.",
-    challenge:
-      "Create intuitive tools that allow journalists without technical backgrounds to transform their data into compelling visual stories quickly and effectively.",
-    solution:
-      "Built a suite of web-based and downloadable tools with streamlined workflows and pre-designed templates, making it easy for journalists to create professional data visualizations without coding knowledge.",
-    image: "/path/to/google-news-image.jpg",
-    roles: ["Technical Architecture", "Data Visualization", "Tool Development"],
-    url: "https://example.com/google-news",
+      "Helping teams across eBay make data-driven decisions, these intuitive analytics dashboards transformed complex business metrics into clear insights for employees at all levels. Pitch Interactive’s custom visualizations made it easy to track and understand everything from financial forecasts and cross-border transactions to device usage patterns and real-time market trends, showcasing Pitch's ability to turn intricate data into actionable business intelligence.",
+    year: "2017-2022",
+    description: "Content coming soon.",
+    challenge: "Content coming soon.",
+    solution: "Content coming soon.",
+    image: "/images/work/ebay_qsx_sankey.webp",
+    roles: [
+      "Vision and team leadership, Data Visualization design, UI/UX design, Project Management, React/D3 development",
+    ],
+    url: "https://www.pitchinteractive.com/work/ebayanalytics/",
   },
 ];
 

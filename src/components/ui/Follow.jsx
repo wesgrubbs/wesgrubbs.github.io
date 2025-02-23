@@ -1,5 +1,3 @@
-import React from "react";
-
 const Follow = () => {
   const revealEmail = (e) => {
     e.preventDefault();
@@ -20,7 +18,7 @@ const Follow = () => {
         <li>
           <button
             onClick={revealEmail}
-            className="inline-flex hover:text-primary-red transition-colors duration-300"
+            className="inline-flex hover:text-primary-red transition-colors duration-300 -mx-2"
             aria-label="Reveal email address"
           >
             <svg
