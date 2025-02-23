@@ -8,6 +8,13 @@ const ProjectCard = ({ project, onClick }) => {
     >
       <div className="flex flex-col gap-2">
         <div className="flex items-start justify-between">
+          <div className="w-16 h-16 bg-grey-60 rounded-lg overflow-hidden">
+            <img
+              src={project.image}
+              alt={project.title}
+              className="object-cover w-full h-full"
+            />
+          </div>
           <div className="flex-grow">
             <h3 className="font-meta-serif text-xl group-hover:text-primary-red transition-colors duration-300">
               {project.title}
@@ -32,6 +39,7 @@ const ProjectCard = ({ project, onClick }) => {
 ProjectCard.propTypes = {
   project: PropTypes.shape({
     title: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
     subtitle: PropTypes.string.isRequired,
     blurb: PropTypes.string.isRequired,
     year: PropTypes.string.isRequired,

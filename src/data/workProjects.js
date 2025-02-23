@@ -1,11 +1,11 @@
 export const workProjects = [
   {
-    id: "undp-hdr",
-    title: "UNDP Human Development Report",
-    subtitle: "Interactive Data Visualization Platform",
+    id: "inflatacart",
+    title: "InflataCart",
+    subtitle: "An iOS app that ties inflation data with groceries",
     blurb:
       "An interactive platform making global development data accessible through custom visualization tools and intuitive exploration interfaces.",
-    year: "2023",
+    year: "2025",
     description:
       "Led the development of an interactive platform that visualizes global human development indicators, making complex datasets accessible to policymakers and the public. The project features custom-built data visualization components and an intuitive interface for exploring trends across countries and time periods.",
     challenge:

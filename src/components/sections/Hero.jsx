@@ -1,4 +1,5 @@
 import Follow from "../ui/Follow";
+import IsometricSquares from "../shapes/IsometricSquares";
 
 const Hero = () => {
   const createLink = (text, url) => (
@@ -36,7 +37,7 @@ const Hero = () => {
         </p>
 
         <div className="mt-8 w-72">
-          {/* TimeBasedPattern component placeholder */}
+          <IsometricSquares />
         </div>
 
         <div className="mt-8">

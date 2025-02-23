@@ -22,7 +22,7 @@ const Navigation = ({ activeSection }) => {
           key={item.label}
           href={item.href}
           onClick={(e) => handleClick(e, item.href)}
-          className={`font-meta-sans text-base text-primary-black dark:text-primary-yellow 
+          className={`font-meta-serif text-base text-primary-black dark:text-primary-yellow 
             hover:text-primary-red dark:hover:text-primary-red transition-colors duration-300 
             ${
               activeSection === item.section
@@ -69,7 +69,7 @@ const MobileMenu = ({ isOpen, onClose, activeSection }) => {
               key={section}
               href={`#${section}`}
               onClick={(e) => handleClick(e, `#${section}`)}
-              className={`font-meta-sans text-2xl text-primary-black dark:text-primary-yellow 
+              className={`font-meta-serif text-2xl text-primary-black dark:text-primary-yellow 
                 hover:text-primary-red dark:hover:text-primary-red capitalize
                 ${
                   activeSection === section
