@@ -14,15 +14,15 @@ const Hero = () => {
   );
 
   return (
-    <div className="min-h-screen flex px-6 pt-24">
-      <div className="w-full lg:w-1/2 mt-8">
-        <h1 className="font-meta-serif text-4xl lg:text-5xl font-bold pb-2 ml-[-14px]">
+    <div id="hero" className="min-h-screen flex px-6 pt-24">
+      <div className="w-full lg:w-2/3 mt-8">
+        <h1 className="font-meta-serif text-4xl lg:text-4xl font-bold pb-2 ml-[-14px]">
           Wesley Grubbs
         </h1>
-        <h2 className="font-meta-serif-italic text-xl lg:text-2xl font-normal opacity-50 pb-5 ml-[-12px]">
+        <h2 className="font-meta-serif-italic text-xl lg:text-xl font-normal opacity-50 pb-5 ml-[-12px]">
           Information Design Technologist
         </h2>
-        <p className="font-meta-sans text-base lg:text-lg">
+        <p className="font-meta-sans text-base sm:text-sm">
           I transform complex data into meaningful experiences, operating at the
           intersection of design and technology. As the founder of{" "}
           {createLink("Pitch Interactive", "https://www.pitchinteractive.com")},
