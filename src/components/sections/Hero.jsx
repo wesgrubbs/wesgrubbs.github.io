@@ -14,7 +14,7 @@ const Hero = () => {
   );
 
   return (
-    <div className="min-h-screen flex px-6">
+    <div className="min-h-screen flex px-6 pt-24">
       <div className="w-full lg:w-1/2 mt-8">
         <h1 className="font-meta-serif text-4xl lg:text-5xl font-bold pb-2 ml-[-14px]">
           Wesley Grubbs
