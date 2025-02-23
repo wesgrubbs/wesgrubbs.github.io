@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
+import PropTypes from "prop-types";
 
 const ProjectDetail = ({ project, onClose }) => {
   useEffect(() => {
@@ -120,6 +121,21 @@ const ProjectDetail = ({ project, onClose }) => {
       </div>
     </div>
   );
+};
+
+ProjectDetail.propTypes = {
+  project: PropTypes.shape({
+    image: PropTypes.string.isRequired,
+    url: PropTypes.string,
+    roles: PropTypes.arrayOf(PropTypes.string).isRequired,
+    challenge: PropTypes.string,
+    solution: PropTypes.string,
+    title: PropTypes.string.isRequired,
+    subtitle: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    year: PropTypes.string.isRequired,
+  }).isRequired,
+  onClose: PropTypes.func.isRequired,
 };
 
 export default ProjectDetail;

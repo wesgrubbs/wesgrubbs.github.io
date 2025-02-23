@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import useScrollSection from "../../hooks/useScrollSection";
-import { useTheme } from "../../components/ThemeProvider";
 import { scrollToSection } from "../../utils/animations";
 
 const Navigation = ({ activeSection }) => {
@@ -37,11 +37,14 @@ const Navigation = ({ activeSection }) => {
   );
 };
 
+Navigation.propTypes = {
+  activeSection: PropTypes.string,
+};
+
 const MobileMenu = ({ isOpen, onClose, activeSection }) => {
   const handleClick = (e, href) => {
     e.preventDefault();
     onClose();
-    // Small delay to allow menu close animation
     setTimeout(() => {
       scrollToSection(href);
     }, 300);
@@ -83,11 +86,16 @@ const MobileMenu = ({ isOpen, onClose, activeSection }) => {
   );
 };
 
+MobileMenu.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+  activeSection: PropTypes.string,
+};
+
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const activeSection = useScrollSection();
-  const { isDarkMode } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {

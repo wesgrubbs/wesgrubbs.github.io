@@ -1,5 +1,5 @@
-import React from "react";
 import { infoContent } from "../../data/infoContent";
+import PropTypes from "prop-types";
 
 const InfoSection = ({ title, items }) => {
   return (
@@ -63,6 +63,46 @@ const InfoSection = ({ title, items }) => {
       </div>
     </div>
   );
+};
+
+// Define shape for each type of item
+const mediaItemShape = PropTypes.shape({
+  title: PropTypes.string.isRequired,
+  publication: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+});
+
+const workshopTalkItemShape = PropTypes.shape({
+  title: PropTypes.string.isRequired,
+  venue: PropTypes.string,
+  event: PropTypes.string,
+  location: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+});
+
+const recognitionItemShape = PropTypes.shape({
+  title: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  award: PropTypes.string.isRequired,
+  project: PropTypes.string.isRequired,
+});
+
+const yearGroupShape = PropTypes.shape({
+  year: PropTypes.string.isRequired,
+  items: PropTypes.arrayOf(
+    PropTypes.oneOfType([
+      mediaItemShape,
+      workshopTalkItemShape,
+      recognitionItemShape,
+    ])
+  ).isRequired,
+});
+
+InfoSection.propTypes = {
+  title: PropTypes.oneOf(["In the Media", "Workshops", "Talks", "Recognition"])
+    .isRequired,
+  items: PropTypes.arrayOf(yearGroupShape).isRequired,
 };
 
 const Info = () => {

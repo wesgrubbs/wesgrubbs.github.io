@@ -1,4 +1,3 @@
-import React from "react";
 import Follow from "../ui/Follow";
 
 const Hero = () => {
@@ -26,7 +25,7 @@ const Hero = () => {
           I transform complex data into meaningful experiences, operating at the
           intersection of design and technology. As the founder of{" "}
           {createLink("Pitch Interactive", "https://www.pitchinteractive.com")},
-          I've spent over two decades crafting visualization tools and
+          I&apos;ve spent over two decades crafting visualization tools and
           data-driven applications for organizations like Google, eBay, and
           UNDP. My expertise spans from enterprise analytics dashboards to
           mobile and watch applications, with a focus on creating intuitive
