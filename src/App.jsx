@@ -10,7 +10,7 @@ import "./styles/globals.css";
 function App() {
   return (
     <ThemeProvider>
-      <div className="min-h-screen bg-white dark:bg-primary-black text-primary-black dark:text-primary-yellow transition-colors duration-300">
+      <div className="min-h-screen bg-primary-yellow dark:bg-primary-black text-primary-black dark:text-primary-yellow transition-colors duration-300">
         <Header />
         <main className="flex-grow">
           <Hero />

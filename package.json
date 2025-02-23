@@ -11,8 +11,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d dist",
-    "deploy:custom": "yarn build:custom && echo 'Ready for custom deployment to wesleygrubbs.com'"
+    "deploy": "npx gh-pages -d dist"
   },
   "dependencies": {
     "animejs": "^3.2.2",
