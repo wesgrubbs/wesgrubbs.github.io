@@ -26,17 +26,16 @@ const Hero = () => {
           Information Design Technologist
         </h2>
         <p className="font-meta-sans text-base sm:text-sm">
-          I transform complex data into meaningful experiences, operating at the
-          intersection of design and technology. As the founder of{" "}
+          Wesley transforms complex data into meaningful experiences, operating
+          at the intersection of design and technology. As the founder of{" "}
           {createLink("Pitch Interactive", "https://www.pitchinteractive.com")},
-          I&apos;ve spent over two decades crafting visualization tools and
+          he has spent over two decades crafting visualization tools and
           data-driven applications for organizations like Google, eBay, and
-          UNDP. My expertise spans from enterprise analytics dashboards to
+          UNDP. His expertise spans from enterprise analytics dashboards to
           mobile applications, with a focus on creating intuitive solutions that
           help people better understand and interact with the world around them.
-          Based in Oakland, I excel at weaving together product, design, and
-          engineering to deliver functional, impactful results. I am currently
-          seeking new opportunities to collaborate on.
+          Based in Oakland, Wesley excels at weaving together product, design,
+          and engineering to deliver functional, impactful results.
         </p>
 
         <div className="mt-6 sm:mt-8 w-56 sm:w-72">

@@ -1,4 +1,5 @@
 export const infoContent = {
+  /* RECOGNITION */
   media: [
     {
       year: "2025",
@@ -129,8 +130,19 @@ export const infoContent = {
         },
       ],
     },
+    {
+      year: "2010",
+      items: [
+        {
+          title: "An inspirational interview with Wesley Grubbs",
+          publication: "Substratum",
+          url: "http://substratumseries.com/issues/truth_and_beauty/wesley_grubbs/0",
+          type: "interview",
+        },
+      ],
+    },
   ],
-
+  /* PUBLICATIONS */
   publications: [
     {
       year: "2017",
@@ -173,7 +185,7 @@ export const infoContent = {
       ],
     },
   ],
-
+  /* EXHIBITS, TALKS, WORKSHOPS */
   exhibits: [
     {
       year: "2016",
@@ -249,7 +261,7 @@ export const infoContent = {
       ],
     },
   ],
-
+  /* TALKS */
   talks: [
     {
       year: "2021",
@@ -352,7 +364,7 @@ export const infoContent = {
       ],
     },
   ],
-
+  /* WORKSHOPS */
   workshops: [
     {
       year: "2022",
