@@ -60,14 +60,9 @@ const Work = () => {
   return (
     <section id="work" className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
-        <h2 className="font-meta-serif text-3xl mb-4 text-black">
+        <h2 className="font-meta-serif text-3xl mb-4 mx-auto px-6">
           Selected Work
         </h2>
-        <p>
-          (As of Feb, 2025 this site is being developed. Check back daily for
-          updates.)
-        </p>
-
         <div>
           {workProjects.map((project) => (
             <ProjectCard

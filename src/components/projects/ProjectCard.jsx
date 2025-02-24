@@ -4,7 +4,7 @@ const ProjectCard = ({ project, onClick }) => {
   return (
     <div
       onClick={() => onClick(project)}
-      className="group py-4 cursor-pointer hover:bg-grey-60/10 transition-colors duration-300"
+      className="group py-4 mx-6 cursor-pointer transition-colors duration-300"
     >
       <div className="flex flex-col md:flex-row md:gap-8">
         <div className="w-full md:w-96 h-64 md:h-72 bg-black flex-shrink-0 overflow-hidden mb-4 md:mb-0">
@@ -21,9 +21,7 @@ const ProjectCard = ({ project, onClick }) => {
               <h3 className="font-meta-serif text-xl group-hover:text-primary-red transition-colors duration-300">
                 {project.title}
               </h3>
-              <p className="font-meta-serif-italic text-black mt-1">
-                {project.subtitle}
-              </p>
+              <p className="font-meta-serif-italic mt-1">{project.subtitle}</p>
             </div>
             <div className="font-meta-sans text-base sm:text-sm ml-4">
               {project.year}

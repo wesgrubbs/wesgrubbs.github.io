@@ -32,11 +32,11 @@ const Hero = () => {
           I&apos;ve spent over two decades crafting visualization tools and
           data-driven applications for organizations like Google, eBay, and
           UNDP. My expertise spans from enterprise analytics dashboards to
-          mobile and watch applications, with a focus on creating intuitive
-          solutions that help people better understand and interact with the
-          world around them. Based in Oakland, I excel at weaving together
-          product, design, and engineering to deliver functional, impactful
-          results.
+          mobile applications, with a focus on creating intuitive solutions that
+          help people better understand and interact with the world around them.
+          Based in Oakland, I excel at weaving together product, design, and
+          engineering to deliver functional, impactful results. I am currently
+          seeking new opportunities to collaborate on.
         </p>
 
         <div className="mt-6 sm:mt-8 w-56 sm:w-72">

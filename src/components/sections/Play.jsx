@@ -58,9 +58,11 @@ const Play = () => {
   };
 
   return (
-    <section id="play" className="py-20 px-6">
+    <section id="play" className="py-20 mx-6">
       <div className="max-w-7xl mx-auto">
-        <h2 className="font-meta-serif text-3xl mb-4">Experiments & Play</h2>
+        <h2 className="font-meta-serif text-3xl mb-4 ml-1">
+          Experiments & Play
+        </h2>
 
         <div>
           {playProjects.map((project) => (

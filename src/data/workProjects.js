@@ -13,7 +13,7 @@ export const workProjects = [
     roles: [
       "Product design",
       "Native app development (iOS, Swift)",
-      "Data Analysis (Pythong)",
+      "Data Analysis (Python)",
       "Logo design",
     ],
     url: "https://apps.apple.com/us/app/inflatacart/id6740125695?platform=iphone",
