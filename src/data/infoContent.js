@@ -7,7 +7,26 @@ export const infoContent = {
           title:
             "How much more expensive are your groceries? This app does the inflation math",
           publication: "SF Chronicle",
-          url: "https://www.sfchronicle.com/article",
+          url: "https://www.sfchronicle.com/personal-finance/article/inflatacart-grocery-inflation-price-tracker-20070212.php",
+          type: "article",
+        },
+        {
+          title: "A closer look: App tracks rising grocery prices",
+          publication: "NBC Bay Area",
+          url: "https://www.nbcbayarea.com/news/tech/a-closer-look-app-tracks-rising-grocery-prices/3789269/",
+          type: "news interview",
+        },
+        {
+          title: "With InflataCart, your grocery list plus inflation data",
+          publication: "Flowing Data",
+          url: "https://flowingdata.com/2025/01/23/with-inflatacart-your-grocery-list-plus-inflation-data/",
+          type: "article",
+        },
+        {
+          title:
+            "InflataCart, A Handy App That Keeps Track of How Inflation Affects Grocery Store Prices",
+          publication: "Laughin Squid",
+          url: "https://laughingsquid.com/inflatacart-grocery-prices/",
           type: "article",
         },
       ],
@@ -44,6 +63,17 @@ export const infoContent = {
           publication: "Flowing Data",
           url: "https://flowingdata.com/tiled-cartograms",
           type: "article",
+        },
+      ],
+    },
+    {
+      year: "2015",
+      items: [
+        {
+          title: "Discussion on Data Visualization",
+          publication: "Radio New Zealand",
+          url: "https://www.rnz.co.nz/national/programmes/thiswayup/audio/201779602/data-visualisation",
+          type: "news interview",
         },
       ],
     },
@@ -150,7 +180,8 @@ export const infoContent = {
       items: [
         {
           title: "Take this Hammer: Art + Media Activism from the Bay Area",
-          venue: "Yerba Buena Center for the Arts",
+          venue: "YBCA",
+          organization: "Yerba Buena Center for the Arts",
           location: "San Francisco, California",
           url: "https://ybca.org/take-this-hammer",
           type: "exhibition",
@@ -177,6 +208,7 @@ export const infoContent = {
           title: "Art by Code",
           venue: "Codame",
           location: "San Francisco, California",
+          organization: "Codame",
           url: "https://codame.com/artbycode",
           type: "exhibition",
         },
@@ -188,6 +220,7 @@ export const infoContent = {
         {
           title: "Talk To Me",
           venue: "MoMA",
+          organization: "Muesum of Modern Art",
           location: "New York City",
           url: "https://www.moma.org/talktome",
           type: "exhibition",
@@ -195,6 +228,7 @@ export const infoContent = {
         {
           title: "Gene Davis Renditions",
           venue: "MMOCA",
+          organization: "Madison Museum of Contemporary Art",
           location: "Madison, Wisconsin",
           url: "https://www.mmoca.org/genedavis",
           type: "exhibition",
@@ -207,6 +241,7 @@ export const infoContent = {
         {
           title: "Science Express train exhibit",
           venue: "Max Planck Institute",
+          organization: "Max Planck Society",
           location: "Germany, China",
           url: "https://www.mpg.de/scienceexpress",
           type: "exhibition",

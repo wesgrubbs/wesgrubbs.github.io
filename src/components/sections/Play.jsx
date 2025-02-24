@@ -58,11 +58,11 @@ const Play = () => {
   };
 
   return (
-    <section id="play" className="py-24 px-6 bg-grey-60/10">
+    <section id="play" className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
-        <h2 className="font-meta-serif text-4xl mb-12">Experiments & Play</h2>
+        <h2 className="font-meta-serif text-3xl mb-4">Experiments & Play</h2>
 
-        <div className="divide-y divide-grey-60">
+        <div>
           {playProjects.map((project) => (
             <ProjectCard
               key={project.id}
