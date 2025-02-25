@@ -64,10 +64,10 @@ const ProjectDetail = ({ project, onClose }) => {
 
     anime({
       targets: detailRef.current,
-      opacity: [1, 0],
-      translateY: [0, 10],
-      duration: 400,
-      easing: "easeInQuad",
+      //opacity: [1, 0],
+      translateY: [0, 800],
+      duration: 200,
+      easing: "easeInOutQuad",
       complete: () => {
         setIsAnimating(false);
         onClose();
@@ -93,6 +93,9 @@ const ProjectDetail = ({ project, onClose }) => {
 
   // Determine if we have enough gallery images to show
   const hasGallery = galleryImages.length > 0;
+
+  // Get custom link text or use default
+  const linkText = project.linkText || "View Project";
 
   return (
     <div
@@ -219,7 +222,7 @@ const ProjectDetail = ({ project, onClose }) => {
                       rel="noopener noreferrer"
                       className="font-meta-sans text-primary-red hover:underline"
                     >
-                      View Project
+                      {linkText}
                     </a>
                   </div>
                 )}
@@ -282,6 +285,7 @@ ProjectDetail.propTypes = {
     ),
     image: PropTypes.string, // For backward compatibility
     url: PropTypes.string,
+    linkText: PropTypes.string, // New prop for custom link text
     roles: PropTypes.arrayOf(PropTypes.string).isRequired,
     challenge: PropTypes.oneOfType([
       PropTypes.string,

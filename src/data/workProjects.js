@@ -55,6 +55,7 @@ export const workProjects = [
       "App Store deployment",
     ],
     url: "https://apps.apple.com/us/app/inflatacart/id6740125695?platform=iphone",
+    linkText: "Download on App Store",
   },
   {
     id: "alpine-mode",
@@ -64,7 +65,7 @@ export const workProjects = [
       "Alpine Mode is the first app made specifically for mountaineering and alpine climbing with precision metrics that cater to performance in the mountains.",
     year: "2025",
     description: [
-      "Made for alpine terrain by mountaineer, alpinist, and rock climber Wesley Grubbs, this app seeks to fill the gaps in performance and feedback metrics while you make your approach to base camp, climb the coveted knife ridge, start your descent, or if you’re training in the hills. The metrics provided in Alpine Mode are specific to mountaineering, mountain biking, backcountry skiing, or more advanced hiking.",
+      "Made for alpine terrain by mountaineer, alpinist, and rock climber Wesley Grubbs, this app seeks to fill the gaps in performance and feedback metrics while you make your approach to base camp, climb the coveted knife ridge, start your descent, or if you're training in the hills. The metrics provided in Alpine Mode are specific to mountaineering, mountain biking, backcountry skiing, or more advanced hiking.",
       "This app is currently in development and actively being tested. If you would like to be a beta tester, please reach out to me directly.",
     ],
     challenge: [
@@ -111,16 +112,17 @@ export const workProjects = [
       "Project Testing",
     ],
     url: "https://www.alpine-mode.com",
+    linkText: "Visit Website",
   },
   {
     id: "ebay-qsx",
     title: "eBay QuickStrike (QSX)",
     subtitle: "Financial Analytics Dashboard",
     blurb:
-      "Business analytics is crucial for large corporations, but let’s face it, a lot of the analytics tools out there are uninspiring, cumbersome and difficult to understand for people outside the analytics team.",
+      "Business analytics is crucial for large corporations, but let's face it, a lot of the analytics tools out there are uninspiring, cumbersome and difficult to understand for people outside the analytics team.",
     year: "2017-2022",
     description: [
-      "Business analytics is crucial for large corporations, but let’s face it, a lot of the analytics tools out there are uninspiring, cumbersome and difficult to understand for people outside the analytics team. eBay approached my team at Pitch to build custom visualizations geared for company-wide viewing, from the executive level to entry level, to help people better understand financial trends, forecasts, cross-border transactions, device usage, traffic funnel metrics, real-time global trends and more. All in all, the visuals help employees clearly see and gather insights about the health of the business.",
+      "Business analytics is crucial for large corporations, but let's face it, a lot of the analytics tools out there are uninspiring, cumbersome and difficult to understand for people outside the analytics team. eBay approached my team at Pitch to build custom visualizations geared for company-wide viewing, from the executive level to entry level, to help people better understand financial trends, forecasts, cross-border transactions, device usage, traffic funnel metrics, real-time global trends and more. All in all, the visuals help employees clearly see and gather insights about the health of the business.",
       "eBay QuickStrike (QSX) is an internal analytics platform that transformed how eBay's global teams accessed and interpreted complex business data. We designed and built interactive dashboards that visualized everything from cross-border transactions to device usage patterns across eBay's vast marketplace ecosystem.",
     ],
     challenge: [
@@ -169,6 +171,7 @@ export const workProjects = [
       "Project Management",
     ],
     url: "https://www.pitchinteractive.com/work/ebayanalytics/",
+    linkText: "See Case Study",
   },
 ];
 

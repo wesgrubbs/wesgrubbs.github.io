@@ -39,6 +39,7 @@ export const playProjects = [
     ],
     roles: ["Creative Coding", "SwiftUI", "Xcode", "Generative Art"],
     url: "https://github.com/wesgrubbs/GeometricPlayground",
+    linkText: "View on GitHub",
   },
   {
     id: "geometric-playground",
@@ -81,6 +82,7 @@ export const playProjects = [
     ],
     roles: ["Creative Exploration", "Visual Design", "Figma", "Illustrator"],
     url: "https://www.instagram.com/gray.pattern/",
+    linkText: "Follow on Instagram",
   },
 ];
 

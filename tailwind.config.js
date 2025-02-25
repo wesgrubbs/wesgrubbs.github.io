@@ -10,7 +10,7 @@ export default {
         "primary-black": "#131313",
         "primary-orange": "#e14414",
         "primary-yellow": "#fdaa08",
-        "primary-red": "#fb3735",
+        "primary-red": "#E3170A",
 
         // Greys
         grey: {
@@ -24,9 +24,9 @@ export default {
         // Section-specific background colors (light mode)
         section: {
           hero: "#fdaa08", // Your BRAND_COLORS.YELLOW
-          work: "#F7FFF7", // Mint Cream
-          play: "#FBF7F4", // Off-white
-          info: "#fdaa08", // Mint Cream
+          work: "#f9c660",
+          play: "#fce3b0",
+          info: "#fdecca",
         },
         "section-dark": {
           hero: "#fdaa08", // BRAND_COLORS.YELLOW

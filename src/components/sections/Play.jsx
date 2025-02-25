@@ -49,7 +49,7 @@ const Play = () => {
       targets: projectGrid,
       opacity: [1, 0.2],
       scale: [1, 0.98],
-      duration: 400,
+      duration: 100,
       easing: "easeOutQuad",
     });
 
@@ -81,13 +81,13 @@ const Play = () => {
         targets: projectGrid,
         opacity: [0.2, 1],
         scale: [0.98, 1],
-        duration: 500,
+        duration: 200,
         easing: "easeOutQuad",
       });
 
       // Update URL and browser history
       window.history.pushState(null, "", window.location.pathname);
-    }, 400); // This timing should match the close animation in ProjectDetail
+    }, 100); // This timing should match the close animation in ProjectDetail
   };
 
   return (

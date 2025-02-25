@@ -33,8 +33,45 @@ const InfoSection = ({ title, items }) => {
                 );
               }
 
-              // Workshops and Talks
-              if (title === "Workshops" || title === "Talks") {
+              // Talks - Link the title if URL exists
+              if (title === "Talks") {
+                return (
+                  <div key={index} className="mb-2">
+                    <div className="flex items-baseline">
+                      <span className="font-meta-serif-italic mr-2">
+                        {yearGroup.year}
+                      </span>
+                      <div>
+                        {item.url ? (
+                          <a
+                            href={item.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-meta-sans text-lg inline hover:text-primary-red transition-colors duration-300"
+                          >
+                            {item.title}
+                          </a>
+                        ) : (
+                          <h4 className="font-meta-sans text-lg inline">
+                            {item.title}
+                          </h4>
+                        )}
+                        <p className="font-meta-sans inline ml-2">
+                          {item.venue || item.event}, {item.location}
+                        </p>
+                        {item.description && (
+                          <p className="font-meta-sans text-sm">
+                            {item.description}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+
+              // Workshops - No links
+              if (title === "Workshops") {
                 return (
                   <div key={index} className="mb-2">
                     <div className="flex items-baseline">
@@ -129,6 +166,16 @@ const InfoSection = ({ title, items }) => {
                           <p className="font-meta-sans mt-1 text-sm">
                             Project: {item.project}
                           </p>
+                        )}
+                        {item.url && (
+                          <a
+                            href={item.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-meta-sans text-sm text-primary-red hover:underline block mt-1"
+                          >
+                            View
+                          </a>
                         )}
                       </div>
                     </div>

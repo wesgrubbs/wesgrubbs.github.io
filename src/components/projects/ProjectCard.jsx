@@ -4,7 +4,7 @@ import anime from "animejs";
 
 const ProjectCard = ({ project, onClick }) => {
   const cardRef = useRef(null);
-  const [isHovering, setIsHovering] = useState(false);
+  const [setIsHovering] = useState(false);
 
   // Find the thumbnail image (an image with type "thumbnail")
   const thumbnailImage = project.images?.find(
