@@ -290,6 +290,19 @@ export const infoContent = {
       ],
     },
     {
+      year: "2017",
+      items: [
+        {
+          title: "Finding Happiness in Creativity",
+          event: "Semi-Permanent",
+          location: "Auckland, New Zealand",
+          url: "https://semipermanent.com/profiles/wesley-grubbs",
+          description:
+            "Talk about the creative process and how we find happiness through our work and play.",
+        },
+      ],
+    },
+    {
       year: "2016",
       items: [
         {
@@ -299,6 +312,14 @@ export const infoContent = {
           url: "https://visualized.com/2016/keynote",
           description:
             "Exploration of how data visualization can be used to communicate dissent.",
+        },
+        {
+          title: "Data Visualization to Communicate the State of the World",
+          event: "Business of Design Week (BODW)",
+          location: "Hong Kong",
+          url: "https://2017.kodw.org/speakers/wesley-grubbs/",
+          description:
+            "Walking through key works and processes that Pitch uses to communicate the state of the world to amplify a call to action.",
         },
         {
           title: "Data on the Road",
@@ -313,6 +334,14 @@ export const infoContent = {
     {
       year: "2015",
       items: [
+        {
+          title: "Finding Happiness in Creativity",
+          event: "Semi-Permanent",
+          location: "Wellington, New Zealand",
+          url: "https://semipermanent.com/profiles/wesley-grubbs",
+          description:
+            "Talk about the creative process and how we find happiness through our work and play.",
+        },
         {
           title: "Storytelling with Data",
           event: "Creative Mornings",
@@ -360,6 +389,35 @@ export const infoContent = {
           url: "https://eyeofestival.com/2011/bargraph",
           description:
             "Discussion of advanced visualization techniques beyond basic charts.",
+        },
+        {
+          title: "Beyond the Bargraph: A Visual Narrative with Data",
+          event: "FITC",
+          location: "Toronto, Canada",
+          url: "https://fitc.ca/event/to11/",
+          description:
+            "Discussion of advanced visualization techniques beyond basic charts.",
+        },
+      ],
+    },
+    {
+      year: "2010",
+      items: [
+        {
+          title: "Making Meaningful Data Meaninful",
+          event: "FITC",
+          location: "Toronto, Canada",
+          url: "https://fitc.ca/presentation/making-meaningful-data-meaningful/",
+          description:
+            "Discussion of advanced visualization techniques beyond basic charts.",
+        },
+        {
+          title: "Making Meaningful Data Meaninful",
+          event: "FITC",
+          location: "Amsterdam, The Netherlands",
+          url: "https://fitc.ca/presentation/making-meaningful-data-meaningful-2/",
+          description:
+            "As the use of data visualization grows among a broader audience, designers and developers find themselves lost in the process when trying to visually represent large amounts of information. One side of the spectrum tends to over-simplify. The other side often over-complicates. This session aims at finding a balance between both worlds by deconstructing some of our projects and showing our process and sources of inspiration.",
         },
       ],
     },
