@@ -58,7 +58,7 @@
     }
 
     h2 {
-      @apply text-[1.2em] px-2;
+      @apply text-[1.2em] px-0;
     }
   }
 }

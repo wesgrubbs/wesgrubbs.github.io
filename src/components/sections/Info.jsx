@@ -6,7 +6,7 @@ const InfoSection = ({ title, items }) => {
 
   return (
     <div className="max-w-7xl mx-auto">
-      <h2 className="font-meta-serif text-3xl mb-2 mt-6 ml-2">{title}</h2>
+      <h2 className="font-meta-serif text-2xl mb-2 mt-6">{title}</h2>
       <div className="space-y-1">
         {items.map((yearGroup) => (
           <div key={yearGroup.year}>
@@ -14,7 +14,7 @@ const InfoSection = ({ title, items }) => {
               // Media items
               if (title === "In the Media") {
                 return (
-                  <div key={index} className="group mb-1 mx-6">
+                  <div key={index} className="group mb-1">
                     <a
                       href={item.url}
                       target="_blank"
@@ -36,7 +36,7 @@ const InfoSection = ({ title, items }) => {
               // Workshops and Talks
               if (title === "Workshops" || title === "Talks") {
                 return (
-                  <div key={index} className="mb-2 mx-6">
+                  <div key={index} className="mb-2">
                     <div className="flex items-baseline">
                       <span className="font-meta-serif-italic mr-2">
                         {yearGroup.year}
@@ -62,7 +62,7 @@ const InfoSection = ({ title, items }) => {
               // Publications
               if (title === "Publications") {
                 return (
-                  <div key={index} className="mb-2 mx-6">
+                  <div key={index} className="mb-2">
                     <a
                       href={item.url}
                       target="_blank"
@@ -83,7 +83,7 @@ const InfoSection = ({ title, items }) => {
               // Exhibits
               if (title === "Exhibits") {
                 return (
-                  <div key={index} className="mb-2 mx-6">
+                  <div key={index} className="mb-2">
                     <div className="flex items-baseline">
                       <span className="font-meta-serif-italic mr-2">
                         {yearGroup.year}
@@ -109,7 +109,7 @@ const InfoSection = ({ title, items }) => {
               // Recognition
               if (title === "Recognition") {
                 return (
-                  <div key={index} className="mb-2 mx-6">
+                  <div key={index} className="mb-2">
                     <div className="flex items-baseline">
                       <span className="font-meta-serif-italic mr-2">
                         {yearGroup.year}
@@ -145,12 +145,10 @@ const InfoSection = ({ title, items }) => {
   );
 };
 
-// PropTypes definitions remain the same...
-
 const Info = () => {
   return (
-    <section id="info" className="py-12 px-6">
-      <div className="max-w-7xl mx-auto">
+    <section id="info" className="py-12">
+      <div className="max-w-7xl mx-auto px-6">
         <InfoSection title="In the Media" items={infoContent.media} />
         <InfoSection title="Publications" items={infoContent.publications} />
         <InfoSection title="Workshops" items={infoContent.workshops} />

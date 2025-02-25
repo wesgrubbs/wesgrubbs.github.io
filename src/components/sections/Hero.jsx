@@ -23,19 +23,20 @@ const Hero = () => {
           Wesley Grubbs
         </h1>
         <h2 className="font-meta-serif-italic text-lg sm:text-xl font-normal opacity-50 pb-4 sm:pb-5 ml-[-6px] sm:ml-[-12px]">
-          Information Design Technologist
+          Information design technologist passionate about data-driven,
+          meaningful experiences
         </h2>
         <p className="font-meta-sans text-base sm:text-sm">
-          Wesley transforms complex data into meaningful experiences, operating
-          at the intersection of design and technology. As the founder of{" "}
+          I transform complex data into meaningful experiences, operating at the
+          intersection of design and technology. As the founder of{" "}
           {createLink("Pitch Interactive", "https://www.pitchinteractive.com")},
-          he has spent over two decades crafting visualization tools and
+          I have spent over two decades crafting visualization tools and
           data-driven applications for organizations like Google, eBay, and
-          UNDP. His expertise spans from enterprise analytics dashboards to
+          UNDP. My expertise spans from enterprise analytics dashboards to
           mobile applications, with a focus on creating intuitive solutions that
           help people better understand and interact with the world around them.
-          Based in Oakland, Wesley excels at weaving together product, design,
-          and engineering to deliver functional, impactful results.
+          I excel at weaving together product, design, and engineering to
+          deliver functional, impactful results.
         </p>
 
         <div className="mt-6 sm:mt-8 w-56 sm:w-72">

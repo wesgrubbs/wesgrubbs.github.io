@@ -48,7 +48,7 @@ export const playProjects = [
       "A design practice of abstract exploration, where Figma becomes a canvas for spontaneous creativity. Each piece in this growing collection of hundreds represents a moment of pure design play, experimenting with shape and color to create unique visual compositions shared frequently on Instagram.",
     year: "2023 - Present",
     description: [
-      "Since 2023, I've maintained a creative ritual that transforms design exploration into visual meditation. Through Figma, I craft abstract compositions that push the boundaries of shape and color, each piece serving as a distinct capsule of experimentation and artistic intuition.",
+      "Since 2023, I've maintained a creative ritual that transforms design exploration into visual meditation. Mostly with Figma, I craft abstract compositions that push the boundaries of shape and color, each piece serving as a distinct capsule of experimentation and artistic intuition.",
       "This growing collection of hundreds of designs, shared on Instagram, represents more than just a portfolio—it's a living document of creative evolution, where each composition emerges from moments of inspiration and the pure joy of unrestricted play.",
       "The practice has become both a creative outlet and a technical exercise, allowing me to continually refine my design sensibilities while maintaining a space for spontaneous artistic expression.",
     ],
@@ -59,17 +59,17 @@ export const playProjects = [
         type: "thumbnail", // Used in the Play grid view
       },
       {
-        src: "/images/play/daily_geometric_play.webp",
+        src: "/images/play/daily_geometric_hero.webp",
         alt: "Abstract geometric pattern design in gray and black",
         type: "hero", // Used as hero image in detail view
       },
       {
-        src: "/images/play/daily_geometric_play.webp",
+        src: "/images/play/daily_geometric_gall1.webp",
         alt: "Collection of abstract shapes in gray scale",
         type: "gallery", // First gallery image (side by side)
       },
       {
-        src: "/images/play/daily_geometric_play.webp",
+        src: "/images/play/daily_geometric_gall2.webp",
         alt: "Geometric composition with circles and triangles",
         type: "gallery", // Second gallery image (side by side)
       },

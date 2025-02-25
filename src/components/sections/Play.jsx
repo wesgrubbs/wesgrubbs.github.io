@@ -58,12 +58,12 @@ const Play = () => {
   };
 
   return (
-    <section id="play" className="py-20 px-6">
+    <section id="play" className="py-20">
       <div className="max-w-7xl mx-auto">
         <h2 className="font-meta-serif text-3xl mb-8 mx-auto">Creative Play</h2>
 
         {/* Multi-column grid layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
           {playProjects.map((project) => (
             <div key={project.id} className="p-2">
               <ProjectCard project={project} onClick={handleProjectClick} />

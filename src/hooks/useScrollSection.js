@@ -5,28 +5,37 @@ const useScrollSection = () => {
 
   useEffect(() => {
     const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
       const sections = ["hero", "work", "play", "info"];
-      const scrollPosition = window.scrollY + window.innerHeight / 3;
 
+      // Find the current section
       for (const section of sections) {
         const element = document.getElementById(section);
-        if (element) {
-          const { top, bottom } = element.getBoundingClientRect();
-          const elementTop = top + window.scrollY;
-          const elementBottom = bottom + window.scrollY;
+        if (!element) continue;
 
-          if (scrollPosition >= elementTop && scrollPosition <= elementBottom) {
-            setActiveSection(section);
-            break;
-          }
+        const rect = element.getBoundingClientRect();
+        const sectionTop = rect.top + scrollPosition;
+        const sectionHeight = rect.height;
+        const threshold = windowHeight * 0.3; // 30% threshold
+
+        // If we're within this section (with threshold)
+        if (
+          scrollPosition >= sectionTop - threshold &&
+          scrollPosition < sectionTop + sectionHeight - threshold
+        ) {
+          setActiveSection(section);
+          break;
         }
       }
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Check initial position
+    handleScroll(); // Set initial active section
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return activeSection;
