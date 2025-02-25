@@ -60,16 +60,14 @@ const Work = () => {
   return (
     <section id="work" className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
-        <h2 className="font-meta-serif text-3xl mb-4 mx-auto px-6">
-          Selected Work
-        </h2>
-        <div>
+        <h2 className="font-meta-serif text-3xl mb-8 mx-auto">Selected Work</h2>
+
+        {/* Multi-column grid layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {workProjects.map((project) => (
-            <ProjectCard
-              key={project.id}
-              project={project}
-              onClick={handleProjectClick}
-            />
+            <div key={project.id} className="p-2">
+              <ProjectCard project={project} onClick={handleProjectClick} />
+            </div>
           ))}
         </div>
       </div>

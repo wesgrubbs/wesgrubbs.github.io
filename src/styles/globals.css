@@ -45,16 +45,20 @@
 
   button {
     @apply bg-[var(--theme-background)] border-0 text-[var(--theme-text-secondary)]
-           px-2 text-center inline-block text-[0.6em] font-meta-sans cursor-pointer;
+           px-2 text-center inline-block text-[1.0em] font-meta-sans cursor-pointer;
   }
 
   @media (max-width: 600px) {
     body {
-      @apply p-4;
+      @apply p-2;
     }
 
     h1 {
-      @apply text-[1.6em];
+      @apply text-[1.6em] px-2;
+    }
+
+    h2 {
+      @apply text-[1.2em] px-2;
     }
   }
 }
