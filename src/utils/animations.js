@@ -1,4 +1,5 @@
 import anime from "animejs";
+import { getSectionColor } from "../utils/colors";
 
 export const scrollToSection = (sectionId) => {
   // Remove the # if it's included
@@ -45,5 +46,25 @@ export const staggerFadeIn = (elements, staggerDelay = 100) => {
     duration: 800,
     delay: anime.stagger(staggerDelay),
     easing: "easeOutQuad",
+  });
+};
+
+// Animation for section background transitions using centralized colors
+export const animateSectionTransition = (fromSection, toSection) => {
+  // Get current background color
+  const fromColor = getComputedStyle(document.documentElement).backgroundColor;
+
+  // Get the target background color based on the section and theme
+  const isDarkMode = document.documentElement.classList.contains("dark");
+
+  // Use the centralized color system
+  const toColor = getSectionColor(toSection, isDarkMode);
+
+  // Animate the transition
+  anime({
+    targets: document.documentElement,
+    backgroundColor: [fromColor, toColor],
+    duration: 1000,
+    easing: "easeInOutQuad",
   });
 };

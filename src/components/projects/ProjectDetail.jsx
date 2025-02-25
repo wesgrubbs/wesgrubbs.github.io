@@ -1,17 +1,79 @@
-import { useEffect } from "react";
+import { useEffect, useState, useRef } from "react";
 import PropTypes from "prop-types";
+import anime from "animejs";
 
 const ProjectDetail = ({ project, onClose }) => {
+  const detailRef = useRef(null);
+  const contentRef = useRef(null);
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  // Handle animations when opening
+  useEffect(() => {
+    if (project && detailRef.current && contentRef.current) {
+      setIsAnimating(true);
+
+      // Initial state - start with opacity 0
+      detailRef.current.style.opacity = 0;
+
+      // Animation timeline
+      const timeline = anime.timeline({
+        easing: "easeOutExpo",
+        complete: () => setIsAnimating(false),
+      });
+
+      // First animate the container
+      timeline.add({
+        targets: detailRef.current,
+        opacity: [0, 1],
+        duration: 600,
+        easing: "easeOutQuad",
+      });
+
+      // Then animate the content with a stagger effect
+      timeline.add(
+        {
+          targets: contentRef.current.children,
+          translateY: [20, 0],
+          opacity: [0, 1],
+          duration: 600,
+          delay: anime.stagger(100),
+          easing: "easeOutQuad",
+        },
+        "-=300"
+      );
+    }
+  }, [project]);
+
+  // Handle escape key
   useEffect(() => {
     const handleEscape = (event) => {
-      if (event.key === "Escape") {
-        onClose();
+      if (event.key === "Escape" && !isAnimating) {
+        handleClose();
       }
     };
 
     window.addEventListener("keydown", handleEscape);
     return () => window.removeEventListener("keydown", handleEscape);
-  }, [onClose]);
+  }, [isAnimating]);
+
+  // Handle close animation
+  const handleClose = () => {
+    if (isAnimating) return;
+
+    setIsAnimating(true);
+
+    anime({
+      targets: detailRef.current,
+      opacity: [1, 0],
+      translateY: [0, 10],
+      duration: 400,
+      easing: "easeInQuad",
+      complete: () => {
+        setIsAnimating(false);
+        onClose();
+      },
+    });
+  };
 
   if (!project) return null;
 
@@ -33,7 +95,10 @@ const ProjectDetail = ({ project, onClose }) => {
   const hasGallery = galleryImages.length > 0;
 
   return (
-    <div className="fixed inset-0 bg-primary-yellow dark:bg-primary-black z-50 overflow-y-auto">
+    <div
+      ref={detailRef}
+      className="fixed inset-0 bg-primary-yellow dark:bg-primary-black z-50 overflow-y-auto"
+    >
       {/* Header */}
       <div className="sticky top-0 bg-primary-yellow dark:bg-primary-black z-10">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
@@ -42,8 +107,9 @@ const ProjectDetail = ({ project, onClose }) => {
             <p className="font-meta-serif-italic">{project.subtitle}</p>
           </div>
           <button
-            onClick={onClose}
+            onClick={handleClose}
             className="text-grey-90 hover:text-primary-red transition-colors duration-300"
+            disabled={isAnimating}
           >
             Close
           </button>
@@ -60,7 +126,7 @@ const ProjectDetail = ({ project, onClose }) => {
       </div>
 
       {/* Main Content Area */}
-      <div className="max-w-7xl mx-auto px-6 py-12">
+      <div ref={contentRef} className="max-w-7xl mx-auto px-6 py-12">
         {/* Project Info */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div className="md:col-span-2">

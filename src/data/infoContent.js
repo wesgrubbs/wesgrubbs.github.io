@@ -264,6 +264,19 @@ export const infoContent = {
   /* TALKS */
   talks: [
     {
+      year: "2022",
+      items: [
+        {
+          title: "Data Visualization and Films in the Classroom",
+          event: "Search Files Podcast",
+          location: "Podcast",
+          url: "https://www.youtube.com/watch?v=co1nffmJhn4",
+          description:
+            "The first episode of Search Files features a discussion on data visualization of academic knowledge production and addresses approaches to teaching films in the classroom.",
+        },
+      ],
+    },
+    {
       year: "2021",
       items: [
         {
@@ -329,6 +342,22 @@ export const infoContent = {
           description:
             "Presentation on collecting and visualizing data while traveling.",
         },
+        {
+          title: "Q&A with Wesley Grubbs",
+          event: "Creative Mornings",
+          location: "Oakland, California",
+          url: "https://www.youtube.com/watch?v=etBcX6vtu38",
+          description:
+            "Get insight into the exhibition Take This Hammer: Art + Media Activism from the Bay Area through a rotating series of brief conversations featuring curator Christian L. Frock and participating artists.",
+        },
+        {
+          title: "Artist + Curator Conversation",
+          event: "TAKE THIS HAMMER at YBCA",
+          location: "San Francisco, California",
+          url: "https://www.youtube.com/watch?v=WVT0abxN8kg",
+          description:
+            "Q&A on the creative and technical process of visualizing data.",
+        },
       ],
     },
     {
@@ -346,7 +375,7 @@ export const infoContent = {
           title: "Storytelling with Data",
           event: "Creative Mornings",
           location: "Oakland, California",
-          url: "https://creativemornings.com/talks/storytelling-data",
+          url: "https://creativemornings.com/talks/wesley-grubbs",
           description: "Talk about effective data storytelling techniques.",
         },
         {
@@ -356,6 +385,19 @@ export const infoContent = {
           url: "https://visualized.com/2015/drone-strikes",
           description:
             "Presentation on the drone strikes visualization project.",
+        },
+      ],
+    },
+    {
+      year: "2014",
+      items: [
+        {
+          title: "Communicating Climate Change",
+          event: "European Centre for Environment and Human Health",
+          location: "Cornwall, UK",
+          url: "https://www.ecehh.org/wp/wp-content/uploads/2014/03/CCC-delegate-profiles.pdf",
+          description:
+            "Talk on how to build data visualization tools to communicate climate change data.",
         },
       ],
     },

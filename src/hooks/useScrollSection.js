@@ -24,7 +24,9 @@ const useScrollSection = () => {
           scrollPosition >= sectionTop - threshold &&
           scrollPosition < sectionTop + sectionHeight - threshold
         ) {
-          setActiveSection(section);
+          if (activeSection !== section) {
+            setActiveSection(section);
+          }
           break;
         }
       }
@@ -36,7 +38,7 @@ const useScrollSection = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [activeSection]);
 
   return activeSection;
 };

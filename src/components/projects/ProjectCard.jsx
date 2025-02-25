@@ -1,6 +1,11 @@
+import { useRef, useState } from "react";
 import PropTypes from "prop-types";
+import anime from "animejs";
 
 const ProjectCard = ({ project, onClick }) => {
+  const cardRef = useRef(null);
+  const [isHovering, setIsHovering] = useState(false);
+
   // Find the thumbnail image (an image with type "thumbnail")
   const thumbnailImage = project.images?.find(
     (img) => img.type === "thumbnail"
@@ -20,9 +25,73 @@ const ProjectCard = ({ project, onClick }) => {
       ? project.images[0].alt
       : project.title);
 
+  // Hover animations
+  const handleMouseEnter = () => {
+    setIsHovering(true);
+
+    anime({
+      targets: cardRef.current.querySelector("img"),
+      scale: 1.05,
+      duration: 400,
+      easing: "easeOutQuad",
+    });
+
+    anime({
+      targets: cardRef.current.querySelector("h3"),
+      translateX: 5,
+      color: "#fb3735", // primary-red
+      duration: 300,
+      easing: "easeOutQuad",
+    });
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovering(false);
+
+    anime({
+      targets: cardRef.current.querySelector("img"),
+      scale: 1,
+      duration: 400,
+      easing: "easeOutQuad",
+    });
+
+    anime({
+      targets: cardRef.current.querySelector("h3"),
+      translateX: 0,
+      color: "#131313", // primary-black (will be overridden by dark mode if active)
+      duration: 300,
+      easing: "easeOutQuad",
+    });
+  };
+
+  // Click animation and handling
+  const handleClick = () => {
+    // Add click animation
+    anime({
+      targets: cardRef.current,
+      scale: 0.98,
+      duration: 100,
+      easing: "easeInQuad",
+      complete: () => {
+        anime({
+          targets: cardRef.current,
+          scale: 1,
+          duration: 250,
+          easing: "easeOutElastic(1, .5)",
+        });
+
+        // Call the parent's onClick handler
+        onClick(project);
+      },
+    });
+  };
+
   return (
     <div
-      onClick={() => onClick(project)}
+      ref={cardRef}
+      onClick={handleClick}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       className="group cursor-pointer transition-colors duration-300 flex flex-col h-full"
     >
       {/* Image Container - No margin around the image */}
@@ -30,14 +99,16 @@ const ProjectCard = ({ project, onClick }) => {
         <img
           src={displayImage}
           alt={imageAlt}
-          className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+          className="object-cover w-full h-full"
+          // Optimization for animation
+          style={{ willChange: "transform" }}
         />
       </div>
 
       {/* Content Container - With padding */}
       <div className="flex-grow flex flex-col p-2">
         <div className="mb-2">
-          <h3 className="font-meta-serif text-lg group-hover:text-primary-red transition-colors duration-300">
+          <h3 className="font-meta-serif text-lg transition-colors duration-300">
             {project.title}
           </h3>
         </div>

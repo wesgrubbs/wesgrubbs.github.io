@@ -16,7 +16,7 @@ const Hero = () => {
   return (
     <div
       id="hero"
-      className="min-h-screen flex px-6 sm:px-12 md:px-20 lg:px-28 pt-16 sm:pt-16 md:pt-24 lg:pt-28"
+      className="min-h-screen flex max-w-7xl mx-auto  px-4 sm:px-6 lg:px-6 pt-16 sm:pt-16 md:pt-24 lg:pt-32"
     >
       <div className="w-full lg:w-2/3 mt-2 sm:mt-4 md:mt-12">
         <h1 className="font-meta-serif text-3xl sm:text-4xl font-bold pb-2 ml-[-6px] sm:ml-[-14px]">

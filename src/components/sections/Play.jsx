@@ -2,9 +2,11 @@ import { useState, useEffect } from "react";
 import ProjectCard from "../projects/ProjectCard";
 import ProjectDetail from "../projects/ProjectDetail";
 import { playProjects } from "../../data/playProjects";
+import anime from "animejs";
 
 const Play = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [animatingOut, setAnimatingOut] = useState(false);
 
   useEffect(() => {
     // Handle browser back/forward buttons
@@ -40,30 +42,64 @@ const Play = () => {
   }, []);
 
   const handleProjectClick = (project) => {
-    setSelectedProject(project);
-    document.body.style.overflow = "hidden";
-    // Update URL and browser history
-    window.history.pushState(
-      { projectId: project.id },
-      "",
-      `#project/${project.id}`
-    );
+    // Animate the grid to fade out slightly
+    const projectGrid = document.querySelector("#play-project-grid");
+
+    anime({
+      targets: projectGrid,
+      opacity: [1, 0.2],
+      scale: [1, 0.98],
+      duration: 400,
+      easing: "easeOutQuad",
+    });
+
+    // Set a small delay before showing the project detail
+    setTimeout(() => {
+      setSelectedProject(project);
+      document.body.style.overflow = "hidden";
+      // Update URL and browser history
+      window.history.pushState(
+        { projectId: project.id },
+        "",
+        `#project/${project.id}`
+      );
+    }, 300);
   };
 
   const handleCloseDetail = () => {
-    setSelectedProject(null);
-    document.body.style.overflow = "auto";
-    // Update URL and browser history
-    window.history.pushState(null, "", window.location.pathname);
+    setAnimatingOut(true);
+
+    // Allow the ProjectDetail component to animate out
+    setTimeout(() => {
+      setSelectedProject(null);
+      setAnimatingOut(false);
+      document.body.style.overflow = "auto";
+
+      // Animate the grid back in
+      const projectGrid = document.querySelector("#play-project-grid");
+      anime({
+        targets: projectGrid,
+        opacity: [0.2, 1],
+        scale: [0.98, 1],
+        duration: 500,
+        easing: "easeOutQuad",
+      });
+
+      // Update URL and browser history
+      window.history.pushState(null, "", window.location.pathname);
+    }, 400); // This timing should match the close animation in ProjectDetail
   };
 
   return (
     <section id="play" className="py-20">
-      <div className="max-w-7xl mx-auto  px-4 sm:px-6 lg:px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6">
         <h2 className="font-meta-serif text-3xl mb-8 mx-0">Creative Play</h2>
 
         {/* Multi-column grid layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+        <div
+          id="play-project-grid"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2"
+        >
           {playProjects.map((project) => (
             <div key={project.id} className="p-0">
               <ProjectCard project={project} onClick={handleProjectClick} />
@@ -72,7 +108,9 @@ const Play = () => {
         </div>
       </div>
 
-      <ProjectDetail project={selectedProject} onClose={handleCloseDetail} />
+      {(selectedProject || animatingOut) && (
+        <ProjectDetail project={selectedProject} onClose={handleCloseDetail} />
+      )}
     </section>
   );
 };

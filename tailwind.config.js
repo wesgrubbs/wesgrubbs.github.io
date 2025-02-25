@@ -5,6 +5,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Original primary colors
         "primary-blue": "#295496",
         "primary-black": "#131313",
         "primary-orange": "#e14414",
@@ -18,6 +19,20 @@ export default {
           80: "#847971",
           70: "#aba29c",
           60: "#d0cbc8",
+        },
+
+        // Section-specific background colors (light mode)
+        section: {
+          hero: "#fdaa08", // Your BRAND_COLORS.YELLOW
+          work: "#F7FFF7", // Mint Cream
+          play: "#FBF7F4", // Off-white
+          info: "#fdaa08", // Mint Cream
+        },
+        "section-dark": {
+          hero: "#fdaa08", // BRAND_COLORS.YELLOW
+          work: "#0B0A07", // BRAND_COLORS.BLACK
+          play: "#2F243A", // Dark purple
+          info: "#333232", // Jet
         },
       },
       fontFamily: {
