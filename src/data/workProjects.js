@@ -107,12 +107,69 @@ export const workProjects = [
     ],
     roles: [
       "Vision and team leadership",
+      "Creative Direction",
       "Data Visualization design",
       "UI/UX design",
       "Project Management",
-      "React/D3 development",
     ],
     url: "https://www.pitchinteractive.com/work/ebayanalytics/",
+  },
+
+  {
+    id: "alpine-mode",
+    title: "Alpine Mode",
+    subtitle: "Mountaineering and Alpine Climbing App",
+    blurb:
+      "Alpine Mode is the first app made specifically for mountaineering and alpine climbing with precision metrics that cater to performance in the mountains.",
+    year: "2025",
+    description: [
+      "Made for alpine terrain by mountaineer, alpinist, and rock climber Wesley Grubbs, this app seeks to fill the gaps in performance and feedback metrics while you make your approach to base camp, climb the coveted knife ridge, start your descent, or if you’re training in the hills. The metrics provided in Alpine Mode are specific to mountaineering, mountain biking, backcountry skiing, or more advanced hiking.",
+      "This app is currently in development and actively being tested. If you would like to be a beta tester, please reach out to me directly.",
+    ],
+    challenge: [
+      "For mountaineers, alpinists, and climbers, there are no apps that cater to the specific needs of alpine terrain and this also applies to mountain biking, backcountry skiing, trail running, and advanced hiking. The current apps on the market measure general metrics, like distance, time, bpm, and current elevation. And having simply elevation gain or loss isn't enough. And no apps have critical decent metrics. 80% of all accidents happen on the descent, often due to poor decision making.",
+      "In the mountains, elevation is a critical metric. Not just what is your current elevation, but how are you moving in the vertical world.",
+    ],
+    solution: [
+      "Alpine Mode seeks to fill this need by measuring elevation-focused metrics, such as progress by elevation gained or loss in relation to a target elevation, vertical speed (how quickly and efficiently you move through elevation), and other key metrics. As you climb, the focus is on gain. As you decent, on loss.",
+      "Having these metrics on your watch and/or phone will give you better insights, making your alpine adventure go more smoothly and safer. As an Apple Watch and iPhone app, your activity becomes part of your workout with Apple's WorkoutKit.",
+      "A beta version of Alpine Mode is set to release in the first half of 2025. Ultimately, people will have the ability to share their routes, and important metrics with other climbers and guides to help find compatible partners (i.e. people who move at a similar speed).",
+    ],
+    images: [
+      {
+        src: "/images/work/alpinemode_cover.webp",
+        alt: "Alpine Mode mountaineering app for Apple Watch and iPhone",
+        type: "thumbnail", // Used in the Work grid view
+      },
+      {
+        src: "/images/work/alpinemode_cover.webp",
+        alt: "Alpine Mode mountaineering app logo",
+        type: "hero", // Used as hero image in detail view
+      },
+      {
+        src: "/images/work/alpinemode_testscreens.webp",
+        alt: "Alpine Mode test screens",
+        type: "gallery", // First gallery image (side by side)
+      },
+      {
+        src: "/images/work/alpinemode_onwatch.webp",
+        alt: "Wesley Grubbs testing Alpine Mode on Apple Watch",
+        type: "gallery", // Second gallery image (side by side)
+      },
+      {
+        src: "/images/work/alpinemode_xcode.webp",
+        alt: "Alpine Mode was built using Xcode and Swift and this is a screenshot of the development environment",
+        type: "gallery", // Third gallery image (full width)
+      },
+    ],
+    roles: [
+      "Vision and Creative Direction",
+      "Product Design",
+      "UI/UX design",
+      "iOS and WatchOS development (Swift)",
+      "Project Testing",
+    ],
+    url: "https://www.alpine-mode.com",
   },
 ];
 

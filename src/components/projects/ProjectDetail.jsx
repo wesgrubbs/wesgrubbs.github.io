@@ -39,7 +39,7 @@ const ProjectDetail = ({ project, onClose }) => {
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <div>
             <h2 className="font-meta-serif text-2xl">{project.title}</h2>
-            <p className="font-meta-serif-italic px-4">{project.subtitle}</p>
+            <p className="font-meta-serif-italic">{project.subtitle}</p>
           </div>
           <button
             onClick={onClose}
@@ -60,7 +60,7 @@ const ProjectDetail = ({ project, onClose }) => {
       </div>
 
       {/* Main Content Area */}
-      <div className="max-w-7xl mx-auto px-12 py-12">
+      <div className="max-w-7xl mx-auto px-6 py-12">
         {/* Project Info */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div className="md:col-span-2">
@@ -128,7 +128,7 @@ const ProjectDetail = ({ project, onClose }) => {
 
                 <div>
                   <h4 className="font-meta-serif-italic text-grey-90 mb-2">
-                    My Role
+                    My Roles
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {project.roles.map((role, index) => (

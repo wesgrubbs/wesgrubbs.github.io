@@ -37,7 +37,7 @@ export const playProjects = [
         type: "gallery", // Third gallery image (full width)
       },
     ],
-    roles: ["Creative Coding", "SwiftUI", "Visual Design"],
+    roles: ["Creative Coding", "SwiftUI", "Xcode", "Generative Art"],
     url: "https://github.com/wesgrubbs/GeometricPlayground",
   },
   {
@@ -79,7 +79,7 @@ export const playProjects = [
         type: "gallery", // Third gallery image (full width)
       },
     ],
-    roles: ["Algorithm Design", "Creative Writing", "Data Analysis"],
+    roles: ["Creative Exploration", "Visual Design", "Figma", "Illustrator"],
     url: "https://www.instagram.com/gray.pattern/",
   },
 ];

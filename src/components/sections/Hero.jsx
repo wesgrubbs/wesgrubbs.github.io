@@ -16,13 +16,13 @@ const Hero = () => {
   return (
     <div
       id="hero"
-      className="min-h-screen flex px-6 sm:px-12 md:px-20 lg:px-28 pt-16 sm:pt-20 md:pt-24 lg:pt-28"
+      className="min-h-screen flex px-6 sm:px-12 md:px-20 lg:px-28 pt-16 sm:pt-16 md:pt-24 lg:pt-28"
     >
-      <div className="w-full lg:w-2/3 mt-4 sm:mt-6 md:mt-8">
-        <h1 className="font-meta-serif text-3xl sm:text-4xl font-bold pb-2 ml-[-8px] sm:ml-[-14px]">
+      <div className="w-full lg:w-2/3 mt-2 sm:mt-4 md:mt-12">
+        <h1 className="font-meta-serif text-3xl sm:text-4xl font-bold pb-2 ml-[-6px] sm:ml-[-14px]">
           Wesley Grubbs
         </h1>
-        <h2 className="font-meta-serif-italic text-lg sm:text-xl font-normal opacity-50 pb-4 sm:pb-5 ml-[-6px] sm:ml-[-12px]">
+        <h2 className="font-meta-serif-italic text-lg sm:text-xl font-normal opacity-50 pb-4 sm:pb-5">
           Information design technologist passionate about data-driven,
           meaningful experiences
         </h2>
