@@ -107,7 +107,7 @@ const ProjectCard = ({ project, onClick }) => {
 
       {/* Content Container - With padding */}
       <div className="flex-grow flex flex-col p-2">
-        <div className="mb-2">
+        <div className="mb-2 text-[var(--theme-text-primary)]">
           <h3 className="font-meta-serif text-lg transition-colors duration-300">
             {project.title}
           </h3>

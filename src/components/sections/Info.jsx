@@ -36,7 +36,10 @@ const InfoSection = ({ title, items }) => {
               // Talks - Link the title if URL exists
               if (title === "Talks") {
                 return (
-                  <div key={index} className="mb-2">
+                  <div
+                    key={index}
+                    className="mb-2 text-[var(--theme-text-primary)]"
+                  >
                     <div className="flex items-baseline">
                       <span className="font-meta-serif-italic mr-2">
                         {yearGroup.year}
@@ -73,7 +76,10 @@ const InfoSection = ({ title, items }) => {
               // Workshops - No links
               if (title === "Workshops") {
                 return (
-                  <div key={index} className="mb-2">
+                  <div
+                    key={index}
+                    className="mb-2 text-[var(--theme-text-primary)]"
+                  >
                     <div className="flex items-baseline">
                       <span className="font-meta-serif-italic mr-2">
                         {yearGroup.year}
@@ -120,7 +126,10 @@ const InfoSection = ({ title, items }) => {
               // Exhibits
               if (title === "Exhibits") {
                 return (
-                  <div key={index} className="mb-2">
+                  <div
+                    key={index}
+                    className="mb-2 text-[var(--theme-text-primary)]"
+                  >
                     <div className="flex items-baseline">
                       <span className="font-meta-serif-italic mr-2">
                         {yearGroup.year}

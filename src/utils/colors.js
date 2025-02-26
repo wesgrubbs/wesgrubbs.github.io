@@ -29,7 +29,7 @@ export const SECTION_COLORS_LIGHT = {
 
 // Section background colors - Dark mode
 export const SECTION_COLORS_DARK = {
-  HERO: BRAND_COLORS.YELLOW, // Hero stays yellow in dark mode
+  HERO: BRAND_COLORS.BLACK, // Hero stays yellow in dark mode
   WORK: BRAND_COLORS.BLACK,
   PLAY: "#2F243A", //dark purple
   INFO: "#333232", //jet

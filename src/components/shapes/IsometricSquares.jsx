@@ -33,8 +33,8 @@ const IsometricSquares = () => {
   const getRandomTransform = () => {
     return TRANSFORMS[Math.floor(Math.random() * TRANSFORMS.length)];
   };
-
-  const Square = ({ index, rowType }) => {
+  /* eslint-disable react/prop-types */
+  const Square = ({ index }) => {
     const [transform, setTransform] = useState(getRandomTransform());
 
     const handleMouseOver = () => {

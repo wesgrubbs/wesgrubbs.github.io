@@ -39,7 +39,7 @@ const Hero = () => {
           deliver functional, impactful results.
         </p>
 
-        <div className="mt-6 sm:mt-8 w-56 sm:w-72">
+        <div className="mt-6 sm:mt-8 w-56 sm:w-72 text-[var(--theme-text-primary)]">
           <IsometricSquares />
         </div>
 

@@ -105,7 +105,6 @@ const Work = () => {
               <ProjectCard project={project} onClick={handleProjectClick} />
             </div>
           ))}
-          <p>2/25/2025: More content coming daily</p>
         </div>
       </div>
 

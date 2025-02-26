@@ -65,7 +65,7 @@ const MobileMenu = ({ isOpen, onClose, activeSection }) => {
           ×
         </button>
         <nav className="flex flex-col space-y-6">
-          {["work", "play", "services", "info"].map((section) => (
+          {["work", "play", "info"].map((section) => (
             <a
               key={section}
               href={`#${section}`}

@@ -10,7 +10,7 @@ export default {
         "primary-black": "#131313",
         "primary-orange": "#e14414",
         "primary-yellow": "#fdaa08",
-        "primary-red": "#E3170A",
+        "primary-red": "#fb3735",
 
         // Greys
         grey: {
@@ -29,7 +29,7 @@ export default {
           info: "#fdecca",
         },
         "section-dark": {
-          hero: "#fdaa08", // BRAND_COLORS.YELLOW
+          hero: "#131313", // BRAND_COLORS.YELLOW
           work: "#0B0A07", // BRAND_COLORS.BLACK
           play: "#2F243A", // Dark purple
           info: "#333232", // Jet
