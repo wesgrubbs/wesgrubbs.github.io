@@ -115,6 +115,65 @@ export const workProjects = [
     linkText: "Visit Website",
   },
   {
+    id: "undp-hdi",
+    title: "UNDP Human Development Index",
+    subtitle: "Interactive Data Visualization Platform",
+    blurb:
+      "Human development data is essential for understanding global progress, but traditional data presentations often fail to reveal the complex relationships between different development indicators in an accessible way.",
+    year: "2022",
+    description: [
+      "Human development data is essential for understanding global progress, but traditional data presentations often fail to reveal the complex relationships between different development indicators in an accessible way. The United Nations Development Programme (UNDP) approached my studio Pitch to reimagine how their Human Development Index (HDI) data could be visualized to make complex relationships more understandable and insights more accessible to a wide range of users, from policy makers to the general public.",
+      "The HDI platform covers 191 countries with some data dating back to 1990, encompassing multiple development indicators. Our collaboration with UNDP resulted in a comprehensive redesign of their visualization approach that better connects and contextualizes the various indices, making the data more compelling and digestible for all users.",
+    ],
+    challenge: [
+      "The Human Development Index encompasses over five different indicator categories, each with its own complexities and relationships to overall human development scores.",
+      "Users needed to understand not just individual country performances, but how specific indicators contribute to overall HDI calculations and rankings.",
+      "The platform needed to serve diverse audiences from policy experts to students, requiring visualizations that were both sophisticated and intuitive.",
+    ],
+    solution: [
+      "We designed and built custom interactive graphs tailored to the specific characteristics of each index category, enabling more meaningful data exploration and comparison.",
+      "Our visualizations collectively showcase how each index score is calculated, how components break down, and how individual metrics impact a country's overall HDI score, all in one integrated platform.",
+      "The redesigned platform enables users to explore connections between different development indicators, revealing patterns and insights that were previously difficult to discern.",
+      "Interactive elements allow users to compare countries, track progress over time, and understand the multidimensional nature of human development in a more engaging way.",
+    ],
+    images: [
+      {
+        src: "/images/work/undp_hdi_thumb.webp",
+        alt: "UNDP Human Development Index overview",
+        type: "thumbnail", // Used in the Work grid view
+      },
+      {
+        src: "/images/work/undp_hdi_hero.webp",
+        alt: "UNDP Human Development Index main visualization",
+        type: "hero", // Used as hero image in detail view
+      },
+      {
+        src: "/images/work/undp_hdi_us-top.webp",
+        alt: "UNDP Human Development Index trends in the United States",
+        type: "gallery", // First gallery image (side by side)
+      },
+      {
+        src: "/images/work/undp_hdi_planetary.webp",
+        alt: "UNDP Human Development Index planetary pressures-adjusted",
+        type: "gallery", // Second gallery image (side by side)
+      },
+      {
+        src: "/images/work/undp_hdi_inequality-adjusted.webp",
+        alt: "UNDP Human Development Index inequality adjusted HDI",
+        type: "gallery", // Third gallery image (full width)
+      },
+    ],
+    roles: [
+      "Project Leadership",
+      "Creative Direction",
+      "Data Visualization Design",
+      "UX/UI Design",
+      "Data Analysis",
+    ],
+    url: "https://hdr.undp.org/data-center/human-development-index#/indicies/HDI",
+    linkText: "View Data Platform",
+  },
+  {
     id: "ebay-qsx",
     title: "eBay QuickStrike (QSX)",
     subtitle: "Financial Analytics Dashboard",

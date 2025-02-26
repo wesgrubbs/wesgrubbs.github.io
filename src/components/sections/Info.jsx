@@ -11,24 +11,31 @@ const InfoSection = ({ title, items }) => {
         {items.map((yearGroup) => (
           <div key={yearGroup.year}>
             {yearGroup.items?.map((item, index) => {
-              // Media items
+              // Media items - Updated to match other sections' format
               if (title === "In the Media") {
                 return (
-                  <div key={index} className="group mb-1">
-                    <a
-                      href={item.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block group-hover:text-primary-red transition-colors duration-300"
-                    >
+                  <div
+                    key={index}
+                    className="mb-2 text-[var(--theme-text-primary)]"
+                  >
+                    <div className="flex items-baseline">
                       <span className="font-meta-serif-italic mr-2">
                         {yearGroup.year}
                       </span>
-                      <span className="font-meta-sans mr-2">
-                        {item.publication}:
-                      </span>
-                      <span className="font-meta-sans">{item.title}</span>
-                    </a>
+                      <div>
+                        <a
+                          href={item.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-meta-sans text-lg inline hover:text-primary-red transition-colors duration-300"
+                        >
+                          <span className="font-meta-sans mr-2">
+                            {item.publication}:
+                          </span>
+                          <span className="font-meta-sans">{item.title}</span>
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 );
               }
@@ -102,23 +109,28 @@ const InfoSection = ({ title, items }) => {
                 );
               }
 
-              // Publications
+              // Publications - Updated to match other sections' format
               if (title === "Publications") {
                 return (
-                  <div key={index} className="mb-2">
-                    <a
-                      href={item.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block group-hover:text-primary-red transition-colors duration-300"
-                    >
+                  <div
+                    key={index}
+                    className="mb-2 text-[var(--theme-text-primary)]"
+                  >
+                    <div className="flex items-baseline">
                       <span className="font-meta-serif-italic mr-2">
                         {yearGroup.year}
                       </span>
-                      <h4 className="font-meta-sans text-lg inline">
-                        {item.title}
-                      </h4>
-                    </a>
+                      <div>
+                        <a
+                          href={item.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-meta-sans text-lg inline hover:text-primary-red transition-colors duration-300"
+                        >
+                          {item.title}
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 );
               }
