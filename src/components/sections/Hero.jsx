@@ -22,7 +22,7 @@ const Hero = () => {
         <h1 className="font-meta-serif text-3xl sm:text-4xl font-bold pb-2 ml-[-6px] sm:ml-[-14px]">
           Wesley Grubbs
         </h1>
-        <h2 className="font-meta-serif-italic text-lg sm:text-xl font-normal opacity-50 pb-4 sm:pb-5">
+        <h2 className="font-meta-serif-italic text-lg sm:text-3xl font-normal opacity-50 pb-4 sm:pb-5">
           Information design technologist passionate about data-driven,
           meaningful experiences
         </h2>
