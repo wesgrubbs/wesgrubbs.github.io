@@ -11,7 +11,7 @@ import "./styles/globals.css";
 
 // Main content component that applies section classes
 const MainContent = () => {
-  const activeSection = useScrollSection();
+  const { activeSection, isInitialLoad } = useScrollSection();
 
   // Apply section classes to HTML element with animation
   useEffect(() => {
@@ -25,6 +25,15 @@ const MainContent = () => {
     // If we already have the right class, don't do anything
     if (currentSectionClass === `in-${activeSection}`) return;
 
+    // For initial load, directly set the class without animation
+    if (isInitialLoad) {
+      // First, remove any existing section classes
+      htmlElement.classList.remove("in-hero", "in-work", "in-play", "in-info");
+      // Add the current section class
+      htmlElement.classList.add(`in-${activeSection}`);
+      return;
+    }
+
     // Debounce the class changes to prevent flickering during fast scrolling
     const timer = setTimeout(() => {
       // First, remove any existing section classes
@@ -35,7 +44,7 @@ const MainContent = () => {
     }, 50); // Short delay for smoother transitions
 
     return () => clearTimeout(timer);
-  }, [activeSection]);
+  }, [activeSection, isInitialLoad]);
 
   return (
     <div className="min-h-screen">

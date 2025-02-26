@@ -35,8 +35,8 @@
   --theme-link-hover: var(--color-primary-red);
 }
 
-/* Enhanced transitions for all html element properties */
-html {
+/* Enhanced transitions for all html element properties - BUT ONLY AFTER PAGE LOAD */
+html:not(.no-transitions) {
   transition: background-color 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -58,38 +58,59 @@ html.in-info {
 }
 
 @layer base {
-  body {
+  body:not(.no-transitions) {
+    @apply transition-colors duration-500;
+  }
+
+  h1:not(.no-transitions) {
+    @apply transition-colors duration-500;
+  }
+
+  h2:not(.no-transitions) {
+    @apply transition-colors duration-500;
+  }
+
+  h3:not(.no-transitions) {
+    @apply transition-colors duration-500;
+  }
+
+  p:not(.no-transitions) {
+    @apply transition-colors duration-500;
+  }
+
+  a:not(.no-transitions) {
+    @apply transition-colors duration-300;
+  }
+
+  button:not(.no-transitions) {
     @apply transition-colors duration-500;
   }
 
   h1 {
     @apply font-meta-serif text-[2.0em] font-bold text-[var(--theme-text-primary)] 
-           -mb-[6px] py-0 px-4 transition-colors duration-500;
+           -mb-[6px] py-0 px-4;
   }
 
   h2 {
     @apply font-meta-serif-italic text-[1.4em] font-normal text-[var(--theme-text-primary)]
-           opacity-50 italic py-0 px-0 pb-5 transition-colors duration-500;
+           opacity-50 italic py-0 px-0 pb-5;
   }
 
   h3 {
-    @apply py-0 px-0 transition-colors duration-500;
+    @apply py-0 px-0;
   }
 
   p {
-    @apply font-meta-sans text-base text-[var(--theme-text-secondary)] px-0 
-           transition-colors duration-500;
+    @apply font-meta-sans text-base text-[var(--theme-text-secondary)] px-0;
   }
 
   a {
-    @apply text-[var(--theme-link)] no-underline transition-colors duration-300
-           hover:text-[var(--theme-link-hover)];
+    @apply text-[var(--theme-link)] no-underline hover:text-[var(--theme-link-hover)];
   }
 
   button {
     @apply border-0 text-[var(--theme-text-secondary)]
-           px-2 text-center inline-block text-[1.0em] font-meta-sans cursor-pointer
-           transition-colors duration-500;
+           px-2 text-center inline-block text-[1.0em] font-meta-sans cursor-pointer;
   }
 
   @media (max-width: 600px) {

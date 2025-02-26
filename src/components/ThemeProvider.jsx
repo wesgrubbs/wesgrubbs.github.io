@@ -39,6 +39,18 @@ export const ThemeProvider = ({ children }) => {
     }
   }, [isDarkMode]);
 
+  useEffect(() => {
+    // Add no-transitions class on initial load
+    document.documentElement.classList.add("no-transitions");
+
+    // Remove the class after a short delay to enable transitions later
+    const timer = setTimeout(() => {
+      document.documentElement.classList.remove("no-transitions");
+    }, 500); // Half a second delay
+
+    return () => clearTimeout(timer);
+  }, []); // Empty dependency array means this runs once on mount
+
   return (
     <ThemeContext.Provider value={{ isDarkMode }}>
       {children}
