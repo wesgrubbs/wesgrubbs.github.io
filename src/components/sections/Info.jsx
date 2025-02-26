@@ -16,7 +16,7 @@ const InfoSection = ({ title, items }) => {
                 return (
                   <div
                     key={index}
-                    className="mb-2 text-[var(--theme-text-primary)]"
+                    className="mb-1 text-[var(--theme-text-primary)]"
                   >
                     <div className="flex items-baseline">
                       <span className="font-meta-serif-italic mr-2">
@@ -27,7 +27,7 @@ const InfoSection = ({ title, items }) => {
                           href={item.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="font-meta-sans text-lg inline hover:text-primary-red transition-colors duration-300"
+                          className="font-meta-sans text-sm inline hover:text-primary-red transition-colors duration-300"
                         >
                           <span className="font-meta-sans mr-2">
                             {item.publication}:
@@ -45,7 +45,7 @@ const InfoSection = ({ title, items }) => {
                 return (
                   <div
                     key={index}
-                    className="mb-2 text-[var(--theme-text-primary)]"
+                    className="mb-1 text-[var(--theme-text-primary)]"
                   >
                     <div className="flex items-baseline">
                       <span className="font-meta-serif-italic mr-2">
@@ -57,7 +57,7 @@ const InfoSection = ({ title, items }) => {
                             href={item.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="font-meta-sans text-lg inline hover:text-primary-red transition-colors duration-300"
+                            className="font-meta-sans text-sm inline hover:text-primary-red transition-colors duration-300"
                           >
                             {item.title}
                           </a>
@@ -85,14 +85,14 @@ const InfoSection = ({ title, items }) => {
                 return (
                   <div
                     key={index}
-                    className="mb-2 text-[var(--theme-text-primary)]"
+                    className="mb-1 text-[var(--theme-text-primary)]"
                   >
                     <div className="flex items-baseline">
                       <span className="font-meta-serif-italic mr-2">
                         {yearGroup.year}
                       </span>
                       <div>
-                        <h4 className="font-meta-sans text-lg inline">
+                        <h4 className="font-meta-sans text-sm inline">
                           {item.title}
                         </h4>
                         <p className="font-meta-sans inline ml-2">
@@ -114,7 +114,7 @@ const InfoSection = ({ title, items }) => {
                 return (
                   <div
                     key={index}
-                    className="mb-2 text-[var(--theme-text-primary)]"
+                    className="mb-1 text-[var(--theme-text-primary)]"
                   >
                     <div className="flex items-baseline">
                       <span className="font-meta-serif-italic mr-2">
@@ -125,7 +125,7 @@ const InfoSection = ({ title, items }) => {
                           href={item.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="font-meta-sans text-lg inline hover:text-primary-red transition-colors duration-300"
+                          className="font-meta-sans text-sm inline hover:text-primary-red transition-colors duration-300"
                         >
                           {item.title}
                         </a>
@@ -140,14 +140,14 @@ const InfoSection = ({ title, items }) => {
                 return (
                   <div
                     key={index}
-                    className="mb-2 text-[var(--theme-text-primary)]"
+                    className="mb-1 text-[var(--theme-text-primary)]"
                   >
                     <div className="flex items-baseline">
                       <span className="font-meta-serif-italic mr-2">
                         {yearGroup.year}
                       </span>
                       <div>
-                        <h4 className="font-meta-sans text-lg inline">
+                        <h4 className="font-meta-sans text-sm inline">
                           {item.title}
                         </h4>
                         <p className="font-meta-sans inline ml-2">
@@ -167,13 +167,13 @@ const InfoSection = ({ title, items }) => {
               // Recognition
               if (title === "Recognition") {
                 return (
-                  <div key={index} className="mb-2">
+                  <div key={index} className="mb-1">
                     <div className="flex items-baseline">
                       <span className="font-meta-serif-italic mr-2">
                         {yearGroup.year}
                       </span>
                       <div>
-                        <h4 className="font-meta-sans text-lg inline">
+                        <h4 className="font-meta-sans text-sm inline">
                           {item.title}
                         </h4>
                         {(item.award || item.category) && (
