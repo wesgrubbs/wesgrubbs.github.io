@@ -119,14 +119,16 @@ const ProjectDetail = ({ project, onClose }) => {
         </div>
       </div>
 
-      {/* Hero Image - Full Width */}
-      <div className="w-full mb-4">
-        <img
-          src={heroImage.src}
-          alt={heroImage.alt}
-          className="w-full h-[70vh] object-cover"
-        />
-      </div>
+      {/* Hero Image - Full Width with responsive height - Significantly increased for mobile */}
+      {heroImage && heroImage.src && (
+        <div className="w-full mb-4">
+          <img
+            src={heroImage.src}
+            alt={heroImage.alt || project.title}
+            className="w-full h-70 sm:h-70 md:h-[450px] lg:h-[70vh] object-cover"
+          />
+        </div>
+      )}
 
       {/* Main Content Area */}
       <div
@@ -235,41 +237,46 @@ const ProjectDetail = ({ project, onClose }) => {
         </div>
       </div>
 
-      {/* Gallery - Full width */}
+      {/* Gallery - Modified for stacked layout on mobile */}
       {hasGallery && (
         <div className="w-full mt-8 pb-2">
-          {/* Gallery Layout: 2 side-by-side (no gap) and 1 full width below */}
           <div className="w-full">
-            {/* First two images side by side */}
+            {/* Images stacked on mobile, side by side on larger screens */}
             {galleryImages.length >= 2 && (
-              <div className="flex w-full mb-4">
-                <div className="w-1/2 aspect-video overflow-hidden">
-                  <img
-                    src={galleryImages[0].src}
-                    alt={galleryImages[0].alt}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="w-1/2 aspect-video overflow-hidden">
-                  <img
-                    src={galleryImages[1].src}
-                    alt={galleryImages[1].alt}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+              <div className="flex flex-col sm:flex-row w-full mb-4">
+                {galleryImages[0] && galleryImages[0].src && (
+                  <div className="w-full sm:w-1/2 aspect-video overflow-hidden mb-4 sm:mb-0">
+                    <img
+                      src={galleryImages[0].src}
+                      alt={galleryImages[0].alt || "Gallery image"}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                )}
+                {galleryImages[1] && galleryImages[1].src && (
+                  <div className="w-full sm:w-1/2 aspect-video overflow-hidden">
+                    <img
+                      src={galleryImages[1].src}
+                      alt={galleryImages[1].alt || "Gallery image"}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                )}
               </div>
             )}
 
             {/* Third image full width */}
-            {galleryImages.length >= 3 && (
-              <div className="w-full aspect-video overflow-hidden">
-                <img
-                  src={galleryImages[2].src}
-                  alt={galleryImages[2].alt}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            )}
+            {galleryImages.length >= 3 &&
+              galleryImages[2] &&
+              galleryImages[2].src && (
+                <div className="w-full aspect-video overflow-hidden">
+                  <img
+                    src={galleryImages[2].src}
+                    alt={galleryImages[2].alt || "Gallery image"}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              )}
           </div>
         </div>
       )}
