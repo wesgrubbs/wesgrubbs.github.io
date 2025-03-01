@@ -84,6 +84,56 @@ export const playProjects = [
     url: "https://www.instagram.com/gray.pattern/",
     linkText: "Follow on Instagram",
   },
+  {
+    id: "toneflow",
+    title: "ToneFlow",
+    subtitle: "Interactive Sound Generation with Swift",
+    blurb:
+      "ToneFlow is an experimental iOS application that transforms touch gestures into dynamic audio experiences. Built with Swift and AVFoundation, it explores the intersection of electronic music principles and interactive mobile interfaces, allowing users to generate and manipulate sound through intuitive touch controls.",
+    year: "2024",
+    description: [
+      "Inspired by MIDI Electronic level I and II courses I completed in 2024, ToneFlow represents my exploration into audio programming and sound synthesis through iOS development. The app demonstrates how musical concepts can be translated into interactive digital experiences.",
+      "The interface is deliberately minimal—a black canvas where touch position directly controls sound properties. Horizontal movement modulates frequency (from 10Hz to 2000Hz), while vertical position adjusts amplitude, creating an intuitive X-Y control surface for sound exploration.",
+      "Under the hood, ToneFlow leverages AVFoundation's audio engine to generate waveforms in real-time, offering four classic synthesizer wave shapes: sine, square, triangle, and sawtooth. This implementation demonstrates the possibilities of mobile devices as expressive musical instruments while showcasing the power of Swift for audio applications.",
+      "ToneFlow is an open-source project, available on GitHub for developers interested in exploring audio programming and interactive sound design on iOS.",
+    ],
+    images: [
+      {
+        src: "/images/play/toneflow_thumb.webp",
+        alt: "ToneFlow app interface showing X-Y coordinate sound control",
+        type: "thumbnail",
+      },
+      {
+        src: "/images/play/toneflow_xcode.webp",
+        alt: "ToneFlow app interface with position indicators and waveform selection",
+        type: "hero",
+      },
+      {
+        src: "",
+        alt: "none",
+        type: "gallery",
+      },
+      {
+        src: "",
+        alt: "none",
+        type: "gallery",
+      },
+      {
+        src: "/images/play/tone_flow_3screens.webp",
+        alt: "ToneFlow waveform selection interface with sine, square, triangle, and sawtooth options",
+        type: "gallery",
+      },
+    ],
+    roles: [
+      "Audio Programming",
+      "Swift",
+      "AVFoundation",
+      "Electronic Music",
+      "Interactive Design",
+    ],
+    url: "https://github.com/wesgrubbs/ToneFlow",
+    linkText: "View on GitHub",
+  },
 ];
 
 // For backward compatibility

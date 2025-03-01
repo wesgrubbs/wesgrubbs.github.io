@@ -232,6 +232,66 @@ export const workProjects = [
     url: "https://www.pitchinteractive.com/work/ebayanalytics/",
     linkText: "See Case Study",
   },
+  {
+    id: "census-mapper",
+    title: "Census Mapper",
+    subtitle: "Interactive Census Data Visualization Tool",
+    blurb:
+      "An embeddable interactive map that makes Census data accessible and meaningful to the public, journalists, and policymakers, part of a collaborative effort to democratize access to crucial demographic information.",
+    year: "2021",
+    description: [
+      "The Census Mapper was developed in collaboration with Census 2020 Data Co-op (supported by the Google News Initiative) as an embeddable map displaying Census data across multiple geographic levels - from national to census tract. The tool visualizes demographic shifts from the 2010 to 2020 Census in an accessible, intuitive format.",
+      "This project represents a new level of collaboration in data journalism. Rather than each news organization separately processing and visualizing census data, the Census 2020 Data Co-op created shared tools and training to help journalists quickly find and tell Census stories that matter to their communities.",
+      "The Census Mapper pulls data collected and processed by The Associated Press, one of the Census Co-op partners, making it easy for users to find demographic information for communities, states, and the nation, and compare it with the 2010 decennial Census.",
+    ],
+    challenge: [
+      "Census data is extensive and complex, covering multiple demographic dimensions across various geographic levels, making it difficult for journalists and the public to quickly extract meaningful insights.",
+      "Data journalists traditionally spend significant time processing raw Census data before they can begin finding stories, creating a barrier to timely reporting on important demographic trends.",
+      "Creating visualizations that work across geographic scales (national, state, county, census tract) while maintaining performance and usability presented significant technical challenges.",
+    ],
+    solution: [
+      "The project delivered an interactive map tool that allows users to explore population and demographic shifts at multiple geographic levels, with an intuitive interface that highlights key changes between 2010 and 2020.",
+      "The tool was built to be embeddable, allowing news organizations to integrate it directly into their own reporting and digital platforms, extending its reach and impact.",
+      "Accessibility was a key focus throughout development, with careful attention to color selection based on accessibility guidelines to ensure the visualizations could be interpreted by users with various types of color vision deficiencies.",
+      "This shared resource for the journalism community helped democratize access to Census data, enabling smaller news organizations without dedicated data teams to provide high-quality Census visualizations to their audiences.",
+    ],
+    images: [
+      {
+        src: "/images/work/census_mapper_thumb.webp",
+        alt: "Census Mapper showing population changes across the United States",
+        type: "thumbnail",
+      },
+      {
+        src: "/images/work/census_mapper_hero.webp",
+        alt: "Census Mapper interactive visualization showing demographic shifts across the United States",
+        type: "hero",
+      },
+      {
+        src: "/images/work/census_mapper_arrows.webp",
+        alt: "Care was taken into the design, where we explored many options, like this for teh arrows.",
+        type: "gallery",
+      },
+      {
+        src: "/images/work/census_mapper_data.webp",
+        alt: "The dataset used in the Census Mapper is extensive and covers multiple demographic dimensions",
+        type: "gallery",
+      },
+      {
+        src: "/images/work/census_mapper_whitepop.webp",
+        alt: "Clear insights can be gained from the Census Mapper by filtering by race, such as this where the white population has declined nationally by 2.6%",
+        type: "gallery",
+      },
+    ],
+    roles: [
+      "Project Vision",
+      "Creative Direction",
+      "Data Visualization Design",
+      "Data Analysis",
+      "Interactive Mapping",
+    ],
+    url: "https://censusmapper.biglocalnews.org",
+    linkText: "View Census Mapper",
+  },
 ];
 
 // For backward compatibility
