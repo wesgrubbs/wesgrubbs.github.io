@@ -1,7 +1,8 @@
 import { useEffect, useState, useRef } from "react";
 import PropTypes from "prop-types";
 import anime from "animejs";
-
+import { trackExternalLinkClick } from "../../utils/analytics";
+/* eslint-disable react/prop-types */
 const ProjectDetail = ({ project, onClose }) => {
   const detailRef = useRef(null);
   const contentRef = useRef(null);
@@ -226,6 +227,16 @@ const ProjectDetail = ({ project, onClose }) => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="font-meta-sans text-primary-red hover:underline"
+                      onClick={() => {
+                        const projectType = project.id.includes("work")
+                          ? "work"
+                          : "play";
+                        trackExternalLinkClick(
+                          project,
+                          projectType,
+                          project.url
+                        );
+                      }}
                     >
                       {linkText}
                     </a>

@@ -80,6 +80,15 @@ const ProjectCard = ({ project, onClick }) => {
           easing: "easeOutElastic(1, .5)",
         });
 
+        // Track click in Google Analytics
+        if (window.gtag) {
+          window.gtag("event", "project_click", {
+            event_category: project.id.includes("work") ? "work" : "play",
+            event_label: project.title,
+            value: 1,
+          });
+        }
+
         // Call the parent's onClick handler
         onClick(project);
       },

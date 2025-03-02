@@ -3,6 +3,7 @@ import ProjectCard from "../projects/ProjectCard";
 import ProjectDetail from "../projects/ProjectDetail";
 import { playProjects } from "../../data/playProjects";
 import anime from "animejs";
+import { trackProjectView } from "../../utils/analytics";
 
 const Play = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -52,6 +53,9 @@ const Play = () => {
       duration: 100,
       easing: "easeOutQuad",
     });
+
+    // Track project view using our analytics utility
+    trackProjectView(project, "play");
 
     // Set a small delay before showing the project detail
     setTimeout(() => {

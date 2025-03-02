@@ -2,7 +2,9 @@ import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import useScrollSection from "../../hooks/useScrollSection";
 import { scrollToSection } from "../../utils/animations";
+import { trackNavigation } from "../../utils/analytics";
 
+/* eslint-disable react/prop-types */
 const Navigation = ({ activeSection }) => {
   const navItems = [
     { label: "Work", href: "#work", section: "work" },
@@ -13,6 +15,8 @@ const Navigation = ({ activeSection }) => {
 
   const handleClick = (e, href) => {
     e.preventDefault();
+    const targetSection = href.replace("#", "");
+    trackNavigation(activeSection || "unknown", targetSection);
     scrollToSection(href);
   };
 
@@ -45,6 +49,8 @@ Navigation.propTypes = {
 const MobileMenu = ({ isOpen, onClose, activeSection }) => {
   const handleClick = (e, href) => {
     e.preventDefault();
+    const targetSection = href.replace("#", "");
+    trackNavigation(activeSection || "unknown", targetSection);
     onClose();
     setTimeout(() => {
       scrollToSection(href);
@@ -109,6 +115,7 @@ const Header = () => {
 
   const handleHomeClick = (e) => {
     e.preventDefault();
+    trackNavigation(activeSection || "unknown", "hero");
     scrollToSection("#hero");
   };
 
