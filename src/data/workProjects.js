@@ -115,6 +115,69 @@ export const workProjects = [
     linkText: "Visit Website",
   },
   {
+    id: "sovereign-debt-environment-profiles",
+    title: "Sovereign Debt and Environment Profiles Database",
+    subtitle:
+      "Visualizing the Intersection of Fiscal Constraints and Sustainable Development Opportunities",
+    blurb:
+      "An interactive data visualization tool that maps the complex relationship between debt pressures, market constraints, and green investment opportunities across 114 emerging markets and developing economies, helping policymakers identify viable pathways for financing sustainable development.",
+    year: "2024",
+    description: [
+      "The Sovereign Debt and Environment Profiles (SDEP) Database was developed for Boston University's Global Development Policy Center to address a critical challenge: the convergence of extreme weather events, financial instability, unsustainable debt levels, and high capital costs that are limiting fiscal space just as a dramatic increase in climate and conservation investments is needed.",
+      "This interactive data project tracks debt stress and capital market constraints relative to climate investment needs, conservation opportunities, and green finance potential across 114 emerging market and developing economies.",
+      "The tool enables researchers, policymakers, and financial institutions to explore comprehensive country-level data that illuminates the tension between fiscal limitations and the urgent investments required to meet the United Nations 2030 Sustainable Development Goals (SDGs) and Paris Agreement targets.",
+    ],
+    challenge: [
+      "Complex, multidimensional data spanning economic indicators, environmental metrics, and financial variables needed to be presented in an accessible, actionable format for diverse stakeholders.",
+      "The relationship between debt sustainability and environmental investment opportunities varies significantly across different economies, requiring nuanced visualization approaches that avoid oversimplification.",
+      "Users needed the ability to compare countries, track trends over time, and identify patterns that could inform policy decisions and investment strategies in sustainable development.",
+      "The intersection of sovereign debt and climate finance is an emerging field with evolving metrics, requiring a flexible platform that could incorporate new indicators and methodologies as they develop.",
+    ],
+    solution: [
+      "We developed an interactive database that visualizes multiple dimensions of economic and environmental data simultaneously, allowing users to quickly grasp the fiscal challenges and green opportunities specific to each country.",
+      "The platform features intuitive comparison tools that enable side-by-side analysis of different economies, helping identify regional patterns and potential collaborative approaches to sustainable finance.",
+      "Comprehensive country profiles provide detailed breakdowns of debt structures, climate vulnerabilities, conservation assets, and green finance readiness, creating a holistic picture of each nation's situation.",
+      "Data visualization techniques were carefully selected to highlight correlations between fiscal constraints and environmental investment needs, making complex relationships more apparent to non-specialist users.",
+      "The database serves as both an analytical tool for researchers and a decision-support system for policymakers seeking to navigate the difficult trade-offs between immediate fiscal pressures and long-term sustainable development goals.",
+    ],
+    images: [
+      {
+        src: "/images/work/sdep_thumbnail.webp",
+        alt: "Sovereign Debt and Environment Profiles Database dashboard showing multiple countries and their sustainability metrics",
+        type: "thumbnail",
+      },
+      {
+        src: "/images/work/sdep_hero.webp",
+        alt: "Interactive visualization of debt pressures and green investment opportunities across emerging markets",
+        type: "hero",
+      },
+      {
+        src: "/images/work/sdep_gallery1.webp",
+        alt: "Side-by-side country comparison feature showing fiscal constraints relative to environmental opportunities",
+        type: "gallery",
+      },
+      {
+        src: "/images/work/sdep_gallery2.webp",
+        alt: "Detailed breakdown of environmental and financial metrics for a selected country",
+        type: "gallery",
+      },
+      {
+        src: "/images/work/sdep_mali.webp",
+        alt: "Global map view highlighting regional patterns in debt stress and climate investment needs",
+        type: "gallery",
+      },
+    ],
+    roles: [
+      "Data Visualization Design",
+      "Economic Data Analysis",
+      "React Native Development Support",
+      "Environmental Finance Mapping",
+      "Policy Research",
+    ],
+    url: "https://www.bu.edu/gdp/sovereign-debt-and-environment-profiles-database/",
+    linkText: "View SDEP Database",
+  },
+  {
     id: "undp-hdi",
     title: "UNDP Human Development Index",
     subtitle: "Interactive Data Visualization Platform",
@@ -172,65 +235,6 @@ export const workProjects = [
     ],
     url: "https://hdr.undp.org/data-center/human-development-index#/indicies/HDI",
     linkText: "View Data Platform",
-  },
-  {
-    id: "ebay-qsx",
-    title: "eBay QuickStrike (QSX)",
-    subtitle: "Financial Analytics Dashboard",
-    blurb:
-      "Business analytics is crucial for large corporations, but let's face it, a lot of the analytics tools out there are uninspiring, cumbersome and difficult to understand for people outside the analytics team.",
-    year: "2017-2022",
-    description: [
-      "Business analytics is crucial for large corporations, but let's face it, a lot of the analytics tools out there are uninspiring, cumbersome and difficult to understand for people outside the analytics team. eBay approached my team at Pitch to build custom visualizations geared for company-wide viewing, from the executive level to entry level, to help people better understand financial trends, forecasts, cross-border transactions, device usage, traffic funnel metrics, real-time global trends and more. All in all, the visuals help employees clearly see and gather insights about the health of the business.",
-      "eBay QuickStrike (QSX) is an internal analytics platform that transformed how eBay's global teams accessed and interpreted complex business data. We designed and built interactive dashboards that visualized everything from cross-border transactions to device usage patterns across eBay's vast marketplace ecosystem.",
-    ],
-    challenge: [
-      "eBay's teams were dealing with siloed data sources and inconsistent reporting tools, making it difficult to extract actionable insights from the company's vast data resources.",
-      "Decision-makers needed a unified, intuitive way to understand complex relationships in marketplace data without requiring specialized technical skills.",
-      "The platform needed to serve diverse stakeholders from executives to analysts while maintaining consistency and accuracy across all visualizations.",
-    ],
-    solution: [
-      "We created a customizable dashboard system with interactive, real-time visualizations that allowed users to explore data relationships through multiple dimensions. We created dozens of unique visualizations that could be combined and customized to answer specific business questions.",
-      "The platform featured innovative data mapping techniques, including Sankey diagrams for flow analysis and hierarchy visualizations that made complex relationships immediately understandable.",
-      "We implemented a modular architecture that allowed teams to create custom views for specific business questions while maintaining consistent data governance and visual language across the organization.",
-      "This is an internally used tool and not available to the public.",
-    ],
-    images: [
-      {
-        src: "/images/work/ebay_qsx_sankey.webp",
-        alt: "eBay QuickStrike dashboard showing Sankey diagram visualization",
-        type: "thumbnail", // Used in the Work grid view
-      },
-      {
-        src: "/images/work/ebay_qsx_james.webp",
-        alt: "eBay QuickStrike in use",
-        type: "hero", // Used as hero image in detail view
-      },
-      {
-        src: "/images/work/ebay_qsx_customerdata.webp",
-        alt: "eBay QuickStrike customer data",
-        type: "gallery", // First gallery image (side by side)
-      },
-      {
-        src: "/images/work/ebay_qsx_anomalies.webp",
-        alt: "eBay QuickStrike anomaly detection visualization",
-        type: "gallery", // Second gallery image (side by side)
-      },
-      {
-        src: "/images/work/ebay_qsx_homecolors.webp",
-        alt: "eBay QuickStrike comprehensive dashboard view",
-        type: "gallery", // Third gallery image (full width)
-      },
-    ],
-    roles: [
-      "Vision and team leadership",
-      "Creative Direction",
-      "Data Visualization design",
-      "UI/UX design",
-      "Project Management",
-    ],
-    url: "https://www.pitchinteractive.com/work/ebayanalytics/",
-    linkText: "See Case Study",
   },
   {
     id: "census-mapper",
@@ -298,7 +302,7 @@ export const workProjects = [
     subtitle:
       "Visualizing the Rise in Anti-AAPI Hate Incidents During the COVID-19 Pandemic",
     blurb:
-      "An interactive data visualization that exposes the full scope of hate incidents targeting the AAPI community since the start of the pandemic, revealing that media headlines represent only the tip of the iceberg of this troubling trend.",
+      "An interactive data visualization that exposes the full scope of hate incidents targeting the AAPI community since the start of the pandemic.",
     year: "2022",
     description: [
       "Decoding Asian Hate was developed in partnership with The Asian American Foundation (TAAF) to visualize and contextualize the unprecedented surge in hate incidents targeting the AAPI (Asian American and Pacific Islander) community during the COVID-19 pandemic.",
@@ -353,6 +357,127 @@ export const workProjects = [
     ],
     url: "https://decodinghate.taaf.org/",
     linkText: "View Decoding Asian Hate",
+  },
+  {
+    id: "ebay-qsx",
+    title: "eBay QuickStrike (QSX)",
+    subtitle: "Financial Analytics Dashboard",
+    blurb:
+      "Business analytics is crucial for large corporations, but let's face it, a lot of the analytics tools out there are uninspiring, cumbersome and difficult to understand for people outside the analytics team.",
+    year: "2017-2022",
+    description: [
+      "Business analytics is crucial for large corporations, but let's face it, a lot of the analytics tools out there are uninspiring, cumbersome and difficult to understand for people outside the analytics team. eBay approached my team at Pitch to build custom visualizations geared for company-wide viewing, from the executive level to entry level, to help people better understand financial trends, forecasts, cross-border transactions, device usage, traffic funnel metrics, real-time global trends and more. All in all, the visuals help employees clearly see and gather insights about the health of the business.",
+      "eBay QuickStrike (QSX) is an internal analytics platform that transformed how eBay's global teams accessed and interpreted complex business data. We designed and built interactive dashboards that visualized everything from cross-border transactions to device usage patterns across eBay's vast marketplace ecosystem.",
+    ],
+    challenge: [
+      "eBay's teams were dealing with siloed data sources and inconsistent reporting tools, making it difficult to extract actionable insights from the company's vast data resources.",
+      "Decision-makers needed a unified, intuitive way to understand complex relationships in marketplace data without requiring specialized technical skills.",
+      "The platform needed to serve diverse stakeholders from executives to analysts while maintaining consistency and accuracy across all visualizations.",
+    ],
+    solution: [
+      "We created a customizable dashboard system with interactive, real-time visualizations that allowed users to explore data relationships through multiple dimensions. We created dozens of unique visualizations that could be combined and customized to answer specific business questions.",
+      "The platform featured innovative data mapping techniques, including Sankey diagrams for flow analysis and hierarchy visualizations that made complex relationships immediately understandable.",
+      "We implemented a modular architecture that allowed teams to create custom views for specific business questions while maintaining consistent data governance and visual language across the organization.",
+      "This is an internally used tool and not available to the public.",
+    ],
+    images: [
+      {
+        src: "/images/work/ebay_qsx_sankey.webp",
+        alt: "eBay QuickStrike dashboard showing Sankey diagram visualization",
+        type: "thumbnail", // Used in the Work grid view
+      },
+      {
+        src: "/images/work/ebay_qsx_james.webp",
+        alt: "eBay QuickStrike in use",
+        type: "hero", // Used as hero image in detail view
+      },
+      {
+        src: "/images/work/ebay_qsx_customerdata.webp",
+        alt: "eBay QuickStrike customer data",
+        type: "gallery", // First gallery image (side by side)
+      },
+      {
+        src: "/images/work/ebay_qsx_anomalies.webp",
+        alt: "eBay QuickStrike anomaly detection visualization",
+        type: "gallery", // Second gallery image (side by side)
+      },
+      {
+        src: "/images/work/ebay_qsx_homecolors.webp",
+        alt: "eBay QuickStrike comprehensive dashboard view",
+        type: "gallery", // Third gallery image (full width)
+      },
+    ],
+    roles: [
+      "Vision and team leadership",
+      "Creative Direction",
+      "Data Visualization design",
+      "UI/UX design",
+      "Project Management",
+    ],
+    url: "https://www.pitchinteractive.com/work/ebayanalytics/",
+    linkText: "See Case Study",
+  },
+  {
+    id: "out-of-sight-out-of-mind",
+    title: "Out of Sight, Out of Mind",
+    subtitle: "Visualizing the Hidden Human Cost of Drone Warfare in Pakistan",
+    blurb:
+      "A web-based narrative visualization that documents every known US and Coalition drone strike in Pakistan since 2004, revealing the temporal patterns, geographic distribution, and human toll of an often invisible technological war.",
+    year: "2013",
+    description: [
+      "Out of Sight, Out of Mind was a passion project created to address the inadequacies of traditional reporting on drone warfare, which often fails to convey the scale, patterns, and human impact of these military operations over time.",
+      "Using meticulously collected data from the Bureau of Investigative Journalism, this interactive visualization builds itself before the viewer's eyes, with each drone strike generating a dynamic timeline that spans across the screen, creating both an emotional and informational experience.",
+      "The project goes beyond mere statistics by allowing viewers to explore the specific details of each attack through interactive elements, while simultaneously revealing the broader patterns of escalation and targeting that emerge from viewing the data as a whole.",
+    ],
+    challenge: [
+      "Drone warfare operates largely outside public consciousness, with limited media coverage and visual documentation, making it difficult for people to comprehend its real-world impact and scope.",
+      "Traditional data reporting methods often fail to convey both the individual human tragedies and the cumulative effect of years of drone operations in regions like Pakistan.",
+      "The available data on drone strikes contains inherent uncertainties, including ranges of estimated casualties and differing classifications of victims, presenting challenges for accurate and ethical visualization.",
+      "Creating an experience that was both emotionally resonant and factually rigorous required balancing narrative techniques with journalistic integrity.",
+    ],
+    solution: [
+      "We developed a time-based visualization that builds itself chronologically, with each attack represented as it occurred, creating a powerful narrative of escalation and persistence that static visualizations cannot achieve.",
+      "The interface offers two complementary views: a strike-by-strike timeline showing individual attacks and a 'Victims' tab that aggregates casualties by month, allowing viewers to understand both specific incidents and broader patterns.",
+      "Interactive elements enable users to hover or click on specific strikes to reveal detailed information about each attack, including date, location, reported targets, and casualty figures.",
+      "The visual language of the project deliberately evokes missile trajectories and impact patterns, creating an aesthetic that reinforces the subject matter while maintaining respectful distance from the actual violence.",
+      "By visualizing uncertainty in the data through ranges rather than precise figures, the project acknowledges the contested nature of information in conflict zones while still providing a meaningful representation of scale.",
+    ],
+    images: [
+      {
+        src: "/images/work/drones_thumb.webp",
+        alt: "Timeline visualization of drone strikes in Pakistan showing patterns of escalation over time",
+        type: "thumbnail",
+      },
+      {
+        src: "/images/work/drones_hero.webp",
+        alt: "Interactive narrative visualization showing drone strikes as they build up chronologically across the screen",
+        type: "hero",
+      },
+      {
+        src: "/images/work/drones_gallery1.webp",
+        alt: "Detailed view of the horizontal timeline showing individual drone strikes with interactive elements",
+        type: "gallery",
+      },
+      {
+        src: "/images/work/drones_gallery2.webp",
+        alt: "The 'Victims' view showing aggregated casualty figures by month and classification",
+        type: "gallery",
+      },
+      {
+        src: "/images/work/drones_last.webp",
+        alt: "Close-up of an individual strike showing specific details about date, location, targets and casualties",
+        type: "gallery",
+      },
+    ],
+    roles: [
+      "Data Visualization Design",
+      "Narrative Experience Development",
+      "Interactive Storytelling",
+      "Conflict Data Analysis",
+      "Data Journalism",
+    ],
+    url: "https://drones.pitchinteractive.com",
+    linkText: "View Out of Sight, Out of Mind",
   },
 ];
 
