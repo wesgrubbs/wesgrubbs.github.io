@@ -155,6 +155,17 @@ export const infoContent = {
       ],
     },
     {
+      year: "2016",
+      items: [
+        {
+          title:
+            "New Challenges for Data Design: Chapter: A Process Dedicated to Cognition and Memory",
+          url: "https://link.springer.com/book/10.1007/978-1-4471-6596-5#toc",
+          type: "book",
+        },
+      ],
+    },
+    {
       year: "2013",
       items: [
         {

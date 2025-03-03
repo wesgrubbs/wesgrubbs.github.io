@@ -292,6 +292,68 @@ export const workProjects = [
     url: "https://censusmapper.biglocalnews.org",
     linkText: "View Census Mapper",
   },
+  {
+    id: "decoding-asian-hate",
+    title: "Decoding Asian Hate",
+    subtitle:
+      "Visualizing the Rise in Anti-AAPI Hate Incidents During the COVID-19 Pandemic",
+    blurb:
+      "An interactive data visualization that exposes the full scope of hate incidents targeting the AAPI community since the start of the pandemic, revealing that media headlines represent only the tip of the iceberg of this troubling trend.",
+    year: "2022",
+    description: [
+      "Decoding Asian Hate was developed in partnership with The Asian American Foundation (TAAF) to visualize and contextualize the unprecedented surge in hate incidents targeting the AAPI (Asian American and Pacific Islander) community during the COVID-19 pandemic.",
+      "The visualization represents each documented hate incident as an individual fragment, creating a powerful visual flood that conveys the true magnitude of this crisis beyond what makes headlines. Users can explore incidents chronologically from the pandemic's start to present day, with interactive filtering capabilities that reveal patterns across incident types, locations, and contextual factors.",
+      "By combining data from news reports and social media, particularly Twitter, this project brings visibility to incidents that might otherwise go unreported or unnoticed, creating a more comprehensive picture of anti-AAPI hate during this critical period.",
+    ],
+    challenge: [
+      "The true scale of anti-AAPI hate incidents was significantly underreported in mainstream media, creating a gap in public awareness about the severity and breadth of the issue.",
+      "Many incidents captured in social media never made it to news reports, making it difficult to quantify and understand the full extent of hatred faced by the AAPI community.",
+      "Presenting sensitive data about traumatic experiences in a way that was both impactful and respectful required careful consideration of ethical visualization practices.",
+      "Creating an interface that could handle thousands of individual data points while remaining accessible and meaningful to users presented significant technical challenges.",
+    ],
+    solution: [
+      "We developed a visualization system that represents each hate incident as a unique fragment, with an impactful animation that floods the screen to convey the overwhelming volume of incidents.",
+      "The interface enables users to explore incidents by multiple dimensions including location type (with businesses identified as the most common site), victim gender (when known), and whether the incident was COVID-related.",
+      "Color-coding and interactive sorting features allow users to identify patterns and relationships in the data, revealing insights that might not be apparent in traditional statistical reports.",
+      "The chronological presentation creates a timeline of hate that helps contextualize how these incidents evolved throughout the pandemic, providing important historical documentation of this period.",
+      "This visualization tool serves both as an educational resource for the public and as an advocacy instrument for organizations working to combat anti-AAPI racism and violence.",
+    ],
+    images: [
+      {
+        src: "/images/work/taaf_thumbnail.webp",
+        alt: "Decoding Asian Hate visualization showing fragments representing individual hate incidents",
+        type: "thumbnail",
+      },
+      {
+        src: "/images/work/taaf_hero.webp",
+        alt: "Interactive visualization of anti-AAPI hate incidents with color-coded fragments flooding the screen",
+        type: "hero",
+      },
+      {
+        src: "/images/work/taaf_twittershards.webp",
+        alt: "Chronological timeline view of hate incidents from the start of the pandemic",
+        type: "gallery",
+      },
+      {
+        src: "/images/work/taaf_anti-asian-hate.webp",
+        alt: "Visualization filtered to show incidents occurring at businesses, which had the highest occurrence rate",
+        type: "gallery",
+      },
+      {
+        src: "/images/work/taaf_chart.webp",
+        alt: "Comparative view showing COVID-related versus non-COVID-related hate incidents",
+        type: "gallery",
+      },
+    ],
+    roles: [
+      "Data Visualization Design",
+      "Interactive Experience Design",
+      "Data Analysis",
+      "Narrative Storytelling",
+    ],
+    url: "https://decodinghate.taaf.org/",
+    linkText: "View Decoding Asian Hate",
+  },
 ];
 
 // For backward compatibility
