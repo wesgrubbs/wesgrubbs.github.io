@@ -479,6 +479,65 @@ export const workProjects = [
     url: "https://drones.pitchinteractive.com",
     linkText: "View Out of Sight, Out of Mind",
   },
+  {
+    id: "facebook-insights-wall",
+    title: "Facebook Insights Wall",
+    subtitle: "Multi-Touch Data Visualization Installation",
+    blurb:
+      "Facebook needed a way to display global insights from their public and customer data in an engaging, interactive format for visitors and employees at their headquarters.",
+    year: "2013 - 2018",
+    description: [
+      "Facebook needed a way to display global insights from their public and customer data in an engaging, interactive format for visitors and employees at their headquarters. They approached my studio Pitch to help create an immersive, large-scale installation that would showcase these insights in a compelling way.",
+      "The Facebook Insights Wall is an integrated multi-touch installation consisting of 20 Planar screens (in a 5 x 4 grid) measuring 23' x 9' total. Located at Facebook's headquarters in Menlo Park, California, the wall is accessible to all visitors and employees, offering a unique window into Facebook's global data landscape.",
+    ],
+    challenge: [
+      "Facebook needed to visualize complex global data patterns in a way that would be engaging and informative for both casual visitors and employees.",
+      "The installation required seamless integration of multiple touchscreens to function as a cohesive interactive surface.",
+      "The solution needed to handle real-time data processing and display from various Facebook public and customer data sources.",
+    ],
+    solution: [
+      "My studio was involved from the project's early conception in 2013, providing comprehensive consulting on hardware selection, technology implementation, and content strategy.",
+      "We developed a system for effectively pulling and parsing Facebook's data to create meaningful, interactive visualizations across the large display surface.",
+      "The multi-touch capability allows visitors to interact directly with the data, exploring insights and patterns through an intuitive interface.",
+      "The installation serves as both an educational tool and a showcase of Facebook's global impact, providing valuable insights to visitors while enhancing the company's headquarters with a striking visual element.",
+    ],
+    images: [
+      {
+        src: "/images/work/facebook_insights_thumb.webp",
+        alt: "Facebook Insights Wall overview",
+        type: "thumbnail", // Used in the Work grid view
+      },
+      {
+        src: "/images/work/facebook_insights_thumb.webp",
+        alt: "Facebook Insights Wall full installation",
+        type: "hero", // Used as hero image in detail view
+      },
+      {
+        src: "/images/work/facebook_insights_interaction.webp",
+        alt: "Visitors interacting with the Facebook Insights Wall",
+        type: "gallery", // First gallery image (side by side)
+      },
+      {
+        src: "/images/work/facebook_insights_videos.webp",
+        alt: "Detailed view of Facebook Insights Wall visualization",
+        type: "gallery", // Second gallery image (side by side)
+      },
+      {
+        src: "/images/work/facebook_insights_wires.webp",
+        alt: "Facebook Insights Wall in the context of headquarters",
+        type: "gallery", // Third gallery image (full width)
+      },
+    ],
+    roles: [
+      "Vision and Strategy",
+      "Creative Direction",
+      "Data Visualization Design",
+      "Data Analysis",
+      "Technical Implementation",
+    ],
+    url: "",
+    linkText: "",
+  },
 ];
 
 // For backward compatibility
