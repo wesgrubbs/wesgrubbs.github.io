@@ -24,13 +24,13 @@ export default {
         // Section-specific background colors (light mode)
         section: {
           hero: "#fdaa08", // Your BRAND_COLORS.YELLOW
-          work: "#f9c660",
-          play: "#fce3b0",
+          work: "#131313", // Changed to black to match dark mode
+          play: "#2F243A",
           info: "#fdecca",
         },
         "section-dark": {
           hero: "#131313", // BRAND_COLORS.YELLOW
-          work: "#0B0A07", // BRAND_COLORS.BLACK
+          work: "#131313", // BRAND_COLORS.BLACK
           play: "#2F243A", // Dark purple
           info: "#333232", // Jet
         },

@@ -14,7 +14,7 @@
   --color-section-play: theme("colors.section.play");
   --color-section-info: theme("colors.section.info");
 
-  /* Text colors - Light mode */
+  /* Text colors - Light mode (defaults) */
   --theme-text-primary: var(--color-primary-black);
   --theme-text-secondary: var(--color-primary-black);
   --theme-link: var(--color-primary-black);
@@ -40,21 +40,37 @@ html:not(.no-transitions) {
   transition: background-color 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Section-specific background colors using CSS variables */
+/* Section-specific styles - background AND text colors */
 html.in-hero {
   background-color: var(--color-section-hero);
+  /* Use default text colors defined in :root */
 }
 
 html.in-work {
   background-color: var(--color-section-work);
+  /* Override text colors for work section in light mode to match dark mode */
+  --theme-text-primary: var(--color-primary-yellow);
+  --theme-text-secondary: var(--color-primary-yellow);
+  --theme-link: var(--color-primary-yellow);
+  --theme-link-hover: var(--color-primary-red);
 }
 
 html.in-play {
   background-color: var(--color-section-play);
+  /* Reset to default text colors */
+  --theme-text-primary: var(--color-primary-yellow);
+  --theme-text-secondary: var(--color-primary-yellow);
+  --theme-link: var(--color-primary-black);
+  --theme-link-hover: var(--color-primary-red);
 }
 
 html.in-info {
   background-color: var(--color-section-info);
+  /* Reset to default text colors */
+  --theme-text-primary: var(--color-primary-black);
+  --theme-text-secondary: var(--color-primary-black);
+  --theme-link: var(--color-primary-black);
+  --theme-link-hover: var(--color-primary-red);
 }
 
 @layer base {
