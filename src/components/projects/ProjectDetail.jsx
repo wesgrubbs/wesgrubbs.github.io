@@ -2,11 +2,14 @@ import { useEffect, useState, useRef } from "react";
 import PropTypes from "prop-types";
 import anime from "animejs";
 import { trackExternalLinkClick } from "../../utils/analytics";
+import { useTheme } from "../../components/ThemeProvider";
+
 /* eslint-disable react/prop-types */
 const ProjectDetail = ({ project, onClose }) => {
   const detailRef = useRef(null);
   const contentRef = useRef(null);
   const [isAnimating, setIsAnimating] = useState(false);
+  const { isDarkMode } = useTheme();
 
   // Handle animations when opening
   useEffect(() => {
@@ -98,17 +101,33 @@ const ProjectDetail = ({ project, onClose }) => {
   // Get custom link text or use default
   const linkText = project.linkText || "View Project";
 
+  // Determine if we're in work section based on project ID
+  const isWorkProject = project.id.includes("work");
+
+  // Determine if the background is dark (either work section in light mode or dark mode)
+  const hasDarkBackground = (isWorkProject && !isDarkMode) || isDarkMode;
+
+  // Text color class based on background
+  const textColorClass = hasDarkBackground
+    ? "text-primary-yellow"
+    : "text-primary-black";
+  const linkColorClass = "text-primary-red";
+
   return (
     <div
       ref={detailRef}
-      className="fixed inset-0 bg-primary-yellow dark:bg-primary-black z-50 overflow-y-auto"
+      className={`fixed inset-0 bg-primary-yellow dark:bg-primary-black z-50 overflow-y-auto ${textColorClass}`}
     >
       {/* Header */}
       <div className="sticky top-0 bg-primary-yellow dark:bg-primary-black z-10">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <div>
-            <h2 className="font-meta-serif text-2xl">{project.title}</h2>
-            <p className="font-meta-serif-italic">{project.subtitle}</p>
+            <h2 className={`font-meta-serif text-2xl ${textColorClass}`}>
+              {project.title}
+            </h2>
+            <p className={`font-meta-serif-italic ${textColorClass}`}>
+              {project.subtitle}
+            </p>
           </div>
           <button
             onClick={handleClose}
@@ -132,23 +151,25 @@ const ProjectDetail = ({ project, onClose }) => {
       )}
 
       {/* Main Content Area */}
-      <div
-        ref={contentRef}
-        className="max-w-7xl mx-auto px-6 py-12 text-[var(--theme-text-primary)]"
-      >
+      <div ref={contentRef} className="max-w-7xl mx-auto px-6 py-12">
         {/* Project Info */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div className="md:col-span-2">
-            <h3 className="font-meta-serif text-xl mb-4">About</h3>
+            <h3 className={`font-meta-serif text-xl mb-4 ${textColorClass}`}>
+              About
+            </h3>
             <div className="space-y-4">
               {Array.isArray(project.description) ? (
                 project.description.map((paragraph, index) => (
-                  <p key={index} className="font-meta-sans text-base">
+                  <p
+                    key={index}
+                    className={`font-meta-sans text-base ${textColorClass}`}
+                  >
                     {paragraph}
                   </p>
                 ))
               ) : (
-                <p className="font-meta-sans text-base">
+                <p className={`font-meta-sans text-base ${textColorClass}`}>
                   {project.description}
                 </p>
               )}
@@ -156,16 +177,23 @@ const ProjectDetail = ({ project, onClose }) => {
 
             {project.challenge && (
               <div className="mt-8">
-                <h3 className="font-meta-serif text-xl mb-4">Challenge</h3>
+                <h3
+                  className={`font-meta-serif text-xl mb-4 ${textColorClass}`}
+                >
+                  Challenge
+                </h3>
                 <div className="space-y-4">
                   {Array.isArray(project.challenge) ? (
                     project.challenge.map((paragraph, index) => (
-                      <p key={index} className="font-meta-sans text-base">
+                      <p
+                        key={index}
+                        className={`font-meta-sans text-base ${textColorClass}`}
+                      >
                         {paragraph}
                       </p>
                     ))
                   ) : (
-                    <p className="font-meta-sans text-base">
+                    <p className={`font-meta-sans text-base ${textColorClass}`}>
                       {project.challenge}
                     </p>
                   )}
@@ -175,16 +203,23 @@ const ProjectDetail = ({ project, onClose }) => {
 
             {project.solution && (
               <div className="mt-8">
-                <h3 className="font-meta-serif text-xl mb-4">Solution</h3>
+                <h3
+                  className={`font-meta-serif text-xl mb-4 ${textColorClass}`}
+                >
+                  Solution
+                </h3>
                 <div className="space-y-4">
                   {Array.isArray(project.solution) ? (
                     project.solution.map((paragraph, index) => (
-                      <p key={index} className="font-meta-sans text-base">
+                      <p
+                        key={index}
+                        className={`font-meta-sans text-base ${textColorClass}`}
+                      >
                         {paragraph}
                       </p>
                     ))
                   ) : (
-                    <p className="font-meta-sans text-base">
+                    <p className={`font-meta-sans text-base ${textColorClass}`}>
                       {project.solution}
                     </p>
                   )}
@@ -197,12 +232,20 @@ const ProjectDetail = ({ project, onClose }) => {
             <div className="sticky top-32">
               <div className="space-y-6">
                 <div>
-                  <h4 className="font-meta-serif-italic text-grey-90">Year</h4>
-                  <p className="font-meta-sans">{project.year}</p>
+                  <h4
+                    className={`font-meta-serif-italic text-grey-90 ${textColorClass}`}
+                  >
+                    Year
+                  </h4>
+                  <p className={`font-meta-sans ${textColorClass}`}>
+                    {project.year}
+                  </p>
                 </div>
 
                 <div>
-                  <h4 className="font-meta-serif-italic text-grey-90 mb-2">
+                  <h4
+                    className={`font-meta-serif-italic text-grey-90 mb-2 ${textColorClass}`}
+                  >
                     My Roles
                   </h4>
                   <div className="flex flex-wrap gap-2">
@@ -219,14 +262,16 @@ const ProjectDetail = ({ project, onClose }) => {
 
                 {project.url && (
                   <div>
-                    <h4 className="font-meta-serif-italic text-grey-90 mb-2">
+                    <h4
+                      className={`font-meta-serif-italic text-grey-90 mb-2 ${textColorClass}`}
+                    >
                       Link
                     </h4>
                     <a
                       href={project.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-meta-sans text-primary-red hover:underline"
+                      className={`font-meta-sans ${linkColorClass} hover:underline`}
                       onClick={() => {
                         const projectType = project.id.includes("work")
                           ? "work"
