@@ -68,7 +68,6 @@ const ProjectDetail = ({ project, onClose }) => {
 
     anime({
       targets: detailRef.current,
-      //opacity: [1, 0],
       translateY: [0, 800],
       duration: 200,
       easing: "easeInOutQuad",
@@ -101,14 +100,8 @@ const ProjectDetail = ({ project, onClose }) => {
   // Get custom link text or use default
   const linkText = project.linkText || "View Project";
 
-  // Determine if we're in work section based on project ID
-  const isWorkProject = project.id.includes("work");
-
-  // Determine if the background is dark (either work section in light mode or dark mode)
-  const hasDarkBackground = (isWorkProject && !isDarkMode) || isDarkMode;
-
-  // Text color class based on background
-  const textColorClass = hasDarkBackground
+  // Text color classes based on dark mode
+  const textColorClass = isDarkMode
     ? "text-primary-yellow"
     : "text-primary-black";
   const linkColorClass = "text-primary-red";

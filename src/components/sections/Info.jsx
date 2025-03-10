@@ -7,7 +7,7 @@ const InfoSection = ({ title, items }) => {
   return (
     <div className="mx-0 max-w-7xl md:mx-0 lg:mx-0 xl:mx-0">
       <h2 className="font-meta-serif text-2xl mb-2 mt-6">{title}</h2>
-      <div className="space-y-1">
+      <div className="space-y-1 pl-6">
         {items.map((yearGroup) => (
           <div key={yearGroup.year}>
             {yearGroup.items?.map((item, index) => {

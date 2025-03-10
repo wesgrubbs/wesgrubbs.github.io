@@ -8,11 +8,8 @@
   --color-primary-black: theme("colors.primary-black");
   --color-primary-red: theme("colors.primary-red");
 
-  /* Section background colors - Light mode */
-  --color-section-hero: theme("colors.section.hero");
-  --color-section-work: theme("colors.section.work");
-  --color-section-play: theme("colors.section.play");
-  --color-section-info: theme("colors.section.info");
+  /* Background colors */
+  --background-color: var(--color-primary-yellow);
 
   /* Text colors - Light mode (defaults) */
   --theme-text-primary: var(--color-primary-black);
@@ -22,11 +19,8 @@
 }
 
 .dark {
-  /* Section background colors - Dark mode */
-  --color-section-hero: theme("colors.section-dark.hero");
-  --color-section-work: theme("colors.section-dark.work");
-  --color-section-play: theme("colors.section-dark.play");
-  --color-section-info: theme("colors.section-dark.info");
+  /* Background colors - Dark mode */
+  --background-color: var(--color-primary-black);
 
   /* Text colors - Dark mode */
   --theme-text-primary: var(--color-primary-yellow);
@@ -35,70 +29,38 @@
   --theme-link-hover: var(--color-primary-red);
 }
 
-/* Enhanced transitions for all html element properties - BUT ONLY AFTER PAGE LOAD */
-html:not(.no-transitions) {
+/* Set background color for html */
+html {
+  background-color: var(--background-color);
   transition: background-color 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Section-specific styles - background AND text colors */
-html.in-hero {
-  background-color: var(--color-section-hero);
-  /* Use default text colors defined in :root */
-}
-
-html.in-work {
-  background-color: var(--color-section-work);
-  /* Override text colors for work section in light mode to match dark mode */
-  --theme-text-primary: var(--color-primary-yellow);
-  --theme-text-secondary: var(--color-primary-yellow);
-  --theme-link: var(--color-primary-yellow);
-  --theme-link-hover: var(--color-primary-red);
-}
-
-html.in-play {
-  background-color: var(--color-section-play);
-  /* Reset to default text colors */
-  --theme-text-primary: var(--color-primary-yellow);
-  --theme-text-secondary: var(--color-primary-yellow);
-  --theme-link: var(--color-primary-black);
-  --theme-link-hover: var(--color-primary-red);
-}
-
-html.in-info {
-  background-color: var(--color-section-info);
-  /* Reset to default text colors */
-  --theme-text-primary: var(--color-primary-black);
-  --theme-text-secondary: var(--color-primary-black);
-  --theme-link: var(--color-primary-black);
-  --theme-link-hover: var(--color-primary-red);
-}
-
 @layer base {
-  body:not(.no-transitions) {
+  body {
     @apply transition-colors duration-500;
   }
 
-  h1:not(.no-transitions) {
+  h1 {
     @apply transition-colors duration-500;
   }
 
-  h2:not(.no-transitions) {
+  h2 {
     @apply transition-colors duration-500;
   }
 
-  h3:not(.no-transitions) {
+  h3 {
     @apply transition-colors duration-500;
   }
 
-  p:not(.no-transitions) {
+  p {
     @apply transition-colors duration-500;
   }
 
-  a:not(.no-transitions) {
+  a {
     @apply transition-colors duration-300;
   }
 
-  button:not(.no-transitions) {
+  button {
     @apply transition-colors duration-500;
   }
 
@@ -108,8 +70,8 @@ html.in-info {
   }
 
   h2 {
-    @apply font-meta-serif-italic text-[1.4em] font-normal text-[var(--theme-text-primary)]
-           opacity-50 italic py-0 px-0 pb-5;
+    @apply font-meta-serif text-[1.6em] font-normal text-[var(--theme-text-primary)]
+           py-0 px-0 pb-5;
   }
 
   h3 {

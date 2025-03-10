@@ -1,22 +1,20 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import useScrollSection from "../../hooks/useScrollSection";
 import { scrollToSection } from "../../utils/animations";
 import { trackNavigation } from "../../utils/analytics";
 
 /* eslint-disable react/prop-types */
-const Navigation = ({ activeSection }) => {
+const Navigation = () => {
   const navItems = [
     { label: "Work", href: "#work", section: "work" },
     { label: "Play", href: "#play", section: "play" },
-    //{ label: "Services", href: "#services", section: "services" },
     { label: "Info", href: "#info", section: "info" },
   ];
 
   const handleClick = (e, href) => {
     e.preventDefault();
     const targetSection = href.replace("#", "");
-    trackNavigation(activeSection || "unknown", targetSection);
+    trackNavigation("unknown", targetSection);
     scrollToSection(href);
   };
 
@@ -27,13 +25,8 @@ const Navigation = ({ activeSection }) => {
           key={item.label}
           href={item.href}
           onClick={(e) => handleClick(e, item.href)}
-          className={`font-meta-serif text-base text-primary-black dark:text-primary-yellow 
-            hover:text-primary-red dark:hover:text-primary-red transition-colors duration-300 
-            ${
-              activeSection === item.section
-                ? "border-b-2 border-primary-black dark:border-primary-yellow"
-                : ""
-            }`}
+          className="font-meta-serif text-base text-primary-black dark:text-primary-yellow 
+            hover:text-primary-red dark:hover:text-primary-red transition-colors duration-300"
         >
           {item.label}
         </a>
@@ -42,15 +35,11 @@ const Navigation = ({ activeSection }) => {
   );
 };
 
-Navigation.propTypes = {
-  activeSection: PropTypes.string,
-};
-
-const MobileMenu = ({ isOpen, onClose, activeSection }) => {
+const MobileMenu = ({ isOpen, onClose }) => {
   const handleClick = (e, href) => {
     e.preventDefault();
     const targetSection = href.replace("#", "");
-    trackNavigation(activeSection || "unknown", targetSection);
+    trackNavigation("unknown", targetSection);
     onClose();
     setTimeout(() => {
       scrollToSection(href);
@@ -76,13 +65,8 @@ const MobileMenu = ({ isOpen, onClose, activeSection }) => {
               key={section}
               href={`#${section}`}
               onClick={(e) => handleClick(e, `#${section}`)}
-              className={`font-meta-serif text-2xl text-primary-black dark:text-primary-yellow 
-                hover:text-primary-red dark:hover:text-primary-red capitalize
-                ${
-                  activeSection === section
-                    ? "border-b-2 border-primary-black dark:border-primary-yellow"
-                    : ""
-                }`}
+              className="font-meta-serif text-2xl text-primary-black dark:text-primary-yellow 
+                hover:text-primary-red dark:hover:text-primary-red capitalize"
             >
               {section}
             </a>
@@ -96,13 +80,11 @@ const MobileMenu = ({ isOpen, onClose, activeSection }) => {
 MobileMenu.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
-  activeSection: PropTypes.string,
 };
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const activeSection = useScrollSection();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -115,7 +97,7 @@ const Header = () => {
 
   const handleHomeClick = (e) => {
     e.preventDefault();
-    trackNavigation(activeSection || "unknown", "hero");
+    trackNavigation("unknown", "hero");
     scrollToSection("#hero");
   };
 
@@ -138,7 +120,7 @@ const Header = () => {
           Wesley Grubbs
         </a>
 
-        <Navigation activeSection={activeSection} />
+        <Navigation />
 
         <button
           className="md:hidden text-primary-black dark:text-primary-yellow"
@@ -150,7 +132,6 @@ const Header = () => {
         <MobileMenu
           isOpen={isMobileMenuOpen}
           onClose={() => setIsMobileMenuOpen(false)}
-          activeSection={activeSection}
         />
       </div>
     </header>
