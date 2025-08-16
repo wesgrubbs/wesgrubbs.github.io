@@ -59,6 +59,65 @@ export const workProjects = [
     linkText: "",
   },
   {
+    id: "drought-whiplash",
+    title: "Drought Whiplash",
+    subtitle: "Visualizing California's Climate Variability and Wildfire Risk",
+    blurb:
+      "A data visualization for print exploring how California's increasingly volatile weather patterns—extreme wet periods followed by severe droughts—create the perfect conditions for devastating wildfires.",
+    year: "2025",
+    description: [
+      "The devastating fires in California early this year came after a particularly unfortunate weather pattern—an exceptionally wet period of about 18 months, followed by an exceptionally dry spell. The wet duration encouraged grass and brush growth, and then the lack of rain dried it all out, priming it to catch on fire and spread quickly.",
+      "This project visualizes the concept of 'wet-to-dry whiplash' using the Palmer Hydrological Drought Index, which measures drought using reservoir and groundwater levels among other factors. Each data point represents the drought level for one month in one region of California, revealing the increasing variability in the state's climate patterns.",
+      "Working with climate data allowed me to flex my statistical analysis skills as we analyzed standard deviation models to understand how climate change is leading to wider swings between wet and dry spells—what scientists call the 'expanding atmospheric sponge' effect.",
+    ],
+    challenge: [
+      "Climate data is often presented in abstract formats that fail to connect extreme weather patterns with their real-world consequences like wildfire risk.",
+      "The relationship between wet periods, subsequent drought, and fire danger needed to be visualized in a way that made the 'whiplash' effect immediately understandable.",
+      "Statistical concepts like standard deviation and climate variability needed to be made accessible to general audiences while maintaining scientific accuracy.",
+    ],
+    solution: [
+      "I created a visualization for print that shows each month's drought index as individual data points, allowing users to see the dramatic swings between wet and dry conditions across California regions.",
+      "The visualization incorporates statistical analysis of standard deviation models to highlight how climate variability has increased over time, making the 'expanding atmospheric sponge' effect tangible through data.",
+      "By connecting the Palmer Hydrological Drought Index data directly to the wildfire narrative, the project demonstrates how abstract climate metrics translate into concrete environmental risks and human consequences.",
+    ],
+    images: [
+      {
+        src: "/images/work/drought_whiplash_thumb.webp",
+        alt: "Drought Whiplash visualization showing California's climate variability patterns",
+        type: "thumbnail",
+      },
+      {
+        src: "/images/work/drought_whiplash_hero.webp",
+        alt: "Interactive Palmer Hydrological Drought Index visualization for California regions",
+        type: "hero",
+      },
+      {
+        src: "",
+        alt: "Statistical analysis showing increased climate variability and standard deviation patterns",
+        type: "gallery",
+      },
+      {
+        src: "",
+        alt: "Statistical analysis showing increased climate variability and standard deviation patterns",
+        type: "gallery",
+      },
+      {
+        src: "/images/work/drought_whiplash_gallery.webp",
+        alt: "Statistical analysis showing increased climate variability and standard deviation patterns",
+        type: "gallery",
+      },
+    ],
+    roles: [
+      "Data Visualization Design",
+      "Statistical Analysis",
+      "Climate Data Processing",
+      "Interactive Storytelling",
+      "Scientific Communication",
+    ],
+    url: "",
+    linkText: "",
+  },
+  {
     id: "inflatacart",
     title: "InflataCart",
     subtitle: "An iOS app that ties inflation data with groceries",
