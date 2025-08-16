@@ -1,5 +1,64 @@
 export const workProjects = [
   {
+    id: "stripe-stablecoin-sphere",
+    title: "Stripe Stablecoin Sphere",
+    subtitle: "Real-Time Visualization Installation for Stripe Sessions",
+    blurb:
+      "When Stripe wanted to showcase their stablecoin technology at Sessions conference, we transformed a 2-meter LED sphere into a living visualization that responded to real-time transactions and data flows.",
+    year: "2025",
+    description: [
+      "Stripe approached me to create a visual installation for their Sessions conference that would showcase stablecoin technology in a compelling way. Working with Kristin Baumann and Nick Harbaugh, we transformed a blank 2-meter LED sphere into a dynamic showcase that visualized real-time stablecoin data and transactions.",
+      "The sphere became the centerpiece of Stripe's stablecoin area, drawing conference attendees with flowing geometric patterns and reactive animations that responded to live data. When someone bought coffee using stablecoin, the sphere immediately reflected that transaction with unique visual effects.",
+      "This seven-week project pushed web technologies into physical space in ways I hadn't attempted before. We used React, P5.js, Three.js, and real-time APIs to create something that was both technically ambitious and visually captivating.",
+    ],
+    challenge: [
+      "Web technologies aren't designed for spherical displays. We needed to figure out how to adapt flat-screen visualizations to wrap seamlessly around a curved LED surface without distortion.",
+      "We had limited access to the physical sphere during development, making it difficult to test and iterate on our designs.",
+      "The project required visualizing complex financial data in a way that would be engaging for conference attendees, regardless of their cryptocurrency knowledge.",
+    ],
+    solution: [
+      "I built a custom Three.js development environment that simulated the sphere, allowing us to prototype and test visualizations remotely. This virtual sphere became essential for rapid iteration.",
+      "We developed custom spherical projection techniques using P5.js, creating seamless animations with noise loops and grid-based patterns that wrapped perfectly around the sphere with no visible seams.",
+      "For real-time data, we connected to the Allium API for continuous stablecoin transaction data and implemented Stripe webhooks for live coffee purchases, enabling immediate visual responses within milliseconds.",
+    ],
+    images: [
+      {
+        src: "/images/work/stripe_sphere_thumb.webp",
+        alt: "Stripe Stablecoin Sphere installation at Sessions conference",
+        type: "thumbnail",
+      },
+      {
+        src: "/images/work/stripe_sphere_hero.webp",
+        alt: "2-meter LED sphere displaying dynamic stablecoin visualizations",
+        type: "hero",
+      },
+      {
+        src: "/images/work/stripe_sphere_backstage.webp",
+        alt: "Backstage view of the sphere installation setup",
+        type: "gallery",
+      },
+      {
+        src: "/images/work/stripe_sphere_conference.webp",
+        alt: "Conference attendees interacting with the sphere installation",
+        type: "gallery",
+      },
+      {
+        src: "/images/work/stripe_sphere_demo.webp",
+        alt: "Behind-the-scenes control center with live feeds and real-time data monitoring",
+        type: "gallery",
+      },
+    ],
+    roles: [
+      "Lead Creative Technologist",
+      "Project Management",
+      "Creative and Technical Direction",
+      "Architecture Design",
+      "Engineering Oversight",
+    ],
+    url: "",
+    linkText: "",
+  },
+  {
     id: "inflatacart",
     title: "InflataCart",
     subtitle: "An iOS app that ties inflation data with groceries",
