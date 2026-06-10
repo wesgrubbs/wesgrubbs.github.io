@@ -1,5 +1,64 @@
 export const workProjects = [
   {
+    id: "california-reservoirs",
+    title: "California Reservoirs",
+    subtitle: "A Daily, Regional View of California's Water Supply",
+    blurb:
+      "How's water doing in California right now? The state publishes reservoir data every day, but a clear picture of it has been hard to find. California Reservoirs is a free, calm, public tool that shows how much water the state is holding, how that compares to what's normal for the season, and which reservoirs supply your own neighborhood.",
+    year: "2026",
+    description: [
+      "California Reservoirs began as a question I'd asked myself for years: how is water actually doing across the state? The Department of Water Resources publishes daily storage readings for over 150 reservoirs, but clear visuals of that data have been hard to find. I first started this project ten years ago at my studio Pitch Interactive, and it sat unfinished until this year, when I rebuilt it from the ground up with Claude, on my own dime, as a small example of AI used for something quietly useful.",
+      "The site shows statewide storage as a single, legible number, then breaks the story down by region. Drought isn't one statewide story: some regions can be fine while others are genuinely dry. A capacity-weighted choropleth compares each of California's seven reservoir regions to its historical average for the date, and every reservoir gets its own page with storage history, typical seasonal ranges, and precipitation context.",
+      "The part I care about most is the supply lookup: search by city or ZIP and see exactly which reservoirs feed your area, with live storage levels for each. The picture becomes local, not just a statewide headline. It's free, there's nothing to sign up for, and it's built to already be running the next time California enters a drought.",
+    ],
+    challenge: [
+      "Reservoir percentages are easy to misread. A reservoir at 70% of capacity sounds fine until you learn it's usually at 95% in June. Every number needed honest context: what's normal for this date, not just how full the bucket is.",
+      "The state's data is published daily through the California Data Exchange Center, but it's raw, occasionally gappy, and spread across sensors and stations. Turning it into something trustworthy required a resilient ingestion pipeline, not just a pretty front end.",
+      "Water supply is regional, but most drought coverage is statewide. Mapping which reservoirs actually serve which cities and ZIP codes, through water districts and wholesale hierarchies, was a research project of its own.",
+    ],
+    solution: [
+      "I designed every reading around historical context: current storage is always shown against the historical average for that exact date, with typical seasonal bands on every chart, so 'how full' becomes 'how full compared to what's normal right now.'",
+      "A daily automated pipeline ingests readings from the California Data Exchange Center into Supabase, computes regional health, 7-day trends, and drought severity, and publishes static snapshots to a CDN so the site stays fast and inexpensive to run.",
+      "The supply search resolves cities and ZIP codes to the water districts that serve them and the reservoirs those districts draw from, so an Oakland resident sees Pardee Reservoir on the Mokelumne River, not just a statewide average. The same design system extends to a companion iOS app built in SwiftUI.",
+    ],
+    images: [
+      {
+        src: "/images/work/careservoirs_thumb.webp",
+        alt: "California Reservoirs home view showing statewide storage at a glance",
+        type: "thumbnail",
+      },
+      {
+        src: "/images/work/careservoirs_hero.webp",
+        alt: "California Reservoirs home page with statewide storage percentage and a year of storage history against typical seasonal ranges",
+        type: "hero",
+      },
+      {
+        src: "/images/work/careservoirs_history.webp",
+        alt: "Ten years of Shasta storage history with typical seasonal ranges, weekly precipitation, and drought periods highlighted in orange",
+        type: "gallery",
+      },
+      {
+        src: "/images/work/careservoirs_table.webp",
+        alt: "All-reservoirs table with 7-day gainers and losers, regional context, and each reservoir's percent of historical average",
+        type: "gallery",
+      },
+      {
+        src: "/images/work/careservoirs_detail.webp",
+        alt: "Shasta Dam detail page with region, river, and operator context, current reading at 99% of historical average, and storage history",
+        type: "gallery",
+      },
+    ],
+    roles: [
+      "Product Vision and Design",
+      "Data Visualization Design",
+      "Full-Stack Development (React, Supabase)",
+      "Data Pipeline Engineering",
+      "iOS Development (SwiftUI)",
+    ],
+    url: "https://californiareservoirs.com",
+    linkText: "Visit California Reservoirs",
+  },
+  {
     id: "stripe-stablecoin-sphere",
     title: "Stripe Stablecoin Sphere",
     subtitle: "Real-Time Visualization Installation for Stripe Sessions",
