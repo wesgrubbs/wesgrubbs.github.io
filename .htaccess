@@ -1,0 +1,3 @@
+# Custom 404 error page redirect
+
+ErrorDocument 404 https://www.wesleygrubbs.com/
